@@ -129,8 +129,10 @@
 
   // Keep only kana/kanji/latin/digits/spaces (remove most punctuation)
   function stripPunct(str) {
+    // Remove punctuation/symbols broadly (covers Japanese/Unicode punctuation).
+    // Keep letters/numbers/kana/kanji and spaces; replace everything punctuation-like with spaces.
     return (str || '')
-      .replace(/[、。！？!?,.\(\)\[\]「」『』"“”'’：:;・…]/g, ' ')
+      .replace(/[\p{P}\p{S}]/gu, ' ')
       .replace(/\s+/g, ' ')
       .trim();
   }
@@ -945,11 +947,12 @@
       }
 
       const transcript = normalizeSpaces(finalText || interim);
-      state.lastTranscript = transcript;
-      $('#recognizedText').textContent = transcript;
+      const transcriptClean = normalizeSpaces(stripPunct(transcript));
+      state.lastTranscript = transcriptClean;
+      $('#recognizedText').textContent = transcriptClean;
 
       const isFinal = !!finalText;
-      const evalRes = evaluateTranscript(transcript, isFinal);
+      const evalRes = evaluateTranscript(transcriptClean, isFinal);
 
       const successThreshold = clamp(state.success / 100, 0.5, 0.95);
       if (isFinal) showRating(evalRes.score, successThreshold);

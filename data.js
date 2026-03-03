@@ -19,7 +19,7 @@ window.JP_DATA = {
   ],
 
   sentences: [
-    { id: "s1", tokens: [{ t: "私", r: "わたし" }, "は", "ペーター", "です"], en: "I am Peter.", de: "Ich bin Peter.", speak: "わたしはペーターです" },
+    { id: "s1", tokens: [{ t: "私", r: "わたし" }, "は", "ペーター", "です"], en: "I am Peter.", de: "Ich bin Peter.", speak: "わたしはぺえたあです" },
     { id: "s2", tokens: ["これ", "は", "何", "です", "か"], ruby: { "何": "なに" }, en: "What is this?", de: "Was ist das?", speak: "これはなんですか" },
     { id: "s3", tokens: ["すみません", "が", { t: "駅", r: "えき" }, "は", "どこ", "です", "か"], en: "Excuse me, where is the station?", de: "Entschuldigung, wo ist der Bahnhof?", speak: "すみませんが駅はどこですか" },
 
@@ -72,7 +72,7 @@ window.JP_DATA = {
       turns: [
         { who: "user", tokens: ["チェックイン", "おねがいします"], en:"I'd like to check in.", de:"Ich möchte einchecken.", speak:"チェックインおねがいします" },
         { who: "bot",  tokens: ["おなまえ", "は", "？"], en:"Your name?", de:"Ihr Name?", speak:"おなまえは？" },
-        { who: "user", tokens: ["ペーター", "です"], en:"It's Peter.", de:"Peter.", speak:"ペーターです" },
+        { who: "user", tokens: ["ペーター", "です"], en:"It's Peter.", de:"Peter.", speak:"ぺえたあです" },
         { who: "bot",  tokens: ["こちら", "へ", "どうぞ"], en:"This way, please.", de:"Bitte hier entlang.", speak:"こちらへどうぞ" }
       ]
     }
