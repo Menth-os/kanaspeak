@@ -760,7 +760,7 @@
       const jp = document.createElement('div');
       jp.className = 'text-white';
       jp.style.fontWeight = '700';
-      jp.textContent = turn.jp.replace(/\s+/g,' ');
+      jp.textContent = (getTokensFromItem(turn).map(tokenToText).join(' ')).replace(/\s+/g,' ');
       const tr = document.createElement('div');
       tr.className = 'text-white-60 small mt-1';
       tr.textContent = state.uiLang === 'de' ? turn.de : turn.en;
@@ -796,9 +796,9 @@
       stopListening();
       resetHighlights();
       $('#recognizedText').textContent = '';
-      speak(turn.speak || turn.jp);
+      speak(turn.speak || getTokensFromItem(turn).map(tokenToText).join(''));
       // advance after a conservative delay based on text length
-      const delay = clamp(900 + (turn.jp.length * 140), 1200, 6500);
+      const delay = clamp(900 + ((getTokensFromItem(turn).map(tokenToText).join('')).length * 140), 1200, 6500);
       window.setTimeout(() => {
         nextDialogTurn();
       }, delay);
