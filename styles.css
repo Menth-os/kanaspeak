@@ -188,3 +188,5 @@
 #startScreen h1, #startScreen h2, #startScreen .display-6, #startScreen .h5{
   color: rgba(255,255,255,.96) !important;
 }
+
+.jp-token.punct{ opacity:.8; }

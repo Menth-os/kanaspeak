@@ -123,13 +123,13 @@ window.JP_DATA = {
         "何",
         "です",
         "か",
-        "？"
+        "。"
       ],
       "ruby": {
         "何": "なに"
       },
-      "en": "What is this?",
-      "de": "Was ist das?",
+      "en": "What is this。",
+      "de": "Was ist das。",
       "speak": "これはなんですか"
     },
     {
@@ -145,10 +145,10 @@ window.JP_DATA = {
         "どこ",
         "です",
         "か",
-        "？"
+        "。"
       ],
-      "en": "Excuse me, where is the station?",
-      "de": "Entschuldigung, wo ist der Bahnhof?",
+      "en": "Excuse me, where is the station。",
+      "de": "Entschuldigung, wo ist der Bahnhof。",
       "speak": "すみませんえきはどこですか"
     },
     {
@@ -327,10 +327,10 @@ window.JP_DATA = {
             "どこ",
             "です",
             "か",
-            "？"
+            "。"
           ],
-          "en": "Excuse me, where is the station?",
-          "de": "Entschuldigung, wo ist der Bahnhof?",
+          "en": "Excuse me, where is the station。",
+          "de": "Entschuldigung, wo ist der Bahnhof。",
           "speak": "すみませんえきはどこですか"
         },
         {
@@ -388,10 +388,10 @@ window.JP_DATA = {
           "tokens": [
             "おなまえ",
             "は",
-            "？"
+            "。"
           ],
-          "en": "Your name?",
-          "de": "Ihr Name?",
+          "en": "Your name。",
+          "de": "Ihr Name。",
           "speak": "おなまえは"
         },
         {

@@ -115,6 +115,8 @@
     }
   };
 
+  const IGNORE_PUNCT = new Set(['。','、','「','」']);
+
   const LS = {
     uiLang: 'jpTrainer.uiLang',
     voiceUri: 'jpTrainer.voiceUri',
@@ -481,6 +483,7 @@
   // ---------- Speech recognition ----------
   let recognizer = null;
   let silenceTimer = null;
+  let finishTimer = null;
 
   
   function attachRecognitionHandlers() {
@@ -508,22 +511,29 @@
       state.lastTranscript = transcriptForMatch;
       $('#recognizedText').textContent = transcriptClean;
 
+      clearFinishTimer();
+
       // extend time window for slow speakers
       clearSilenceTimer();
       silenceTimer = window.setTimeout(finalizeByTimeout, clamp(state.pauseMs || 2000, 600, 10000));
 
       const isFinal = !!finalText;
       const resEval = evaluateTranscript(transcriptForMatch, isFinal);
-
       if (isFinal) {
-        const successThreshold = clamp(state.success / 100, 0.5, 0.95);
-        showRating(resEval.score, successThreshold);
+        // Wait after a final result so Chrome can stop rewriting the transcript.
+        clearFinishTimer();
+        finishTimer = window.setTimeout(() => {
+          const successThreshold = clamp(state.success / 100, 0.5, 0.95);
+          showRating(resEval.score, successThreshold);
 
-        if (state.mode === 'dialog') {
-          const dialog = getItem();
-          const turn = dialog?.turns?.[state.dialogTurn];
-          if (turn?.who === 'user' && resEval.score >= successThreshold) nextDialogTurn();
-        }
+          if (state.mode === 'dialog') {
+            const dialog = getItem();
+            const turn = dialog?.turns?.[state.dialogTurn];
+            if (turn?.who === 'user' && resEval.score >= successThreshold) {
+              window.setTimeout(() => nextDialogTurn(), 450);
+            }
+          }
+        }, 650);
       }
     };
 
@@ -538,14 +548,14 @@
       if (state.listening) {
         // In some browsers, onend fires even when we still want to listen; keep state but unlock buttons
         state.listening = false;
-    clearSilenceTimer();
         $('#btnListen').disabled = false;
         $('#btnStop').disabled = true;
       }
     };
   }
 
-function createRecognizer() {
+
+  function createRecognizer() {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SR) return null;
     const r = new SR();
@@ -557,6 +567,13 @@ function createRecognizer() {
   }
 
   
+  function clearFinishTimer() {
+    if (finishTimer) {
+      window.clearTimeout(finishTimer);
+      finishTimer = null;
+    }
+  }
+
   function clearSilenceTimer() {
     if (silenceTimer) {
       window.clearTimeout(silenceTimer);
@@ -566,7 +583,6 @@ function createRecognizer() {
 
   function finalizeByTimeout() {
     if (!state.listening) return;
-    clearSilenceTimer();
     const transcript = state.lastTranscript || '';
     stopListening();
     if (!transcript) return;
@@ -578,7 +594,7 @@ function createRecognizer() {
     if (state.mode === 'dialog') {
       const dialog = getItem();
       const turn = dialog?.turns?.[state.dialogTurn];
-      if (turn?.who === 'user' && res.score >= successThreshold) nextDialogTurn();
+      if (turn?.who === 'user' && res.score >= successThreshold) window.setTimeout(() => nextDialogTurn(), 450);
     }
   }
 
@@ -600,13 +616,12 @@ function startListening() {
     try { recognizer.start(); } catch {}
 
     // schedule silence timeout
-    clearSilenceTimer();
     silenceTimer = window.setTimeout(finalizeByTimeout, clamp(state.pauseMs || 2000, 600, 10000));
   }
 
   function stopListening() {
     state.listening = false;
-    clearSilenceTimer();
+    clearFinishTimer();
     $('#btnListen').disabled = false;
     $('#btnStop').disabled = true;
 
@@ -615,6 +630,7 @@ function startListening() {
 
   function resetHighlights() {
     $$('.jp-token').forEach(el => {
+      if (el.dataset.ignorable === '1' || el.classList.contains('punct')) return;
       el.classList.remove('good','missed','active');
       el.classList.add('pending');
     });
@@ -666,6 +682,14 @@ function startListening() {
 
       const surface = tokenToText(tok);
       const reading = tokenToReading(tok) || (rubyMap && surface ? rubyMap[surface] : '');
+
+      if (IGNORE_PUNCT.has(surface)) {
+        span.className = 'jp-token punct';
+        span.dataset.ignorable = '1';
+        span.textContent = surface;
+        line.appendChild(span);
+        return;
+      }
 
       if (reading && surface && surface !== reading) {
         const ruby = document.createElement('ruby');
@@ -812,6 +836,7 @@ function startListening() {
 
   function applyTokenClasses(matches) {
     $$('.jp-token').forEach((el) => {
+      if (el.dataset.ignorable === '1' || el.classList.contains('punct')) return;
       const idx = Number(el.dataset.idx);
       el.classList.remove('good','missed','active','pending');
       if (matches[idx]) el.classList.add('good');
@@ -821,6 +846,10 @@ function startListening() {
 
   function setActiveIndex(activeIdx) {
     $$('.jp-token').forEach(el => {
+      if (el.dataset.ignorable === '1' || el.classList.contains('punct')) {
+        el.classList.remove('active');
+        return;
+      }
       el.classList.toggle('active', Number(el.dataset.idx) === activeIdx);
     });
   }
