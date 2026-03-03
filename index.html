@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JP Speak & Read Trainer</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body class="bg-app text-light">
+  <div class="app-shell">
+    <header class="app-header border-bottom border-white-10">
+      <div class="container-fluid py-3 d-flex align-items-center gap-3">
+        <div class="brand d-flex align-items-center gap-2">
+          <span class="brand-badge"><i class="fa-solid fa-comment-dots"></i></span>
+          <div class="lh-sm">
+            <div class="brand-title">JP Speak & Read</div>
+            <div class="brand-sub" data-i18n="tagline">Reading + speaking practice with speech APIs</div>
+          </div>
+        </div>
+
+        <div class="ms-auto d-flex align-items-center gap-2">
+          <div id="featurePill" class="feature-pill d-none">
+            <i class="fa-solid fa-triangle-exclamation me-2"></i>
+            <span id="featurePillText"></span>
+          </div>
+
+          <div class="dropdown">
+            <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-language me-2"></i><span id="uiLangLabel">English</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+              <li><button class="dropdown-item" data-set-ui-lang="en">English</button></li>
+              <li><button class="dropdown-item" data-set-ui-lang="de">Deutsch</button></li>
+            </ul>
+          </div>
+
+          <button id="btnHome" class="btn btn-sm btn-outline-light" type="button" title="Home">
+            <i class="fa-solid fa-house"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <div class="container py-4">
+
+        <!-- Unsupported notice -->
+        <section id="unsupportedCard" class="card card-glass border-0 d-none">
+          <div class="card-body">
+            <h2 class="h4 mb-2"><i class="fa-solid fa-ban me-2"></i><span data-i18n="unsupported_title">Not supported</span></h2>
+            <p class="text-white-70 mb-3" data-i18n="unsupported_body">
+              This site needs Web Speech API (speech recognition + synthesis). Use Chrome / Edge / a compatible browser.
+            </p>
+            <div class="small text-white-60" id="unsupportedDetails"></div>
+          </div>
+        </section>
+
+        <!-- Start screen -->
+        <section id="startScreen" class="d-none">
+          <div class="row g-3 align-items-stretch">
+            <div class="col-12 col-lg-7">
+              <div class="card card-glass border-0 h-100">
+                <div class="card-body">
+                  <h1 class="display-6 mb-2" data-i18n="start_title">Choose a mode</h1>
+                  <p class="text-white-70 mb-4" data-i18n="start_body">
+                    Speak Japanese into the mic. The text highlights as you match it.
+                  </p>
+
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-lg mode-btn" data-mode="word">
+                      <i class="fa-solid fa-font me-2"></i><span data-i18n="mode_word">Word</span>
+                      <span class="ms-auto opacity-75"><i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button class="btn btn-primary btn-lg mode-btn" data-mode="sentence">
+                      <i class="fa-solid fa-align-left me-2"></i><span data-i18n="mode_sentence">Sentence</span>
+                      <span class="ms-auto opacity-75"><i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                    <button class="btn btn-primary btn-lg mode-btn" data-mode="dialog">
+                      <i class="fa-solid fa-people-arrows me-2"></i><span data-i18n="mode_dialog">Dialog</span>
+                      <span class="ms-auto opacity-75"><i class="fa-solid fa-arrow-right"></i></span>
+                    </button>
+                  </div>
+
+                  <div class="mt-4 d-flex flex-wrap gap-2">
+                    <span class="chip"><i class="fa-solid fa-microphone me-2"></i><span data-i18n="chip_mic">Mic required</span></span>
+                    <span class="chip"><i class="fa-solid fa-volume-high me-2"></i><span data-i18n="chip_tts">Japanese TTS</span></span>
+                    <span class="chip"><i class="fa-solid fa-shield me-2"></i><span data-i18n="chip_local">Runs locally</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-5">
+              <div class="card card-glass border-0 h-100">
+                <div class="card-body">
+                  <h2 class="h5 mb-3" data-i18n="tips_title">Tips</h2>
+                  <ul class="text-white-70 mb-0">
+                    <li data-i18n="tips_1">Allow microphone access when prompted.</li>
+                    <li data-i18n="tips_2">Speak clearly; short pauses help.</li>
+                    <li data-i18n="tips_3">If recognition is strict, try again — near matches are counted.</li>
+                    <li data-i18n="tips_4">The sample content uses spaces between Japanese “chunks” to improve highlighting.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Trainer screen -->
+        <section id="trainerScreen" class="d-none">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="card card-glass border-0">
+                <div class="card-body">
+                  <div class="d-flex flex-wrap align-items-center gap-2">
+                    <span class="badge rounded-pill text-bg-dark border border-white-10">
+                      <i class="fa-solid fa-layer-group me-2"></i><span id="modeLabel">Word</span>
+                    </span>
+
+                    <div class="ms-auto d-flex flex-wrap gap-2 align-items-center">
+                      <div class="btn-group" role="group" aria-label="Actions">
+                        <button id="btnListen" class="btn btn-outline-light" type="button">
+                          <i class="fa-solid fa-microphone me-2"></i><span data-i18n="btn_listen">Listen</span>
+                        </button>
+                        <button id="btnStop" class="btn btn-outline-light" type="button" disabled>
+                          <i class="fa-solid fa-stop me-2"></i><span data-i18n="btn_stop">Stop</span>
+                        </button>
+                      </div>
+
+                      <div class="btn-group" role="group" aria-label="Speech">
+                        <button id="btnSpeak" class="btn btn-outline-light" type="button">
+                          <i class="fa-solid fa-volume-high me-2"></i><span data-i18n="btn_speak">Play</span>
+                        </button>
+                      </div>
+
+                      <div class="btn-group" role="group" aria-label="Nav">
+                        <button id="btnRetry" class="btn btn-outline-light" type="button">
+                          <i class="fa-solid fa-rotate-right me-2"></i><span data-i18n="btn_retry">Retry</span>
+                        </button>
+                        <button id="btnNext" class="btn btn-primary" type="button">
+                          <i class="fa-solid fa-forward me-2"></i><span data-i18n="btn_next">Next</span>
+                        </button>
+                      </div>
+
+                      <button class="btn btn-sm btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#settingsCanvas" aria-controls="settingsCanvas">
+                        <i class="fa-solid fa-gear"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <hr class="border-white-10 my-3"/>
+
+                  <div id="promptArea" class="prompt-area">
+                    <!-- content inserted by JS -->
+                  </div>
+
+                  <div class="mt-3">
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                      <div class="small text-white-60" data-i18n="recognized_label">Recognized:</div>
+                      <div id="recognizedText" class="recognized text-white-70"></div>
+                    </div>
+
+                    <div class="mt-2 d-flex flex-wrap gap-2 align-items-center">
+                      <div id="ratingPill" class="rating-pill d-none"></div>
+                      <div class="ms-auto small text-white-60" id="progressText"></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Dialog transcript -->
+            <div class="col-12 d-none" id="dialogPane">
+              <div class="card card-glass border-0">
+                <div class="card-body">
+                  <h3 class="h6 mb-3" data-i18n="dialog_title">Dialog</h3>
+                  <div id="dialogTranscript" class="dialog-transcript"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="app-footer border-top border-white-10">
+      <div class="container py-3 small text-white-60 d-flex flex-wrap gap-2">
+        <span>© <span id="year"></span> JP Speak & Read</span>
+        <span class="ms-auto"><span data-i18n="footer_note">Works best in Chrome/Edge. No data leaves your device.</span></span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Settings offcanvas -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="settingsCanvas" aria-labelledby="settingsLabel">
+    <div class="offcanvas-header border-bottom border-white-10">
+      <h5 class="offcanvas-title" id="settingsLabel"><i class="fa-solid fa-gear me-2"></i><span data-i18n="settings_title">Settings</span></h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="mb-3">
+        <label class="form-label" data-i18n="settings_voice">Japanese voice</label>
+        <select id="voiceSelect" class="form-select form-select-sm bg-dark text-light border-white-10"></select>
+        <div class="form-text text-white-60" data-i18n="settings_voice_help">Pick a Japanese voice if available.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" data-i18n="settings_leniency">Leniency</label>
+        <input id="leniencyRange" type="range" class="form-range" min="0" max="100" step="5">
+        <div class="d-flex justify-content-between small text-white-60">
+          <span data-i18n="settings_leniency_strict">Strict</span>
+          <span id="leniencyValue"></span>
+          <span data-i18n="settings_leniency_loose">Loose</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" data-i18n="settings_success">Success threshold</label>
+        <input id="successRange" type="range" class="form-range" min="50" max="95" step="5">
+        <div class="d-flex justify-content-between small text-white-60">
+          <span>50%</span>
+          <span id="successValue"></span>
+          <span>95%</span>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" data-i18n="settings_recog">Recognition language</label>
+        <select id="recogLang" class="form-select form-select-sm bg-dark text-light border-white-10">
+          <option value="ja-JP">ja-JP</option>
+          <option value="en-US">en-US</option>
+          <option value="de-DE">de-DE</option>
+        </select>
+        <div class="form-text text-white-60" data-i18n="settings_recog_help">Use ja-JP for best Japanese results.</div>
+      </div>
+
+      <hr class="border-white-10"/>
+
+      <button id="btnReset" class="btn btn-outline-light w-100" type="button">
+        <i class="fa-solid fa-trash-can me-2"></i><span data-i18n="settings_reset">Reset progress</span>
+      </button>
+
+      <div class="mt-3 small text-white-60" data-i18n="settings_note">
+        Note: Web Speech behavior varies by device/OS. This app uses interim results for highlighting.
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

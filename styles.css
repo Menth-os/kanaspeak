@@ -1,0 +1,183 @@
+/* Modern dark glassy UI */
+:root{
+  --bg0:#0b1220;
+  --bg1:#0f1a2f;
+  --card: rgba(255,255,255,.06);
+  --card2: rgba(255,255,255,.09);
+  --border: rgba(255,255,255,.10);
+  --text70: rgba(255,255,255,.70);
+  --text60: rgba(255,255,255,.60);
+  --good:#36d399;
+  --bad:#fb7185;
+  --warn:#fbbf24;
+}
+
+.bg-app{
+  background:
+    radial-gradient(1200px 700px at 12% 0%, rgba(59,130,246,.25), transparent 60%),
+    radial-gradient(900px 600px at 85% 15%, rgba(236,72,153,.18), transparent 55%),
+    radial-gradient(900px 700px at 30% 90%, rgba(34,197,94,.12), transparent 55%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  min-height:100vh;
+}
+
+.text-white-70{ color: var(--text70) !important; }
+.text-white-60{ color: var(--text60) !important; }
+.border-white-10{ border-color: var(--border) !important; }
+
+.app-shell{ min-height:100vh; display:flex; flex-direction:column; }
+.app-main{ flex: 1 1 auto; }
+.app-header, .app-footer{ background: rgba(0,0,0,.20); backdrop-filter: blur(10px); }
+
+.brand-badge{
+  width:40px; height:40px; border-radius:14px;
+  display:grid; place-items:center;
+  background: linear-gradient(135deg, rgba(59,130,246,.85), rgba(236,72,153,.75));
+  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+}
+.brand-title{ font-weight:700; letter-spacing:.2px; }
+.brand-sub{ font-size:.85rem; color: var(--text60); }
+
+.card-glass{
+  background: var(--card);
+  box-shadow: 0 10px 40px rgba(0,0,0,.35);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.mode-btn{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-radius: 16px;
+}
+
+.chip{
+  display:inline-flex;
+  align-items:center;
+  padding:.35rem .6rem;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.05);
+  font-size:.85rem;
+  color: var(--text70);
+}
+
+.feature-pill{
+  border:1px solid rgba(251,191,36,.35);
+  background: rgba(251,191,36,.10);
+  color: rgba(251,191,36,.95);
+  border-radius:999px;
+  padding:.35rem .65rem;
+  font-size:.85rem;
+}
+
+.prompt-area{
+  display:flex;
+  flex-direction:column;
+  gap:.65rem;
+}
+
+.jp-line{
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: .02em;
+  line-height: 1.1;
+  word-break: keep-all;
+}
+
+.jp-token{
+  display:inline-block;
+  padding: .10rem .18rem;
+  border-radius: 10px;
+  margin: .08rem .06rem;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.jp-token.pending{
+  color: rgba(255,255,255,.92);
+}
+
+.jp-token.active{
+  border-color: rgba(59,130,246,.50);
+  background: rgba(59,130,246,.18);
+}
+
+.jp-token.good{
+  color: #081018;
+  background: rgba(54,211,153,.95);
+}
+
+.jp-token.missed{
+  color: rgba(255,255,255,.55);
+  border-color: rgba(255,255,255,.10);
+}
+
+.furigana{
+  font-size: .95rem;
+  color: var(--text60);
+}
+
+.translation{
+  font-size: 1.05rem;
+  color: var(--text70);
+}
+
+.recognized{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: .95rem;
+}
+
+.rating-pill{
+  border-radius: 999px;
+  padding: .35rem .7rem;
+  font-size: .9rem;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.06);
+}
+
+.rating-pill.good{ border-color: rgba(54,211,153,.40); background: rgba(54,211,153,.15); }
+.rating-pill.bad{ border-color: rgba(251,113,133,.40); background: rgba(251,113,133,.15); }
+.rating-pill.warn{ border-color: rgba(251,191,36,.40); background: rgba(251,191,36,.15); }
+
+.dialog-transcript{
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
+}
+
+.turn{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.05);
+  border-radius: 16px;
+  padding: .8rem .9rem;
+}
+
+.turn .who{
+  font-size:.8rem;
+  color: var(--text60);
+  margin-bottom: .3rem;
+}
+
+.turn.user{ border-color: rgba(59,130,246,.30); }
+.turn.bot{ border-color: rgba(236,72,153,.30); }
+
+.btn-primary{
+  background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(236,72,153,.85));
+  border: none;
+}
+.btn-primary:hover{ filter: brightness(1.05); }
+
+.btn-outline-light{
+  border-color: rgba(255,255,255,.22);
+}
+.btn-outline-light:hover{
+  background: rgba(255,255,255,.10);
+}
+
+.form-select.border-white-10, .form-control.border-white-10{
+  border-color: var(--border) !important;
+}
