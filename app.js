@@ -1019,6 +1019,14 @@ function startListening() {
 
   function bindUi() {
     $('#year').textContent = String(nowYear());
+    // UI language dropdown
+    $$('[data-set-ui-lang]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-set-ui-lang') || 'en';
+        setUiLang(lang);
+      });
+    });
+
 
     $('#btnHome').addEventListener('click', () => {
       stopListening();

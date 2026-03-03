@@ -189,4 +189,7 @@
   color: rgba(255,255,255,.96) !important;
 }
 
-.jp-token.punct{ opacity:.8; }
+.jp-token.punct{ 
+	opacity:1; 
+	color: rgba(255,255,255,.85);
+}
