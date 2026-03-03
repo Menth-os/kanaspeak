@@ -292,9 +292,22 @@
   }
 
   function normalizeExpectedForMatch(tok, rubyMap) {
-    const surface = tokenToText(tok);
-    let reading = tokenToReading(tok);
-    if (!reading && rubyMap && surface && rubyMap[surface]) reading = rubyMap[surface];
+    // Accept:
+    // - display token: string or {t,r}
+    // - match token: {surface, reading} (already cleaned)
+    if (tok && typeof tok === 'object' && (Object.prototype.hasOwnProperty.call(tok, 'surface') || Object.prototype.hasOwnProperty.call(tok, 'reading')) && !Object.prototype.hasOwnProperty.call(tok, 't')) {
+      const surface = normalizeSpaces(stripPunct(tok.surface || ''));
+      const reading = normalizeSpaces(stripPunct(tok.reading || ''));
+      return { surface, reading };
+    }
+
+    const surfaceRaw = tokenToText(tok);
+    let readingRaw = tokenToReading(tok);
+    if (!readingRaw && rubyMap && surfaceRaw && rubyMap[surfaceRaw]) readingRaw = rubyMap[surfaceRaw];
+
+    const surface = normalizeSpaces(stripPunct(surfaceRaw));
+    const reading = normalizeSpaces(stripPunct(readingRaw));
+
     return { surface, reading };
   }
 
@@ -676,6 +689,23 @@
   function evaluateTranscript(transcript, isFinal) {
     const expected = currentExpectedTokens();
     const rubyMap = currentRubyMap();
+    // Build a cleaned expected token list for matching (so punctuation/spaces in data won't break scoring).
+    const expectedRaw = expected;
+    const expectedMatch = [];
+    const matchToRaw = [];
+    const rawMatchesPreset = new Array(expectedRaw.length).fill(false);
+
+    for (let k = 0; k < expectedRaw.length; k++) {
+      const ex = normalizeExpectedForMatch(expectedRaw[k], rubyMap);
+      // If token becomes empty after cleaning, treat it as ignorable (punctuation-only etc.)
+      if (!ex.surface && !ex.reading) {
+        rawMatchesPreset[k] = true;
+        continue;
+      }
+      expectedMatch.push(ex); // {surface, reading} cleaned
+      matchToRaw.push(k);
+    }
+
     const leniency01 = clamp(state.leniency / 100, 0, 1);
     const successThreshold = clamp(state.success / 100, 0.5, 0.95);
 
@@ -684,28 +714,38 @@
 
     const spokenTokens = splitTokensMaybe(cleaned);
 
-    let matches = new Array(expected.length).fill(false);
+    let matches = new Array(expectedRaw.length).fill(false);
+    matches = rawMatchesPreset.slice();
     let score = 0;
 
     if (spokenTokens.length > 1 || expected.length > 1) {
       // token-based alignment
-      const aligned = alignTokens(expected, spokenTokens, leniency01, rubyMap);
-      matches = aligned.matches;
+      const aligned = alignTokens(expectedMatch, spokenTokens, leniency01, rubyMap);
+      // map matches back to raw token indices
+      const rawMatches = rawMatchesPreset.slice();
+      for (let p = 0; p < aligned.matches.length; p++) rawMatches[matchToRaw[p]] = aligned.matches[p];
+      matches = rawMatches;
       score = aligned.score;
+
     } else {
       // single token: use similarity
-      const ex = normalizeExpectedForMatch(expected[0] || '', rubyMap);
+      const ex = normalizeExpectedForMatch(expectedMatch[0] || '', rubyMap);
       const sA = ex.surface ? tokenScore(ex.surface, spokenTokens[0] || cleaned, leniency01) : 0;
       const sB = ex.reading ? tokenScore(ex.reading, spokenTokens[0] || cleaned, leniency01) : 0;
       score = Math.max(sA, sB);
       matches[0] = score >= (0.86 - leniency01 * 0.20);
+      // map single match back to raw indices (if raw had ignorable tokens)
+      const rawMatches = rawMatchesPreset.slice();
+      if (expectedMatch.length && matchToRaw.length) rawMatches[matchToRaw[0]] = matches[0];
+      matches = rawMatches;
+
     }
 
     // Fallback for no spaces (common in ja-JP)
     if (!/\s/.test(cleaned) && expected.length > 1) {
-      const prog = roughCharProgress(expected, cleaned, leniency01, rubyMap);
+      const prog = roughCharProgress(expectedMatch, cleaned, leniency01, rubyMap);
       // mark tokens whose cumulative length <= progress
-      const expJoined = expected.map(tok => tokenToText(tok)).join('');
+      const expJoined = expectedRaw.map(tok => tokenToText(tok)).join('');
       const targetChars = Math.round(expJoined.length * prog);
       let acc = 0;
       for (let i = 0; i < expected.length; i++) {
