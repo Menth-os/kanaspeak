@@ -377,7 +377,7 @@ window.JP_DATA = {
           "tokens": [
             "チェックイン",
             {
-              "t": "お願がい",
+              "t": "お願い",
               "r": "おねがい"
             },
             "します",
@@ -385,7 +385,7 @@ window.JP_DATA = {
           ],
           "en": "I'd like to check in.",
           "de": "Ich möchte einchecken.",
-          "speak": "チェックインお願がいします"
+          "speak": "チェックインお願いします"
         },
         {
           "who": "bot",
