@@ -179,9 +179,8 @@
     const e0 = normalizeKanaLoose(stripPunct(expected));
     const s0 = normalizeKanaLoose(stripPunct(spoken));
 
-    // leniency: remove long vowel marks and small tsu effects increasingly
-    const removeLong = leniency01 >= 0.35;
-    const removeSmall = leniency01 >= 0.55;
+    const removeLong = leniency01 >= 0.40;
+    const removeSmall = leniency01 >= 0.65;
 
     const cleanup = (x) => {
       let t = x;
@@ -193,12 +192,14 @@
     const e = cleanup(e0);
     const s = cleanup(s0);
 
-    // direct similarity
     let best = similarity(e, s);
 
-    // bonus: if one contains the other (common when recognition merges tokens)
-    if (e && s) {
-      if (s.includes(e) || e.includes(s)) best = Math.max(best, 0.92);
+    // Prevent nonsense matches: only allow a weak "contains" bump if the chunk is substantial.
+    const chunk = (s.length < e.length) ? s : e;
+    const big = (s.length < e.length) ? e : s;
+
+    if (chunk.length >= 3 && big.includes(chunk)) {
+      best = Math.max(best, 0.70);
     }
 
     return clamp(best, 0, 1);
@@ -206,40 +207,39 @@
 
   // Align expected tokens with spoken tokens allowing skips.
   // Returns {matches: boolean[], score: 0..1, matchedCount}
-  function alignTokens(expectedTokens, spokenTokens, leniency01) {
+  function alignTokens(expectedTokens, spokenTokens, leniency01, rubyMap) {
     const exp = expectedTokens.slice();
     const spk = spokenTokens.slice();
 
     const matches = new Array(exp.length).fill(false);
+    const threshold = (0.84 - leniency01 * 0.18);
 
-    // Greedy with lookahead:
-    // - try match current expected against current spoken
-    // - if low score, allow skipping expected OR skipping spoken to recover
     let i = 0, j = 0;
     let matched = 0;
 
-    while (i < exp.length && j < spk.length) {
-      const s = tokenScore(exp[i], spk[j], leniency01);
+    const scoreExpectedVsSpoken = (expTok, spTok) => {
+      const { surface, reading } = normalizeExpectedForMatch(expTok, rubyMap);
+      const s1 = surface ? tokenScore(surface, spTok, leniency01) : 0;
+      const s2 = reading ? tokenScore(reading, spTok, leniency01) : 0;
+      return Math.max(s1, s2);
+    };
 
-      if (s >= (0.78 - leniency01 * 0.18)) {
+    while (i < exp.length && j < spk.length) {
+      const s = scoreExpectedVsSpoken(exp[i], spk[j]);
+
+      if (s >= threshold) {
         matches[i] = true;
         matched++;
         i++; j++;
         continue;
       }
 
-      // Lookahead one step: can we match expected[i] with spoken[j+1]?
-      const sSkipSpoken = j + 1 < spk.length ? tokenScore(exp[i], spk[j + 1], leniency01) : 0;
-      // Or expected[i+1] with spoken[j]?
-      const sSkipExpected = i + 1 < exp.length ? tokenScore(exp[i + 1], spk[j], leniency01) : 0;
+      const sSkipSpoken = (j + 1 < spk.length) ? scoreExpectedVsSpoken(exp[i], spk[j + 1]) : 0;
+      const sSkipExpected = (i + 1 < exp.length) ? scoreExpectedVsSpoken(exp[i + 1], spk[j]) : 0;
 
-      if (sSkipSpoken >= sSkipExpected && sSkipSpoken >= (0.78 - leniency01 * 0.18)) {
-        j++; // skip one spoken token
-      } else if (sSkipExpected >= (0.78 - leniency01 * 0.18)) {
-        i++; // skip expected token (mark missed)
-      } else {
-        // if both low, skip the one that looks more plausible to skip:
-        // prefer skipping spoken if it's very short (noise), otherwise skip expected
+      if (sSkipSpoken >= sSkipExpected && sSkipSpoken >= threshold) j++;
+      else if (sSkipExpected >= threshold) i++;
+      else {
         if ((spk[j] || '').length <= 1) j++;
         else i++;
       }
@@ -250,24 +250,50 @@
   }
 
   // For transcripts without spaces, approximate "matched chars" against expected joined string
-  function roughCharProgress(expectedTokens, transcript, leniency01) {
-    const expectedJoined = normalizeKanaLoose(stripPunct(expectedTokens.join(''))).replace(/\s+/g,'');
+  function roughCharProgress(expectedTokens, transcript, leniency01, rubyMap) {
     const spokenJoined = normalizeKanaLoose(stripPunct(transcript)).replace(/\s+/g,'');
 
-    if (!expectedJoined.length) return 0;
+    const surfaceJoined = expectedTokens.map(tok => normalizeExpectedForMatch(tok, rubyMap).surface).join('');
+    const readingJoined = expectedTokens.map(tok => {
+      const ex = normalizeExpectedForMatch(tok, rubyMap);
+      return ex.reading || ex.surface;
+    }).join('');
 
-    // similarity by LCS-ish heuristic using sliding window:
-    // count how many expected chars appear in order in spoken
-    let i = 0, j = 0, matched = 0;
-    while (i < expectedJoined.length && j < spokenJoined.length) {
-      if (expectedJoined[i] === spokenJoined[j]) { matched++; i++; j++; }
-      else {
-        // leniency allows skipping in spoken
-        j++;
+    const candidates = [surfaceJoined, readingJoined].filter(x => (x || '').length);
+    if (!candidates.length) return 0;
+
+    const progressFor = (expectedJoined) => {
+      const exp = normalizeKanaLoose(stripPunct(expectedJoined)).replace(/\s+/g,'');
+      if (!exp.length) return 0;
+      let i = 0, j = 0, matched = 0;
+      while (i < exp.length && j < spokenJoined.length) {
+        if (exp[i] === spokenJoined[j]) { matched++; i++; j++; }
+        else j++;
       }
-    }
-    const progress = matched / expectedJoined.length;
-    return clamp(progress, 0, 1);
+      return clamp(matched / exp.length, 0, 1);
+    };
+
+    return Math.max(...candidates.map(progressFor));
+  }
+
+  // Token helpers: token can be string or {t, r}
+  function tokenToText(tok) {
+    if (tok == null) return '';
+    if (typeof tok === 'string') return tok;
+    return tok.t || '';
+  }
+
+  function tokenToReading(tok) {
+    if (tok == null) return '';
+    if (typeof tok === 'string') return '';
+    return tok.r || '';
+  }
+
+  function normalizeExpectedForMatch(tok, rubyMap) {
+    const surface = tokenToText(tok);
+    let reading = tokenToReading(tok);
+    if (!reading && rubyMap && surface && rubyMap[surface]) reading = rubyMap[surface];
+    return { surface, reading };
   }
 
   function splitTokensMaybe(str) {
@@ -452,6 +478,17 @@
   }
 
   // ---------- Content rendering ----------
+  function getTokensFromItem(item) {
+    if (!item) return [];
+    if (Array.isArray(item.tokens)) return item.tokens.slice();
+    if (typeof item.jp === 'string') return splitTokensMaybe(item.jp);
+    return [];
+  }
+
+  function getRubyMap(item) {
+    return (item && item.ruby && typeof item.ruby === 'object') ? item.ruby : null;
+  }
+
   function currentSet() {
     if (state.mode === 'word') return JP_DATA.words;
     if (state.mode === 'sentence') return JP_DATA.sentences;
@@ -465,14 +502,28 @@
     return set[state.index % set.length];
   }
 
-  function renderPromptTokens(tokens) {
+  function renderPromptTokens(tokens, rubyMap) {
     const line = document.createElement('div');
     line.className = 'jp-line';
     tokens.forEach((tok, idx) => {
       const span = document.createElement('span');
       span.className = 'jp-token pending';
       span.dataset.idx = String(idx);
-      span.textContent = tok;
+
+      const surface = tokenToText(tok);
+      const reading = tokenToReading(tok) || (rubyMap && surface ? rubyMap[surface] : '');
+
+      if (reading && surface && surface !== reading) {
+        const ruby = document.createElement('ruby');
+        ruby.textContent = surface;
+        const rt = document.createElement('rt');
+        rt.textContent = reading;
+        ruby.appendChild(rt);
+        span.appendChild(ruby);
+      } else {
+        span.textContent = surface;
+      }
+
       line.appendChild(span);
     });
     return line;
@@ -500,10 +551,12 @@
       prompt.appendChild(titleEl);
 
       const turn = dialog.turns[state.dialogTurn];
-      const tokens = splitTokensMaybe(turn.jp);
-      prompt.appendChild(renderPromptTokens(tokens));
+      const tokens = getTokensFromItem(turn);
+      const rubyMap = getRubyMap(turn);
+      prompt.appendChild(renderPromptTokens(tokens, rubyMap));
 
-      if (turn.reading && turn.reading !== turn.jp) {
+      // If tokens include ruby readings, skip extra reading line
+      if (turn.reading && turn.reading !== turn.jp && !rubyMap) {
         const f = document.createElement('div');
         f.className = 'furigana';
         f.textContent = turn.reading;
@@ -526,18 +579,20 @@
     const item = getItem();
     if (!item) return;
 
-    const jp = item.jp;
-    const reading = item.reading || item.furigana || item.jp;
-    const tokens = splitTokensMaybe(jp);
+    const tokens = getTokensFromItem(item);
+    const rubyMap = getRubyMap(item);
 
-    prompt.appendChild(renderPromptTokens(tokens));
+    prompt.appendChild(renderPromptTokens(tokens, rubyMap));
 
-    if (item.furigana) {
+    const jp = tokens.map(tokenToText).join(' ');
+    const reading = item.reading || item.furigana || item.speak || jp.replace(/\s+/g,'');
+
+    if (item.furigana && !rubyMap) {
       const f = document.createElement('div');
       f.className = 'furigana';
       f.textContent = item.furigana;
       prompt.appendChild(f);
-    } else if (reading && reading !== jp) {
+    } else if (reading && reading !== jp && !rubyMap) {
       const f = document.createElement('div');
       f.className = 'furigana';
       f.textContent = reading;
@@ -571,14 +626,24 @@
   }
 
   // ---------- Matching + highlighting ----------
+  function currentRubyMap() {
+    if (state.mode === 'dialog') {
+      const dialog = getItem();
+      const turn = dialog.turns[state.dialogTurn];
+      return getRubyMap(turn);
+    }
+    const item = getItem();
+    return getRubyMap(item);
+  }
+
   function currentExpectedTokens() {
     if (state.mode === 'dialog') {
       const dialog = getItem();
       const turn = dialog.turns[state.dialogTurn];
-      return splitTokensMaybe(turn.jp);
+      return getTokensFromItem(turn);
     }
     const item = getItem();
-    return splitTokensMaybe(item.jp);
+    return getTokensFromItem(item);
   }
 
   function currentSpeakText() {
@@ -608,6 +673,7 @@
 
   function evaluateTranscript(transcript, isFinal) {
     const expected = currentExpectedTokens();
+    const rubyMap = currentRubyMap();
     const leniency01 = clamp(state.leniency / 100, 0, 1);
     const successThreshold = clamp(state.success / 100, 0.5, 0.95);
 
@@ -621,20 +687,23 @@
 
     if (spokenTokens.length > 1 || expected.length > 1) {
       // token-based alignment
-      const aligned = alignTokens(expected, spokenTokens, leniency01);
+      const aligned = alignTokens(expected, spokenTokens, leniency01, rubyMap);
       matches = aligned.matches;
       score = aligned.score;
     } else {
       // single token: use similarity
-      score = tokenScore(expected[0] || '', spokenTokens[0] || cleaned, leniency01);
-      matches[0] = score >= (0.82 - leniency01 * 0.20);
+      const ex = normalizeExpectedForMatch(expected[0] || '', rubyMap);
+      const sA = ex.surface ? tokenScore(ex.surface, spokenTokens[0] || cleaned, leniency01) : 0;
+      const sB = ex.reading ? tokenScore(ex.reading, spokenTokens[0] || cleaned, leniency01) : 0;
+      score = Math.max(sA, sB);
+      matches[0] = score >= (0.86 - leniency01 * 0.20);
     }
 
     // Fallback for no spaces (common in ja-JP)
     if (!/\s/.test(cleaned) && expected.length > 1) {
-      const prog = roughCharProgress(expected, cleaned, leniency01);
+      const prog = roughCharProgress(expected, cleaned, leniency01, rubyMap);
       // mark tokens whose cumulative length <= progress
-      const expJoined = expected.join('');
+      const expJoined = expected.map(tok => tokenToText(tok)).join('');
       const targetChars = Math.round(expJoined.length * prog);
       let acc = 0;
       for (let i = 0; i < expected.length; i++) {

@@ -181,3 +181,10 @@
 .form-select.border-white-10, .form-control.border-white-10{
   border-color: var(--border) !important;
 }
+
+
+/* Start screen contrast tweaks */
+
+#startScreen h1, #startScreen h2, #startScreen .display-6, #startScreen .h5{
+  color: rgba(255,255,255,.96) !important;
+}
