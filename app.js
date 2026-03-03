@@ -364,7 +364,7 @@
     voices: [],
     voiceUri: localStorage.getItem(LS.voiceUri) || '',
     leniency: Number(localStorage.getItem(LS.leniency) || '45'), // 0..100
-    success: Number(localStorage.getItem(LS.success) || '75'),   // 50..95
+    success: Number(localStorage.getItem(LS.success) || '90'),   // 50..95
     recogLang: localStorage.getItem(LS.recogLang) || 'ja-JP',
     progress: safeJsonParse(localStorage.getItem(LS.progress) || '{}', {})
   };
@@ -523,7 +523,7 @@
         // Wait after a final result so Chrome can stop rewriting the transcript.
         clearFinishTimer();
         finishTimer = window.setTimeout(() => {
-          const successThreshold = clamp(state.success / 100, 0.5, 0.95);
+          const successThreshold = clamp(state.success / 100, 0.7, 0.98);
           showRating(resEval.score, successThreshold);
 
           if (state.mode === 'dialog') {
@@ -587,7 +587,7 @@
     stopListening();
     if (!transcript) return;
 
-    const successThreshold = clamp(state.success / 100, 0.5, 0.95);
+    const successThreshold = clamp(state.success / 100, 0.7, 0.98);
     const res = evaluateTranscript(transcript, true);
     showRating(res.score, successThreshold);
 
@@ -875,7 +875,7 @@ function startListening() {
     }
 
     const leniency01 = clamp(state.leniency / 100, 0, 1);
-    const successThreshold = clamp(state.success / 100, 0.5, 0.95);
+    const successThreshold = clamp(state.success / 100, 0.7, 0.98);
 
     const cleaned = normalizeSpaces(stripPunct(transcript));
     if (!cleaned) return { score: 0, matches: new Array(expected.length).fill(false), done: false };
@@ -1155,6 +1155,29 @@ function boot() {
     $('#leniencyValue').textContent = `${state.leniency}%`;
     $('#successValue').textContent = `${state.success}%`;
     $('#recogLang').value = state.recogLang;
+
+    // Settings listeners
+    $('#leniencyRange').addEventListener('input', (e) => {
+      state.leniency = Number(e.target.value);
+      localStorage.setItem(LS.leniency, String(state.leniency));
+      $('#leniencyValue').textContent = `${state.leniency}%`;
+    });
+
+    $('#successRange').addEventListener('input', (e) => {
+      state.success = Number(e.target.value);
+      localStorage.setItem(LS.success, String(state.success));
+      $('#successValue').textContent = `${state.success}%`;
+    });
+
+    $('#recogLang').addEventListener('change', (e) => {
+      state.recogLang = String(e.target.value || 'ja-JP');
+      localStorage.setItem(LS.recogLang, state.recogLang);
+      // recreate recognizer with new language next time
+      stopListening();
+      recognizer = null;
+      attachRecognitionHandlers();
+    });
+
 
     // show app anyway; unsupported handled above
   }
