@@ -65,7 +65,7 @@ window.JP_DATA = {
       ],
       "en": "I / me",
       "de": "ich / mich",
-      "speak": "わたし"
+      "speak": "私"
     },
     {
       "id": "w7",
@@ -871,7 +871,7 @@ window.JP_DATA = {
       ],
       "en": "I am Peter.",
       "de": "Ich bin Peter.",
-      "speak": "わたしはぺえたあです"
+      "speak": "私はぺえたあです。"
     },
     {
       "id": "s2",
@@ -888,7 +888,7 @@ window.JP_DATA = {
       },
       "en": "What is this。",
       "de": "Was ist das。",
-      "speak": "これはなんですか"
+      "speak": "これは何ですか。"
     },
     {
       "id": "s3",
@@ -905,9 +905,9 @@ window.JP_DATA = {
         "か",
         "。"
       ],
-      "en": "Excuse me, where is the station。",
-      "de": "Entschuldigung, wo ist der Bahnhof。",
-      "speak": "すみませんえきはどこですか"
+      "en": "Excuse me, where is the station.",
+      "de": "Entschuldigung, wo ist der Bahnhof.",
+      "speak": "すみません、駅はどこですか。"
     },
     {
       "id": "s4",
@@ -923,7 +923,7 @@ window.JP_DATA = {
       ],
       "en": "I am free tomorrow.",
       "de": "Ich habe morgen Zeit.",
-      "speak": "あしたはひまです"
+      "speak": "明日はひまです。"
     },
     {
       "id": "s5",
@@ -935,7 +935,7 @@ window.JP_DATA = {
       ],
       "en": "Coffee, please.",
       "de": "Einen Kaffee bitte.",
-      "speak": "コーヒーをください"
+      "speak": "コーヒーをください。"
     },
     {
       "id": "s6",
@@ -951,7 +951,7 @@ window.JP_DATA = {
       ],
       "en": "I study Japanese.",
       "de": "Ich lerne Japanisch.",
-      "speak": "にほんごをべんきょうします"
+      "speak": "日本語をべんきょうします。"
     }
   ],
   "dialogs": [
@@ -972,7 +972,7 @@ window.JP_DATA = {
           ],
           "en": "Excuse me, coffee please.",
           "de": "Entschuldigung, einen Kaffee bitte.",
-          "speak": "すみませんコーヒーをください"
+          "speak": "すみません、コーヒーをください。"
         },
         {
           "who": "bot",
@@ -984,7 +984,7 @@ window.JP_DATA = {
           ],
           "en": "Sure.",
           "de": "Gern.",
-          "speak": "はい、わかりました"
+          "speak": "はい。わかりました。"
         },
         {
           "who": "user",
@@ -999,7 +999,7 @@ window.JP_DATA = {
           ],
           "en": "No sugar.",
           "de": "Kein Zucker.",
-          "speak": "さとうはいりません"
+          "speak": "砂糖はいりません。"
         },
         {
           "who": "bot",
@@ -1009,7 +1009,7 @@ window.JP_DATA = {
           ],
           "en": "Understood.",
           "de": "Verstanden.",
-          "speak": "かしこまりました"
+          "speak": "かしこまりました。"
         }
       ]
     },
@@ -1026,7 +1026,7 @@ window.JP_DATA = {
           ],
           "en": "Nice to meet you.",
           "de": "Freut mich.",
-          "speak": "はじめまして"
+          "speak": "はじめまして。"
         },
         {
           "who": "bot",
@@ -1036,7 +1036,7 @@ window.JP_DATA = {
           ],
           "en": "Nice to meet you too.",
           "de": "Freut mich auch.",
-          "speak": "はじめまして"
+          "speak": "はじめまして。"
         },
         {
           "who": "user",
@@ -1052,7 +1052,7 @@ window.JP_DATA = {
           ],
           "en": "I am Maria.",
           "de": "Ich bin Maria.",
-          "speak": "わたしはマリアです"
+          "speak": "私はマリアです。"
         },
         {
           "who": "bot",
@@ -1063,7 +1063,7 @@ window.JP_DATA = {
           ],
           "en": "Please treat me well.",
           "de": "Freut mich / auf gute Zusammenarbeit.",
-          "speak": "よろしくおねがいします"
+          "speak": "よろしくおねがいします。"
         }
       ]
     },
@@ -1089,7 +1089,7 @@ window.JP_DATA = {
           ],
           "en": "Excuse me, where is the station。",
           "de": "Entschuldigung, wo ist der Bahnhof。",
-          "speak": "すみませんえきはどこですか"
+          "speak": "すみません、駅はどこですか。"
         },
         {
           "who": "bot",
@@ -1100,7 +1100,7 @@ window.JP_DATA = {
           ],
           "en": "Go straight.",
           "de": "Geradeaus.",
-          "speak": "まっすぐです"
+          "speak": "まっすぐです。"
         },
         {
           "who": "user",
@@ -1111,7 +1111,7 @@ window.JP_DATA = {
           ],
           "en": "Thank you very much.",
           "de": "Vielen Dank.",
-          "speak": "ありがとうございます"
+          "speak": "ありがとうございます。"
         },
         {
           "who": "bot",
@@ -1121,7 +1121,7 @@ window.JP_DATA = {
           ],
           "en": "You're welcome.",
           "de": "Gern geschehen.",
-          "speak": "どういたしまして"
+          "speak": "どういたしまして。"
         }
       ]
     },
@@ -1143,7 +1143,7 @@ window.JP_DATA = {
           ],
           "en": "I'd like to check in.",
           "de": "Ich möchte einchecken.",
-          "speak": "チェックインお願いします"
+          "speak": "チェックインお願いします。"
         },
         {
           "who": "bot",
@@ -1153,22 +1153,23 @@ window.JP_DATA = {
               "r": "おなまえ"
             },
             "は",
+			"…",
             "。"
           ],
-          "en": "Your name。",
-          "de": "Ihr Name。",
-          "speak": "おなまえは"
+          "en": "Your name?",
+          "de": "Ihr Name?",
+          "speak": "お名前は…。"
         },
         {
           "who": "user",
           "tokens": [
-            "ペーター",
+            "ピーター",
             "です",
             "。"
           ],
           "en": "It's Peter.",
           "de": "Peter.",
-          "speak": "ぺえたあです"
+          "speak": "ピえたあです。"
         },
         {
           "who": "bot",
@@ -1180,7 +1181,7 @@ window.JP_DATA = {
           ],
           "en": "This way, please.",
           "de": "Bitte hier entlang.",
-          "speak": "こちらへどうぞ"
+          "speak": "こちらへどうぞ。"
         }
       ]
     },
@@ -1201,7 +1202,7 @@ window.JP_DATA = {
           ],
           "en": "Excuse me, are you Mr./Ms. Ide?",
           "de": "Entschuldigung, sind Sie Herr/Frau Ide?",
-          "speak": "すみませんいでさんですか"
+          "speak": "すみません、いでさんですか。"
         },
         {
           "who": "bot",
@@ -1214,7 +1215,7 @@ window.JP_DATA = {
           ],
           "en": "Yes, I am Ide.",
           "de": "Ja, ich bin Ide.",
-          "speak": "はい、いでです"
+          "speak": "はい、いでです。"
         }
       ]
     },
@@ -1237,7 +1238,7 @@ window.JP_DATA = {
           ],
           "en": "Excuse me, are you Mr./Ms. Koko?",
           "de": "Entschuldigung, sind Sie Herr/Frau Koko?",
-          "speak": "すみませんここかさんですか"
+          "speak": "すみません、ここかさんですか。"
         },
         {
           "who": "bot",
@@ -1250,7 +1251,7 @@ window.JP_DATA = {
           ],
           "en": "No, I am Miyoshi.",
           "de": "Nein, ich bin Miyoshi.",
-          "speak": "いいえ、みよしです"
+          "speak": "いいえ、みよしです。"
         },
         {
           "who": "user",
@@ -1260,7 +1261,7 @@ window.JP_DATA = {
           ],
           "en": "Excuse me.",
           "de": "Entschuldigung.",
-          "speak": "すみません"
+          "speak": "すみません。"
         }
       ]
     },
@@ -1284,11 +1285,12 @@ window.JP_DATA = {
               "r": "おなまえ"
             },
             "は",
-            "…"
+            "…",
+			"。"
           ],
           "en": "Good evening. I'm Sugai. Excuse me, your name is…?",
           "de": "Guten Abend. Ich bin Sugai. Entschuldigung, wie ist Ihr Name…?",
-          "speak": "こんばんはすがいですすみませんおなまえは"
+          "speak": "こんばんは。すがいです。すみません。おなまえは…。"
         },
         {
           "who": "bot",
@@ -1304,7 +1306,7 @@ window.JP_DATA = {
           ],
           "en": "I'm Nagawa. Nice to meet you.",
           "de": "Ich bin Nagawa. Freut mich, Sie kennenzulernen.",
-          "speak": "ながわですはじめまして"
+          "speak": "名川です。はじめまして。"
         },
         {
           "who": "user",
@@ -1324,11 +1326,12 @@ window.JP_DATA = {
               "r": "おしごと"
             },
             "は",
-            "…"
+            "…",
+			"。"
           ],
           "en": "Nice to meet you. Excuse me, Mr./Ms. Nagawa, your job is…?",
           "de": "Freut mich. Entschuldigung, Herr/Frau Nagawa, was ist Ihr Beruf…?",
-          "speak": "はじめましてすみませんながわさんはおしごとは"
+          "speak": "はじめまして。すみません。名川さんはお仕事は…。"
         },
         {
           "who": "bot",
@@ -1344,11 +1347,12 @@ window.JP_DATA = {
               "r": "おしごと"
             },
             "は",
-            "…"
+            "…",
+			"。"
           ],
           "en": "I'm a programmer. Mr./Ms. Sugai, your job is…?",
           "de": "Ich bin Programmierer/in. Herr/Frau Sugai, was ist Ihr Beruf…?",
-          "speak": "プログラマーですすがいさんはおしごとは"
+          "speak": "プログラマーです。すがいさんはお仕事は…。"
         },
         {
           "who": "user",
@@ -1359,7 +1363,7 @@ window.JP_DATA = {
           ],
           "en": "I'm an engineer.",
           "de": "Ich bin Ingenieur/in.",
-          "speak": "エンジニアです"
+          "speak": "エンジニアです。"
         }
       ]
     },
@@ -1384,7 +1388,7 @@ window.JP_DATA = {
           ],
           "en": "William, are you German?",
           "de": "William, sind Sie Deutscher?",
-          "speak": "ウィリアムさんはドイツじんですか"
+          "speak": "ウィリアムさんはドイツじんですか。"
         },
         {
           "who": "bot",
@@ -1400,7 +1404,7 @@ window.JP_DATA = {
           ],
           "en": "No, I'm Swiss.",
           "de": "Nein, ich bin Schweizer/in.",
-          "speak": "いいえスイスじんです"
+          "speak": "いいえ、スイスじんです。"
         }
       ]
     },
@@ -1431,7 +1435,7 @@ window.JP_DATA = {
           ],
           "en": "Is Murakami Haruki Japanese?",
           "de": "Ist Murakami Haruki Japaner?",
-          "speak": "むらかみ はるきはにほんじんですか"
+          "speak": "村上 春樹は日本人ですか。"
         },
         {
           "who": "bot",
@@ -1447,7 +1451,7 @@ window.JP_DATA = {
           ],
           "en": "Yes, he is Japanese.",
           "de": "Ja, er ist Japaner.",
-          "speak": "はいにほんじんです"
+          "speak": "はい、日本人です。"
         }
       ]
     },
@@ -1477,7 +1481,7 @@ window.JP_DATA = {
           ],
           "en": "Thomas, are you from Germany?",
           "de": "Thomas, kommen Sie aus Deutschland?",
-          "speak": "トーマスさんトーマスさんはドイツのかたですか"
+          "speak": "トーマスさん、トーマスさんはドイツの方ですか。"
         },
         {
           "who": "bot",
@@ -1501,7 +1505,7 @@ window.JP_DATA = {
           ],
           "en": "No, I'm Swiss. But I live in Potsdam now.",
           "de": "Nein, ich bin Schweizer/in. Aber ich wohne jetzt in Potsdam.",
-          "speak": "いいえスイスですでもいまポツダムにすんでいます"
+          "speak": "いいえ、スイスです。でも、いま、ポツダムに住んでいます。"
         }
       ]
     },
@@ -1531,7 +1535,7 @@ window.JP_DATA = {
           ],
           "en": "Keller, are you from Berlin?",
           "de": "Keller, kommen Sie aus Berlin?",
-          "speak": "ケラーさんケラーさんはベルリンのかたですか"
+          "speak": "ケラーさん、ケラーさんはベルリンの方ですか。"
         },
         {
           "who": "bot",
@@ -1555,7 +1559,7 @@ window.JP_DATA = {
           ],
           "en": "No, I'm from Hamburg. But I live in Berlin now.",
           "de": "Nein, ich komme aus Hamburg. Aber ich wohne jetzt in Berlin.",
-          "speak": "いいえハンブルクですでもいまベルリンにすんでいます"
+          "speak": "いいえ、ハンブルクです。でも、いま、ベルリンに住んでいます。"
         }
       ]
     },
@@ -1588,7 +1592,7 @@ window.JP_DATA = {
           ],
           "en": "Nice to meet you. I'm Seiko Sano. Thomas, are you from Germany?",
           "de": "Freut mich. Ich bin Seiko Sano. Thomas, kommen Sie aus Deutschland?",
-          "speak": "はじめましてさのせいこですトーマスさんはドイツのかたですか"
+          "speak": "はじめまして。さのせいこです。トーマスさんはドイツの方ですか。"
         },
         {
           "who": "bot",
@@ -1612,7 +1616,7 @@ window.JP_DATA = {
           ],
           "en": "No, I'm Swiss. But I live in Potsdam now.",
           "de": "Nein, ich bin Schweizer/in. Aber ich wohne jetzt in Potsdam.",
-          "speak": "いいえスイスですでもいまポツダムにすんでいます"
+          "speak": "いいえ、スイスです。でも、いま、ポツダムに住んでいます。"
         },
         {
           "who": "user",
@@ -1636,18 +1640,22 @@ window.JP_DATA = {
           ],
           "en": "Ms. Sano, are you from Tokyo?",
           "de": "Frau Sano, kommen Sie aus Tokio?",
-          "speak": "さのさんはとうきょうのかたですか"
+          "speak": "さのさんは、東京の方ですか。"
         },
         {
           "who": "user",
           "tokens": [
             "いいえ",
             "、",
-            "おおさか",
+			{
+              "t": "大阪",
+              "r": "おおさか"
+            },
             "です",
             "。",
             "あの",
             "…",
+			"、",
             "トーマス",
             "さん",
             "は",
@@ -1669,7 +1677,7 @@ window.JP_DATA = {
           ],
           "en": "No, I'm from Osaka. Um… Thomas, are you from Mr./Ms. Behrmann's company?",
           "de": "Nein, ich komme aus Osaka. Ähm… Thomas, sind Sie von Herrn/Frau Behrmanns Firma?",
-          "speak": "いいえおおさかですあのトーマスさんはベールマンさんのかいしゃのかたですか"
+          "speak": "いいえ、大阪です。あの…、トーマスさんはベールマンさんの会社の方ですか。"
         },
         {
           "who": "bot",
@@ -1691,11 +1699,12 @@ window.JP_DATA = {
               "r": "おしごと"
             },
             "は",
-            "…"
+            "…",
+			"。"
           ],
           "en": "No, I'm a student. Ms. Sano, your job is…?",
           "de": "Nein, ich bin Student/in. Frau Sano, was ist Ihr Beruf…?",
-          "speak": "いいえがくせいですさのさんはおしごとは"
+          "speak": "いいえ、学生です。さのさんは、お仕事は…。"
         },
         {
           "who": "user",
@@ -1709,7 +1718,7 @@ window.JP_DATA = {
           ],
           "en": "I'm an office worker.",
           "de": "Ich bin Angestellte/r.",
-          "speak": "かいしゃいんです"
+          "speak": "会社員です。"
         },
         {
           "who": "bot",
@@ -1729,7 +1738,7 @@ window.JP_DATA = {
           ],
           "en": "Is it a Japanese company?",
           "de": "Ist es eine japanische Firma?",
-          "speak": "にほんのかいしゃですか"
+          "speak": "日本の会社ですか。"
         },
         {
           "who": "user",
@@ -1742,7 +1751,7 @@ window.JP_DATA = {
           ],
           "en": "Yes. It's Sony.",
           "de": "Ja. Es ist Sony.",
-          "speak": "はいソニーです"
+          "speak": "はい。ソニーです。"
         }
       ]
     },
@@ -1761,11 +1770,12 @@ window.JP_DATA = {
               "r": "おなまえ"
             },
             "は",
-            "…"
+            "…",
+			"。"
           ],
           "en": "Um… your name is…?",
           "de": "Ähm… wie ist Ihr Name…?",
-          "speak": "あのおなまえは"
+          "speak": "あの…お名前は…。"
         },
         {
           "who": "bot",
@@ -1776,7 +1786,7 @@ window.JP_DATA = {
           ],
           "en": "It's Uda.",
           "de": "Uda.",
-          "speak": "うだです"
+          "speak": "うだです。"
         },
         {
           "who": "user",
@@ -1788,7 +1798,7 @@ window.JP_DATA = {
           ],
           "en": "Oda, right?",
           "de": "Oda, richtig?",
-          "speak": "おださんですね"
+          "speak": "おださんですね。"
         },
         {
           "who": "bot",
@@ -1810,7 +1820,7 @@ window.JP_DATA = {
           ],
           "en": "No, not 'Oda'. It's 'Uda'.",
           "de": "Nein, nicht „Oda“. Es ist „Uda“.",
-          "speak": "いいえおだじゃないですうだです"
+          "speak": "いいえ、「おだ」じゃないです。「うだ」です。"
         },
         {
           "who": "user",
@@ -1823,7 +1833,7 @@ window.JP_DATA = {
           ],
           "en": "Ah, I'm very sorry.",
           "de": "Ah, tut mir leid.",
-          "speak": "あどうもすみません"
+          "speak": "あ、どうもすみません。"
         }
       ]
     },
@@ -1846,7 +1856,7 @@ window.JP_DATA = {
           ],
           "en": "Is Mr. Kasai a nurse?",
           "de": "Ist Herr Kasai Krankenpfleger?",
-          "speak": "かさいさんはかんごしさんですか"
+          "speak": "かさいさんはかんごしさんですか。"
         },
         {
           "who": "bot",
@@ -1866,7 +1876,7 @@ window.JP_DATA = {
           ],
           "en": "No, he isn't a nurse. He is a doctor.",
           "de": "Nein, er ist kein Krankenpfleger. Er ist Arzt.",
-          "speak": "いいえかんごしさんじゃないですおいしゃさんです"
+          "speak": "いいえ、かんごしさんじゃないです。おいしゃさんです。"
         },
         {
           "who": "user",
@@ -1881,7 +1891,7 @@ window.JP_DATA = {
           ],
           "en": "Oh, a doctor?",
           "de": "Ah, ein Arzt?",
-          "speak": "あおいしゃさんですか"
+          "speak": "あ、おいしゃさんですか。"
         }
       ]
     },
@@ -1911,7 +1921,7 @@ window.JP_DATA = {
           ],
           "en": "Hello. I'm Sano. Um… your name is…?",
           "de": "Hallo. Ich bin Sano. Ähm… wie ist Ihr Name…?",
-          "speak": "こんにちはさのですあのおなまえは"
+          "speak": "こんにちは。さのです。あのお名前は…。"
         },
         {
           "who": "bot",
@@ -1937,7 +1947,7 @@ window.JP_DATA = {
           ],
           "en": "I'm Kayser. Ms. Sano, right? Are you a student?",
           "de": "Ich bin Kayser. Frau Sano, richtig? Sind Sie Studentin?",
-          "speak": "カイザーですさのさんですねさのさんはがくせいですか"
+          "speak": "カイザーです。さのさん、ですね。さのさんは学生ですか。"
         },
         {
           "who": "user",
@@ -1972,7 +1982,7 @@ window.JP_DATA = {
           ],
           "en": "No, I'm not a student. I'm an office worker. Mr. Kayser, your job is…?",
           "de": "Nein, ich bin keine Studentin. Ich bin Angestellte. Herr Kayser, was ist Ihr Beruf…?",
-          "speak": "いいえがくせいじゃないですかいしゃいんですカイザーさんはおしごとは"
+          "speak": "いいえ、学生じゃないです。会社員です。カイザーさんは、お仕事は…。"
         },
         {
           "who": "bot",
@@ -1986,7 +1996,7 @@ window.JP_DATA = {
           ],
           "en": "I'm a baker.",
           "de": "Ich bin Bäcker.",
-          "speak": "パンやです"
+          "speak": "パン屋です。"
         },
         {
           "who": "user",
@@ -2002,7 +2012,7 @@ window.JP_DATA = {
           ],
           "en": "A baker?",
           "de": "Ein Bäcker?",
-          "speak": "パンやさんですか"
+          "speak": "パン屋さんですか。"
         }
       ]
     },
@@ -2034,7 +2044,7 @@ window.JP_DATA = {
           ],
           "en": "Hello. Um… are you Japanese?",
           "de": "Hallo. Ähm… sind Sie Japaner/in?",
-          "speak": "こんにちはあのにほんのかたですか"
+          "speak": "こんにちは。あの…、日本の方ですか。"
         },
         {
           "who": "bot",
@@ -2049,7 +2059,7 @@ window.JP_DATA = {
           ],
           "en": "Yes, I am. Nice to meet you.",
           "de": "Ja, bin ich. Freut mich.",
-          "speak": "はいそうですはじめまして"
+          "speak": "はい、そうです。はじめまして。"
         },
         {
           "who": "user",
@@ -2068,7 +2078,7 @@ window.JP_DATA = {
           ],
           "en": "Nice to meet you. I'm Keller from Siemens. Pleased to meet you.",
           "de": "Freut mich. Ich bin Keller von Siemens. Angenehm.",
-          "speak": "はじめましてジーメンスのケラーですどうぞよろしくおねがいします"
+          "speak": "はじめまして。ジーメンスのケラーです。どうぞよろしくおねがいします。"
         },
         {
           "who": "bot",
@@ -2083,7 +2093,7 @@ window.JP_DATA = {
           ],
           "en": "Likewise. I'm Uda from Sony.",
           "de": "Ganz meinerseits. Ich bin Uda von Sony.",
-          "speak": "こちらこそソニーのうだです"
+          "speak": "こちらこそ。ソニーのうだです。"
         }
       ]
     },
@@ -2112,7 +2122,7 @@ window.JP_DATA = {
           ],
           "en": "Do you like American food?",
           "de": "Mögen Sie amerikanisches Essen?",
-          "speak": "アメリカのりょうりがすきですか"
+          "speak": "アメリカの料理が好きですか。"
         },
         {
           "who": "bot",
@@ -2128,7 +2138,7 @@ window.JP_DATA = {
           ],
           "en": "Yes, I do.",
           "de": "Ja, das mag ich.",
-          "speak": "はいすきです"
+          "speak": "はい、好きです。"
         },
         {
           "who": "user",
@@ -2148,7 +2158,7 @@ window.JP_DATA = {
           ],
           "en": "What do you like?",
           "de": "Was mögen Sie?",
-          "speak": "なにがすきですか"
+          "speak": "何が好きですか。"
         },
         {
           "who": "bot",
@@ -2164,7 +2174,7 @@ window.JP_DATA = {
           ],
           "en": "I like hamburgers.",
           "de": "Ich mag Hamburger.",
-          "speak": "ハンバーガーがすきです"
+          "speak": "ハンバーガーが好きです。"
         },
         {
           "who": "user",
@@ -2176,7 +2186,7 @@ window.JP_DATA = {
           ],
           "en": "I see.",
           "de": "Ach so.",
-          "speak": "そうですか"
+          "speak": "そうですか。"
         }
       ]
     },
@@ -2205,7 +2215,7 @@ window.JP_DATA = {
           ],
           "en": "Thomas, your hobby is…?",
           "de": "Thomas, Ihr Hobby ist…?",
-          "speak": "トーマスさんトーマスさんはしゅみは"
+          "speak": "トーマスさん、トーマスさんは、趣味は…。"
         },
         {
           "who": "bot",
@@ -2231,7 +2241,7 @@ window.JP_DATA = {
           ],
           "en": "Reiten… sorry, what is 'Reiten' in Japanese?",
           "de": "Reiten… Entschuldigung, was heißt „Reiten“ auf Japanisch?",
-          "speak": "ライテンすみませんライテンはにほんごでなんですか"
+          "speak": "ライテン…すみません、ライテンは日本語で何ですか。"
         },
         {
           "who": "user",
@@ -2254,7 +2264,7 @@ window.JP_DATA = {
           ],
           "en": "Um… what is it in English?",
           "de": "Ähm… wie heißt es auf Englisch?",
-          "speak": "あのえいごでなんですか"
+          "speak": "あの…、英語で何ですか。"
         },
         {
           "who": "bot",
@@ -2265,7 +2275,7 @@ window.JP_DATA = {
           ],
           "en": "It's horse riding.",
           "de": "Es heißt horse riding.",
-          "speak": "horse ridingです"
+          "speak": "horse ridingです。"
         },
         {
           "who": "user",
@@ -2280,7 +2290,7 @@ window.JP_DATA = {
           ],
           "en": "Ah, it's 'jouba'.",
           "de": "Ah, es heißt „jouba“.",
-          "speak": "あじょうばです"
+          "speak": "あ、「じょうば」です。"
         },
         {
           "who": "bot",
@@ -2308,7 +2318,7 @@ window.JP_DATA = {
           ],
           "en": "'Jouba', I see. Ms. Sano, your hobby is…?",
           "de": "„Jouba“, ach so. Frau Sano, Ihr Hobby ist…?",
-          "speak": "じょうばですかあのさのさんはしゅみは"
+          "speak": "「じょうば」、ですか。あの…、さのさんは趣味は…。"
         },
         {
           "who": "user",
@@ -2330,7 +2340,10 @@ window.JP_DATA = {
             "」",
             "は",
             "ドイツ",
-            "語",
+			{
+			  "t": "語",
+			  "r": "ご"
+			},
             "で",
             {
               "t": "何",
@@ -2342,7 +2355,7 @@ window.JP_DATA = {
           ],
           "en": "It's reading. By the way, what is 'dokusho' in German?",
           "de": "Es ist Lesen. Wie heißt „dokusho“ auf Deutsch?",
-          "speak": "どくしょですあのどくしょはドイツごでなんですか"
+          "speak": "読書です。あの…、「読書」はドイツ語で何ですか。"
         }
       ]
     },
@@ -2372,7 +2385,7 @@ window.JP_DATA = {
           ],
           "en": "Hello. I'm Barbara Keller. Um, your name is…?",
           "de": "Hallo. Ich bin Barbara Keller. Ähm, wie ist Ihr Name…?",
-          "speak": "こんにちはバルバラ ケラーですあのおなまえは"
+          "speak": "こんにちは。バルバラ ケラーです。あのお名前は…。"
         },
         {
           "who": "bot",
@@ -2392,7 +2405,7 @@ window.JP_DATA = {
           ],
           "en": "I'm Sano. Seiko Sano. Nice to meet you. Pleased to meet you.",
           "de": "Ich bin Sano. Seiko Sano. Freut mich. Angenehm.",
-          "speak": "さのですさのせいこですはじめましてどうぞよろしく"
+          "speak": "さのです。さのせいこです。はじめまして。どうぞよろしく。"
         },
         {
           "who": "user",
@@ -2401,6 +2414,7 @@ window.JP_DATA = {
             "。",
             "あの",
             "…",
+			"、",
             "さの",
             "さん",
             "は",
@@ -2416,7 +2430,7 @@ window.JP_DATA = {
           ],
           "en": "Likewise. Um… Ms. Sano, are you a student?",
           "de": "Ganz meinerseits. Ähm… Frau Sano, sind Sie Studentin?",
-          "speak": "こちらこそあのさのさんはがくせいさんですか"
+          "speak": "こちらこそ。あの…、さのさんは、学生さんですか。"
         },
         {
           "who": "bot",
@@ -2451,7 +2465,7 @@ window.JP_DATA = {
           ],
           "en": "No, I'm not a student. I'm an office worker. Ms. Keller, your job is…?",
           "de": "Nein, ich bin keine Studentin. Ich bin Angestellte. Frau Keller, was ist Ihr Beruf…?",
-          "speak": "いいえがくせいじゃないですかいしゃいんですケラーさんはおしごとは"
+          "speak": "いいえ、学生じゃないです。会社員です。ケラーさんは、お仕事は…。"
         },
         {
           "who": "user",
@@ -2464,7 +2478,7 @@ window.JP_DATA = {
           ],
           "en": "I'm a programmer at Siemens.",
           "de": "Ich bin Programmierer/in bei Siemens.",
-          "speak": "ジーメンスのプログラマーです"
+          "speak": "ジーメンスのプログラマーです。"
         },
         {
           "who": "bot",
@@ -2488,7 +2502,7 @@ window.JP_DATA = {
           ],
           "en": "A programmer? Do you like Japanese?",
           "de": "Programmierer/in? Mögen Sie Japanisch?",
-          "speak": "プログラマーですかにほんごがすきですか"
+          "speak": "プログラマーですか。日本語が好きですか。"
         },
         {
           "who": "user",
@@ -2504,7 +2518,7 @@ window.JP_DATA = {
           ],
           "en": "Yes, I do.",
           "de": "Ja, ich mag es.",
-          "speak": "ええすきです"
+          "speak": "ええ、好きです。"
         },
         {
           "who": "bot",
@@ -2525,7 +2539,7 @@ window.JP_DATA = {
           ],
           "en": "What is your hobby?",
           "de": "Was ist Ihr Hobby?",
-          "speak": "しゅみはなんですか"
+          "speak": "趣味は、何ですか。"
         },
         {
           "who": "user",
@@ -2545,7 +2559,10 @@ window.JP_DATA = {
             "は",
             "、",
             "ドイツ",
-            "語",
+            {
+			  "t": "語",
+			  "r": "ご"
+			},
             "で",
             {
               "t": "何",
@@ -2557,7 +2574,7 @@ window.JP_DATA = {
           ],
           "en": "shumi… what is 'shumi' in German?",
           "de": "shumi… was heißt „shumi“ auf Deutsch?",
-          "speak": "しゅみしゅみはドイツごでなんですか"
+          "speak": "趣味…、「趣味」は、ドイツ語で何ですか。"
         },
         {
           "who": "bot",
@@ -2576,7 +2593,7 @@ window.JP_DATA = {
           ],
           "en": "Ah, in English it's 'hobby.'",
           "de": "Ah, auf Englisch heißt es „hobby“.",
-          "speak": "あえいごではホビーです"
+          "speak": "あ、英語ではホビーです。"
         }
       ]
     },
@@ -2593,7 +2610,7 @@ window.JP_DATA = {
           ],
           "en": "Please.",
           "de": "Bitte.",
-          "speak": "どうぞ"
+          "speak": "どうぞ。"
         },
         {
           "who": "bot",
@@ -2616,7 +2633,7 @@ window.JP_DATA = {
           ],
           "en": "Oh, thank you. Um… what is this?",
           "de": "Oh, danke. Ähm… was ist das?",
-          "speak": "あどうもあのこれはなんですか"
+          "speak": "あ、どうも。あの…これは何ですか。"
         },
         {
           "who": "user",
@@ -2648,7 +2665,7 @@ window.JP_DATA = {
           ],
           "en": "That is 'yatsuhashi.' It's a Japanese sweet. It's a souvenir from a friend.",
           "de": "Das ist „Yatsuhashi“. Es ist eine japanische Süßigkeit. Ein Mitbringsel von einem Freund.",
-          "speak": "それはやつはしですにほんのおかしですよともだちのおみやげです"
+          "speak": "それは「やつはし」です。日本のおかしですよ。ともだちのお土産です。"
         },
         {
           "who": "bot",
@@ -2660,7 +2677,7 @@ window.JP_DATA = {
           ],
           "en": "It looks delicious.",
           "de": "Sieht lecker aus.",
-          "speak": "おいしそうですね"
+          "speak": "おいしそうですね。"
         },
         {
           "who": "user",
@@ -2676,7 +2693,7 @@ window.JP_DATA = {
           ],
           "en": "Yes, it is delicious. Please.",
           "de": "Ja, es ist lecker. Bitte.",
-          "speak": "ええおいしいですよどうぞ"
+          "speak": "ええ、おいしいですよ。どうぞ。"
         }
       ]
     },
@@ -2698,7 +2715,7 @@ window.JP_DATA = {
           ],
           "en": "Where is that?",
           "de": "Wo ist das?",
-          "speak": "それはどこですか"
+          "speak": "それは、どこですか。"
         },
         {
           "who": "bot",
@@ -2715,7 +2732,7 @@ window.JP_DATA = {
           ],
           "en": "This is Kyoto.",
           "de": "Das ist Kyoto.",
-          "speak": "これはきょうとです"
+          "speak": "これは、京都です。"
         },
         {
           "who": "user",
@@ -2726,11 +2743,12 @@ window.JP_DATA = {
             "。",
             "それ",
             "は",
-            "？"
+			"…",
+            "。"
           ],
           "en": "Beautiful, isn't it? And that?",
           "de": "Schön, oder? Und das?",
-          "speak": "きれいですねそれは"
+          "speak": "きれいですね。それは…。"
         },
         {
           "who": "bot",
@@ -2753,7 +2771,7 @@ window.JP_DATA = {
           ],
           "en": "This is Matsuyama. It's a hot spring.",
           "de": "Das ist Matsuyama. Eine heiße Quelle.",
-          "speak": "これはまつやまですおんせんです"
+          "speak": "これは、松山です。温泉です。"
         },
         {
           "who": "user",
@@ -2779,7 +2797,7 @@ window.JP_DATA = {
           ],
           "en": "That's Dogo Onsen, right? Oh, and that is Hiroshima, right?",
           "de": "Das ist Dogo Onsen, oder? Und das ist Hiroshima, oder?",
-          "speak": "どうごおんせんですねあそれはひろしまですね"
+          "speak": "道後温泉ですね。あ、それは広島ですね。"
         }
       ]
     },
@@ -2805,7 +2823,7 @@ window.JP_DATA = {
           ],
           "en": "Excuse me, what is that?",
           "de": "Entschuldigung, was ist das?",
-          "speak": "すみませんあれはなんですか"
+          "speak": "すみません、あれは何ですか。"
         },
         {
           "who": "bot",
@@ -2817,7 +2835,7 @@ window.JP_DATA = {
           ],
           "en": "Which one?",
           "de": "Welches?",
-          "speak": "どれですか"
+          "speak": "どれですか。"
         },
         {
           "who": "user",
@@ -2828,7 +2846,7 @@ window.JP_DATA = {
           ],
           "en": "That one.",
           "de": "Das da.",
-          "speak": "あれです"
+          "speak": "あれです。"
         },
         {
           "who": "bot",
@@ -2857,7 +2875,7 @@ window.JP_DATA = {
           ],
           "en": "Ah, that is 'kazunoko.' It's fish eggs.",
           "de": "Ah, das ist „Kazunoko“. Fischrogen.",
-          "speak": "あああれはかずのこですさかなのたまごですよ"
+          "speak": "ああ、あれは「かずのこ」です。魚の卵ですよ。"
         }
       ]
     },
@@ -2886,7 +2904,7 @@ window.JP_DATA = {
           ],
           "en": "Um… excuse me. What is that?",
           "de": "Ähm… entschuldigen Sie. Was ist das?",
-          "speak": "あのすみませんそれはなんですか"
+          "speak": "あの…、すみません。それは何ですか。"
         },
         {
           "who": "bot",
@@ -2898,7 +2916,7 @@ window.JP_DATA = {
           ],
           "en": "This one?",
           "de": "Dieses hier?",
-          "speak": "これですか"
+          "speak": "これですか。"
         },
         {
           "who": "user",
@@ -2911,7 +2929,7 @@ window.JP_DATA = {
           ],
           "en": "Yes, that one.",
           "de": "Ja, das.",
-          "speak": "はいそれです"
+          "speak": "はい、それです。"
         },
         {
           "who": "bot",
@@ -2924,7 +2942,7 @@ window.JP_DATA = {
           ],
           "en": "This is a yukata.",
           "de": "Das ist eine Yukata.",
-          "speak": "これはゆかたです"
+          "speak": "これはゆかたです。"
         },
         {
           "who": "user",
@@ -2932,11 +2950,11 @@ window.JP_DATA = {
             "「",
             "ゆかた",
             "」",
-            "？"
+            "。"
           ],
           "en": "'Yukata'?",
           "de": "„Yukata“?",
-          "speak": "ゆかた"
+          "speak": "「ゆかた」。"
         },
         {
           "who": "bot",
@@ -2954,7 +2972,7 @@ window.JP_DATA = {
           ],
           "en": "It's a Japanese summer kimono.",
           "de": "Ein japanischer Sommerkimono.",
-          "speak": "にほんのなつのきものです"
+          "speak": "日本のなつのきものです。"
         },
         {
           "who": "user",
@@ -2970,7 +2988,7 @@ window.JP_DATA = {
           ],
           "en": "It's beautiful. How much is it?",
           "de": "Schön. Wie viel kostet es?",
-          "speak": "きれいですねいくらですか"
+          "speak": "きれいですね。いくらですか。"
         },
         {
           "who": "bot",
@@ -2982,7 +3000,7 @@ window.JP_DATA = {
           ],
           "en": "30 euros.",
           "de": "30 Euro.",
-          "speak": "30 ユーロです"
+          "speak": "30 ユーロです。"
         }
       ]
     },
@@ -3010,7 +3028,7 @@ window.JP_DATA = {
           ],
           "en": "Whose (textbook) is this?",
           "de": "Wessen (Lehrbuch) ist das?",
-          "speak": "これはだれのきょうかしょですか"
+          "speak": "これはだれの（教科書）ですか。"
         },
         {
           "who": "bot",
@@ -3019,14 +3037,17 @@ window.JP_DATA = {
             "、",
             "すみません",
             "。",
-            "わたし",
+            {
+			  "t": "私",
+			  "r": "わたし"
+			},
             "の",
             "です",
             "。"
           ],
           "en": "Oh, excuse me. It's mine.",
           "de": "Oh, entschuldigung. Das ist meins.",
-          "speak": "あすみませんわたしのです"
+          "speak": "あ、すみません。私のです。"
         }
       ]
     },
@@ -3051,7 +3072,7 @@ window.JP_DATA = {
           ],
           "en": "Ms. Keller, your handwriting is beautiful.",
           "de": "Frau Keller, Ihre Schrift ist schön.",
-          "speak": "ケラーさんのじはきれいですね"
+          "speak": "ケラーさんのじは、きれいですね。"
         },
         {
           "who": "bot",
@@ -3062,7 +3083,7 @@ window.JP_DATA = {
           ],
           "en": "Thank you very much.",
           "de": "Vielen Dank.",
-          "speak": "ありがとうございます"
+          "speak": "ありがとうございます。"
         }
       ]
     },
@@ -3074,7 +3095,10 @@ window.JP_DATA = {
         {
           "who": "user",
           "tokens": [
-            "せんせい",
+			{
+			  "t": "先生",
+			  "r": "せんせい"
+			},
             "、",
             "さようなら",
             "。",
@@ -3085,7 +3109,7 @@ window.JP_DATA = {
           ],
           "en": "Goodbye, teacher. See you next week.",
           "de": "Auf Wiedersehen, Lehrer/in. Bis nächste Woche.",
-          "speak": "せんせいさようならまたらいしゅう"
+          "speak": "先生、さようなら。また、らいしゅう。"
         },
         {
           "who": "bot",
@@ -3110,14 +3134,17 @@ window.JP_DATA = {
           ],
           "en": "Oh, Thomas, is this umbrella yours?",
           "de": "Oh, Thomas, ist das dein Regenschirm?",
-          "speak": "あトーマスさんこのかさはトーマスさんのですか"
+          "speak": "あ、トーマスさん、この傘はトーマスさんのですか。"
         },
         {
           "who": "user",
           "tokens": [
             "いいえ",
             "、",
-            "わたし",
+            {
+			  "t": "私",
+			  "r": "わたし"
+			},
             "の",
             "じゃ",
             "ない",
@@ -3126,7 +3153,7 @@ window.JP_DATA = {
           ],
           "en": "No, it's not mine.",
           "de": "Nein, es ist nicht meins.",
-          "speak": "いいえわたしのじゃないです"
+          "speak": "いいえ、私のじゃないです。"
         },
         {
           "who": "bot",
@@ -3145,7 +3172,7 @@ window.JP_DATA = {
           ],
           "en": "I see. Then whose is it?",
           "de": "Ach so. Wessen ist es dann?",
-          "speak": "そうですかじゃどなたのですか"
+          "speak": "そうですか。じゃ、どなたのですか。"
         },
         {
           "who": "user",
@@ -3158,7 +3185,7 @@ window.JP_DATA = {
           ],
           "en": "Hmm… I don't know.",
           "de": "Hm… ich weiß es nicht.",
-          "speak": "うーんわかりません"
+          "speak": "うーん…。わかりません。"
         }
       ]
     },
@@ -3180,7 +3207,6 @@ window.JP_DATA = {
             "です",
             "か",
             "。",
-            "／",
             "その",
             "「",
             "ゆかた",
@@ -3194,7 +3220,7 @@ window.JP_DATA = {
           ],
           "en": "How much is this yukata? / How much is that yukata?",
           "de": "Wie viel kostet diese Yukata? / Wie viel kostet jene Yukata?",
-          "speak": "このゆかたはいくらですかそのゆかたはいくらですか"
+          "speak": "この「ゆかた」は、いくらですか。その「ゆかた」は、いくらですか。"
         },
         {
           "who": "bot",
@@ -3206,7 +3232,7 @@ window.JP_DATA = {
           ],
           "en": "15 euros.",
           "de": "15 Euro.",
-          "speak": "15 ユーロです"
+          "speak": "15 ユーロです。"
         }
       ]
     },
@@ -3232,7 +3258,7 @@ window.JP_DATA = {
           ],
           "en": "Um, excuse me. Your job is…?",
           "de": "Ähm, entschuldigen Sie. Ihr Beruf ist…?",
-          "speak": "あのすみませんおしごとは"
+          "speak": "あの、すみません。お仕事は…。"
         },
         {
           "who": "bot",
@@ -3250,7 +3276,7 @@ window.JP_DATA = {
           ],
           "en": "Ah, I'm a high school teacher.",
           "de": "Ah, ich bin Oberschullehrer/in.",
-          "speak": "あこうこうのきょうしです"
+          "speak": "あ、こうこうの教師です。"
         }
       ]
     },
@@ -3279,7 +3305,7 @@ window.JP_DATA = {
           ],
           "en": "Are you a student at Berlin University?",
           "de": "Sind Sie Student/in an der Universität Berlin?",
-          "speak": "ベルリンだいがくのがくせいさんですか"
+          "speak": "ベルリン大学の学生さんですか。"
         },
         {
           "who": "bot",
@@ -3298,7 +3324,7 @@ window.JP_DATA = {
           ],
           "en": "Ah, no, I'm still a high school student.",
           "de": "Ah, nein, ich bin noch Schüler/in.",
-          "speak": "あいいえまだこうこうせいです"
+          "speak": "あ、いいえ、まだ高校生です。"
         }
       ]
     },
@@ -3324,7 +3350,7 @@ window.JP_DATA = {
           ],
           "en": "Ms. Sakai, are you a student?",
           "de": "Frau Sakai, sind Sie Studentin?",
-          "speak": "さかいさんはがくせいさんですか"
+          "speak": "さかいさんは学生さんですか。"
         },
         {
           "who": "bot",
@@ -3376,7 +3402,7 @@ window.JP_DATA = {
           ],
           "en": "No. I'm an office worker now. I'm a secretary at a Japanese company. But before, I was a university student in Germany.",
           "de": "Nein. Jetzt bin ich Angestellte. Ich bin Sekretärin in einer japanischen Firma. Aber früher war ich Studentin an einer Universität in Deutschland.",
-          "speak": "いいえいまはかいしゃいんですにほんのかいしゃのひしょですでもまえはドイツのだいがくのがくせいでした"
+          "speak": "いいえ。いまは会社員です。日本の会社の秘書です。でも、まえはドイツの大学の学生でした。"
         },
         {
           "who": "user",
@@ -3385,7 +3411,6 @@ window.JP_DATA = {
             "です",
             "か",
             "。",
-            "（",
             "あの",
             "、",
             "それ",
@@ -3397,11 +3422,10 @@ window.JP_DATA = {
             "です",
             "か",
             "。",
-            "）"
           ],
-          "en": "I see. (Um, what is that?)",
-          "de": "Ach so. (Ähm, was ist das?)",
-          "speak": "そうですかあのそれはなんですか"
+          "en": "I see. Um, what is that?",
+          "de": "Ach so. Ähm, was ist das?",
+          "speak": "そうですか。あの、それは何ですか。"
         },
         {
           "who": "bot",
@@ -3446,7 +3470,7 @@ window.JP_DATA = {
           ],
           "en": "This one? This is kazunoko. It's fish eggs. Ms. Keller, do you like fish?",
           "de": "Dieses hier? Das ist Kazunoko. Fischrogen. Frau Keller, mögen Sie Fisch?",
-          "speak": "これですかこれはかずのこですさかなのたまごですよケラーさんはさかながすきですか"
+          "speak": "これですか。これはかずのこです。魚の卵ですよ。ケラーさんは、魚が好きですか。"
         },
         {
           "who": "user",
@@ -3483,7 +3507,7 @@ window.JP_DATA = {
           ],
           "en": "Yes, I do. But I don't like fish eggs very much.",
           "de": "Ja, ich mag Fisch. Aber Fischrogen mag ich nicht besonders.",
-          "speak": "ええすきですでもさかなのたまごはあまりすきじゃないです"
+          "speak": "ええ、好きです。でも、魚の卵はあまり好きじゃないです。"
         },
         {
           "who": "bot",
@@ -3502,12 +3526,15 @@ window.JP_DATA = {
           ],
           "en": "Um… is that yours, Ms. Keller?",
           "de": "Ähm… ist das Ihres, Frau Keller?",
-          "speak": "あのそれはケラーさんのですか"
+          "speak": "あの…、それはケラーさんのですか。"
         },
         {
           "who": "user",
           "tokens": [
-            "わたし",
+            {
+			  "t": "私",
+			  "r": "わたし"
+			},
             "の",
             "じゃ",
             "ない",
@@ -3516,7 +3543,7 @@ window.JP_DATA = {
           ],
           "en": "It's not mine.",
           "de": "Es ist nicht meins.",
-          "speak": "わたしのじゃないです"
+          "speak": "私のじゃないです。"
         },
         {
           "who": "user",
@@ -3535,7 +3562,7 @@ window.JP_DATA = {
           ],
           "en": "Um, excuse me, whose is this?",
           "de": "Ähm, entschuldigen Sie, wessen ist das?",
-          "speak": "あのすみませんこれはどなたのですか"
+          "speak": "あの、すみません、これはどなたのですか。"
         }
       ]
     },
@@ -3555,7 +3582,7 @@ window.JP_DATA = {
           ],
           "en": "Do you play sports?",
           "de": "Treiben Sie Sport?",
-          "speak": "スポーツをしますか"
+          "speak": "スポーツをしますか。"
         },
         {
           "who": "bot",
@@ -3567,7 +3594,7 @@ window.JP_DATA = {
           ],
           "en": "Yes, I do.",
           "de": "Ja, das tue ich.",
-          "speak": "はいします"
+          "speak": "はい、します。"
         }
       ]
     },
@@ -3593,7 +3620,7 @@ window.JP_DATA = {
           ],
           "en": "Mr./Ms. Baba, do you play baseball?",
           "de": "Herr/Frau Baba, spielen Sie Baseball?",
-          "speak": "ばばさんはやきゅうをしますか"
+          "speak": "ばばさんは野球をしますか。"
         },
         {
           "who": "bot",
@@ -3611,7 +3638,7 @@ window.JP_DATA = {
           ],
           "en": "No, I don't. But I did before.",
           "de": "Nein, ich spiele nicht. Aber früher habe ich gespielt.",
-          "speak": "いいえしませんでもまえはしました"
+          "speak": "いいえ、しません。でも、まえはしました。"
         }
       ]
     },
@@ -3635,7 +3662,7 @@ window.JP_DATA = {
           ],
           "en": "Mr./Ms. Meyer, do you play sports?",
           "de": "Herr/Frau Meyer, treiben Sie Sport?",
-          "speak": "マイヤーさんはスポーツをしますか"
+          "speak": "マイヤーさんは、スポーツをしますか。"
         },
         {
           "who": "bot",
@@ -3659,7 +3686,7 @@ window.JP_DATA = {
           ],
           "en": "Yes. I do karate and mountain climbing.",
           "de": "Ja. Ich mache Karate und Bergsteigen.",
-          "speak": "はいからてととざんをします"
+          "speak": "はい。空手と登山をします。"
         },
         {
           "who": "user",
@@ -3671,7 +3698,7 @@ window.JP_DATA = {
           ],
           "en": "I see.",
           "de": "Ach so.",
-          "speak": "そうですか"
+          "speak": "そうですか。"
         }
       ]
     }
