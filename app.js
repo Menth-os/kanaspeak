@@ -470,7 +470,7 @@
     return ja || state.voices[0] || null;
   }
   
-  function speak(text, rate = 0.95) {
+  function speak(text, rate = 0.90) {
   if (!window.speechSynthesis) return;
   window.speechSynthesis.cancel();
   const utt = new SpeechSynthesisUtterance(text);
@@ -1134,7 +1134,7 @@ function startListening() {
     });
 	
 	$('#btnSpeakSlow').addEventListener('click', () => {
-	  const slowRate = 0.70;
+	  const slowRate = 0.65;
 
 	  if (state.mode === 'dialog') {
 		const dialog = getItem();
