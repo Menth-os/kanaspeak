@@ -96,7 +96,729 @@ window.JP_DATA = {
       "en": "Hotel",
       "de": "Hotel",
       "speak": "ホテル"
-    }
+    },
+	{
+	  "id": "w10",
+	  "tokens": [
+		"です"
+	  ],
+	  "en": "to be; am / is / are",
+	  "de": "sein; bin / bist / ist",
+	  "speak": "です"
+	},
+	{
+	  "id": "w11",
+	  "tokens": [
+		"さん"
+	  ],
+	  "en": "Mr.; Ms.; polite suffix",
+	  "de": "Herr; Frau; Höflichkeitssuffix",
+	  "speak": "さん"
+	},
+	{
+	  "id": "w12",
+	  "tokens": [
+		"はい"
+	  ],
+	  "en": "yes",
+	  "de": "ja",
+	  "speak": "はい"
+	},
+	{
+	  "id": "w13",
+	  "tokens": [
+		"いいえ"
+	  ],
+	  "en": "no",
+	  "de": "nein",
+	  "speak": "いいえ"
+	},
+	{
+	  "id": "w14",
+	  "tokens": [
+		"すみません"
+	  ],
+	  "en": "excuse me; sorry",
+	  "de": "entschuldigung; tut mir leid",
+	  "speak": "すみません"
+	},
+	{
+	  "id": "w15",
+	  "tokens": [
+		{
+		  "t": "名前",
+		  "r": "なまえ"
+		}
+	  ],
+	  "en": "name",
+	  "de": "Name",
+	  "speak": "なまえ"
+	},
+	{
+	  "id": "w16",
+	  "tokens": [
+		{
+		  "t": "仕事",
+		  "r": "しごと"
+		}
+	  ],
+	  "en": "job; work",
+	  "de": "Arbeit; Beruf",
+	  "speak": "しごと"
+	},
+	{
+	  "id": "w17",
+	  "tokens": [
+		"こんばんは"
+	  ],
+	  "en": "good evening",
+	  "de": "guten Abend",
+	  "speak": "こんばんは"
+	},
+	{
+	  "id": "w18",
+	  "tokens": [
+		{
+		  "t": "先生",
+		  "r": "せんせい"
+		}
+	  ],
+	  "en": "teacher",
+	  "de": "Lehrer/in",
+	  "speak": "せんせい"
+	},
+	{
+	  "id": "w19",
+	  "tokens": [
+		{
+		  "t": "学生",
+		  "r": "がくせい"
+		}
+	  ],
+	  "en": "student",
+	  "de": "Student/in; Schüler/in",
+	  "speak": "がくせい"
+	},
+	{
+	  "id": "w20",
+	  "tokens": [
+		"ちち"
+	  ],
+	  "en": "my father",
+	  "de": "mein Vater",
+	  "speak": "ちち"
+	},
+	{
+	  "id": "w21",
+	  "tokens": [
+		"はは"
+	  ],
+	  "en": "my mother",
+	  "de": "meine Mutter",
+	  "speak": "はは"
+	},
+	{
+	  "id": "w22",
+	  "tokens": [
+		{
+		  "t": "会社",
+		  "r": "かいしゃ"
+		}
+	  ],
+	  "en": "company",
+	  "de": "Firma",
+	  "speak": "かいしゃ"
+	},
+	{
+	  "id": "w23",
+	  "tokens": [
+		{
+		  "t": "会社員",
+		  "r": "かいしゃいん"
+		}
+	  ],
+	  "en": "company employee; office worker",
+	  "de": "Angestellte/r",
+	  "speak": "かいしゃいん"
+	},
+	{
+	  "id": "w24",
+	  "tokens": [
+		{
+		  "t": "薬剤師",
+		  "r": "やくざいし"
+		}
+	  ],
+	  "en": "pharmacist",
+	  "de": "Apotheker/in",
+	  "speak": "やくざいし"
+	},
+	{
+	  "id": "w25",
+	  "tokens": [
+		{
+		  "t": "看護師",
+		  "r": "かんごし"
+		}
+	  ],
+	  "en": "nurse",
+	  "de": "Krankenpfleger/in",
+	  "speak": "かんごし"
+	},
+	{
+	  "id": "w26",
+	  "tokens": [
+		"ここ"
+	  ],
+	  "en": "here; this place",
+	  "de": "hier; dieser Ort",
+	  "speak": "ここ"
+	},
+	{
+	  "id": "w27",
+	  "tokens": [
+		{
+		  "t": "韓国",
+		  "r": "かんこく"
+		}
+	  ],
+	  "en": "South Korea",
+	  "de": "Südkorea",
+	  "speak": "かんこく"
+	},
+	{
+	  "id": "w28",
+	  "tokens": [
+		"ドイツ"
+	  ],
+	  "en": "Germany",
+	  "de": "Deutschland",
+	  "speak": "ドイツ"
+	},
+	{
+	  "id": "w29",
+	  "tokens": [
+		{
+		  "t": "日本",
+		  "r": "にほん"
+		}
+	  ],
+	  "en": "Japan",
+	  "de": "Japan",
+	  "speak": "にほん"
+	},
+	{
+	  "id": "w30",
+	  "tokens": [
+		"スイス"
+	  ],
+	  "en": "Switzerland",
+	  "de": "Schweiz",
+	  "speak": "スイス"
+	},
+	{
+	  "id": "w31",
+	  "tokens": [
+		{
+		  "t": "日本人",
+		  "r": "にほんじん"
+		}
+	  ],
+	  "en": "Japanese person",
+	  "de": "Japaner/in",
+	  "speak": "にほんじん"
+	},
+	{
+	  "id": "w32",
+	  "tokens": [
+		{
+		  "t": "ドイツ人",
+		  "r": "ドイツじん"
+		}
+	  ],
+	  "en": "German person",
+	  "de": "Deutsche/r",
+	  "speak": "ドイツじん"
+	},
+	{
+	  "id": "w33",
+	  "tokens": [
+		{
+		  "t": "スイス人",
+		  "r": "スイスじん"
+		}
+	  ],
+	  "en": "Swiss person",
+	  "de": "Schweizer/in",
+	  "speak": "スイスじん"
+	},
+	{
+	  "id": "w34",
+	  "tokens": [
+		"あの"
+	  ],
+	  "en": "um; well; that (over there)",
+	  "de": "ähm; also; jener da",
+	  "speak": "あの"
+	},
+	{
+	  "id": "w35",
+	  "tokens": [
+		"～",
+		"の"
+	  ],
+	  "en": "~'s; of",
+	  "de": "von; Genitivpartikel",
+	  "speak": "の"
+	},
+	{
+	  "id": "w36",
+	  "tokens": [
+		{
+		  "t": "方",
+		  "r": "かた"
+		}
+	  ],
+	  "en": "person (polite)",
+	  "de": "Person (höflich)",
+	  "speak": "かた"
+	},
+	{
+	  "id": "w37",
+	  "tokens": [
+		"いま"
+	  ],
+	  "en": "now",
+	  "de": "jetzt",
+	  "speak": "いま"
+	},
+	{
+	  "id": "w38",
+	  "tokens": [
+		"～",
+		"に",
+		{
+		  "t": "住んでいます",
+		  "r": "すんでいます"
+		}
+	  ],
+	  "en": "to live in ~",
+	  "de": "in ~ wohnen",
+	  "speak": "にすんでいます"
+	},
+	{
+	  "id": "w39",
+	  "tokens": [
+		"でも"
+	  ],
+	  "en": "but; however",
+	  "de": "aber",
+	  "speak": "でも"
+	},
+	{
+	  "id": "w40",
+	  "tokens": [
+		{
+		  "t": "車",
+		  "r": "くるま"
+		}
+	  ],
+	  "en": "car",
+	  "de": "Auto",
+	  "speak": "くるま"
+	},
+	{
+	  "id": "w41",
+	  "tokens": [
+		{
+		  "t": "大学",
+		  "r": "だいがく"
+		}
+	  ],
+	  "en": "university",
+	  "de": "Universität",
+	  "speak": "だいがく"
+	},
+	{
+	  "id": "w42",
+	  "tokens": [
+		"じゃ",
+		"ない",
+		"です"
+	  ],
+	  "en": "is not (informal negative of です)",
+	  "de": "ist nicht (umgangssprachlich)",
+	  "speak": "じゃないです"
+	},
+	{
+	  "id": "w43",
+	  "tokens": [
+		"ね"
+	  ],
+	  "en": "sentence-ending particle (right? isn't it?)",
+	  "de": "Satzpartikel (nicht wahr?)",
+	  "speak": "ね"
+	},
+	{
+	  "id": "w44",
+	  "tokens": [
+		"どうも"
+	  ],
+	  "en": "very; thanks; indeed",
+	  "de": "sehr; vielen Dank",
+	  "speak": "どうも"
+	},
+	{
+	  "id": "w45",
+	  "tokens": [
+		{
+		  "t": "医者",
+		  "r": "いしゃ"
+		}
+	  ],
+	  "en": "doctor",
+	  "de": "Arzt/Ärztin",
+	  "speak": "いしゃ"
+	},
+	{
+	  "id": "w46",
+	  "tokens": [
+		"か"
+	  ],
+	  "en": "question particle",
+	  "de": "Fragepartikel",
+	  "speak": "か"
+	},
+	{
+	  "id": "w47",
+	  "tokens": [
+		{
+		  "t": "歯",
+		  "r": "は"
+		}
+	  ],
+	  "en": "tooth",
+	  "de": "Zahn",
+	  "speak": "は"
+	},
+	{
+	  "id": "w48",
+	  "tokens": [
+		{
+		  "t": "歯医者",
+		  "r": "はいしゃ"
+		}
+	  ],
+	  "en": "dentist",
+	  "de": "Zahnarzt/-ärztin",
+	  "speak": "はいしゃ"
+	},
+	{
+	  "id": "w49",
+	  "tokens": [
+		{
+		  "t": "目",
+		  "r": "め"
+		}
+	  ],
+	  "en": "eye",
+	  "de": "Auge",
+	  "speak": "め"
+	},
+	{
+	  "id": "w50",
+	  "tokens": [
+		{
+		  "t": "目医者",
+		  "r": "めいしゃ"
+		}
+	  ],
+	  "en": "eye doctor",
+	  "de": "Augenarzt/-ärztin",
+	  "speak": "めいしゃ"
+	},
+	{
+	  "id": "w51",
+	  "tokens": [
+		{
+		  "t": "花",
+		  "r": "はな"
+		}
+	  ],
+	  "en": "flower",
+	  "de": "Blume",
+	  "speak": "はな"
+	},
+	{
+	  "id": "w52",
+	  "tokens": [
+		{
+		  "t": "花屋",
+		  "r": "はなや"
+		}
+	  ],
+	  "en": "flower shop; florist",
+	  "de": "Blumenladen; Florist/in",
+	  "speak": "はなや"
+	},
+	{
+	  "id": "w53",
+	  "tokens": [
+		"パン"
+	  ],
+	  "en": "bread",
+	  "de": "Brot",
+	  "speak": "パン"
+	},
+	{
+	  "id": "w54",
+	  "tokens": [
+		{
+		  "t": "パン屋",
+		  "r": "パンや"
+		}
+	  ],
+	  "en": "bakery; baker",
+	  "de": "Bäckerei; Bäcker/in",
+	  "speak": "パンや"
+	},
+	{
+	  "id": "w55",
+	  "tokens": ["こんにちは"],
+	  "en": "good afternoon; hello",
+	  "de": "Guten Tag; Hallo",
+	  "speak": "こんにちは"
+	},
+	{
+	  "id": "w56",
+	  "tokens": ["そう"],
+	  "en": "so; that's right",
+	  "de": "so; stimmt",
+	  "speak": "そう"
+	},
+	{
+	  "id": "w57",
+	  "tokens": ["どうぞ"],
+	  "en": "please; here you are",
+	  "de": "bitte; gern",
+	  "speak": "どうぞ"
+	},
+	{
+	  "id": "w58",
+	  "tokens": ["よろしく"],
+	  "en": "well; favorably; best regards (in set phrases)",
+	  "de": "gut; wohlwollend; freundlich",
+	  "speak": "よろしく"
+	},
+	{
+	  "id": "w59",
+	  "tokens": ["おねがいします"],
+	  "en": "please; I ask you; I request",
+	  "de": "bitte; ich bitte Sie",
+	  "speak": "おねがいします"
+	},
+	{
+	  "id": "w60",
+	  "tokens": ["こちらこそ"],
+	  "en": "likewise; the pleasure is mine",
+	  "de": "ganz meinerseits",
+	  "speak": "こちらこそ"
+	},
+	{
+	  "id": "w61",
+	  "tokens": ["～", "が", "すき", "です"],
+	  "en": "to like ~",
+	  "de": "~ mögen",
+	  "speak": "がすきです"
+	},
+	{
+	  "id": "w62",
+	  "tokens": ["あまり"],
+	  "en": "not very (used with negative)",
+	  "de": "nicht besonders",
+	  "speak": "あまり"
+	},
+	{
+	  "id": "w63",
+	  "tokens": [
+		{
+		  "t": "寿司",
+		  "r": "すし"
+		}
+	  ],
+	  "en": "sushi",
+	  "de": "Sushi",
+	  "speak": "すし"
+	},
+	{
+	  "id": "w64",
+	  "tokens": ["ええ"],
+	  "en": "yes (informal)",
+	  "de": "ja (ugs.)",
+	  "speak": "ええ"
+	},
+	{
+	  "id": "w65",
+	  "tokens": [
+		{
+		  "t": "料理",
+		  "r": "りょうり"
+		}
+	  ],
+	  "en": "cooking; cuisine",
+	  "de": "Küche; Gericht",
+	  "speak": "りょうり"
+	},
+	{
+	  "id": "w66",
+	  "tokens": ["そう", "です", "か"],
+	  "en": "I see; is that so?",
+	  "de": "Ach so; ich verstehe",
+	  "speak": "そうですか"
+	},
+	{
+	  "id": "w67",
+	  "tokens": ["うどん"],
+	  "en": "udon noodles",
+	  "de": "Udon",
+	  "speak": "うどん"
+	},
+	{
+	  "id": "w68",
+	  "tokens": ["そば"],
+	  "en": "soba noodles",
+	  "de": "Soba",
+	  "speak": "そば"
+	},
+	{
+	  "id": "w69",
+	  "tokens": ["ハンバーガー"],
+	  "en": "hamburger",
+	  "de": "Hamburger",
+	  "speak": "ハンバーガー"
+	},
+	{
+	  "id": "w70",
+	  "tokens": [
+		{
+		  "t": "何",
+		  "r": "なに"
+		}
+	  ],
+	  "en": "what",
+	  "de": "was",
+	  "speak": "なに"
+	},
+	{
+	  "id": "w71",
+	  "tokens": ["～", "で"],
+	  "en": "in; by; with (means / language)",
+	  "de": "in; mit; auf (Sprache)",
+	  "speak": "で"
+	},
+	{
+	  "id": "w72",
+	  "tokens": [
+		{
+		  "t": "魚",
+		  "r": "さかな"
+		}
+	  ],
+	  "en": "fish",
+	  "de": "Fisch",
+	  "speak": "さかな"
+	},
+	{
+	  "id": "w73",
+	  "tokens": [
+		{
+		  "t": "野菜",
+		  "r": "やさい"
+		}
+	  ],
+	  "en": "vegetable",
+	  "de": "Gemüse",
+	  "speak": "やさい"
+	},
+	{
+	  "id": "w74",
+	  "tokens": [
+		{
+		  "t": "ご飯",
+		  "r": "ごはん"
+		}
+	  ],
+	  "en": "cooked rice; meal",
+	  "de": "Reis; Mahlzeit",
+	  "speak": "ごはん"
+	},
+	{
+	  "id": "w75",
+	  "tokens": ["しょうゆ"],
+	  "en": "soy sauce",
+	  "de": "Sojasoße",
+	  "speak": "しょうゆ"
+	},
+	{
+	  "id": "w76",
+	  "tokens": [
+		{
+		  "t": "生徒",
+		  "r": "せいと"
+		}
+	  ],
+	  "en": "pupil; student (school)",
+	  "de": "Schüler/in",
+	  "speak": "せいと"
+	},
+	{
+	  "id": "w77",
+	  "tokens": [
+		{
+		  "t": "椅子",
+		  "r": "いす"
+		}
+	  ],
+	  "en": "chair",
+	  "de": "Stuhl",
+	  "speak": "いす"
+	},
+	{
+	  "id": "w78",
+	  "tokens": [
+		{
+		  "t": "趣味",
+		  "r": "しゅみ"
+		}
+	  ],
+	  "en": "hobby",
+	  "de": "Hobby",
+	  "speak": "しゅみ"
+	},
+	{
+	  "id": "w79",
+	  "tokens": [
+		{
+		  "t": "読書",
+		  "r": "どくしょ"
+		}
+	  ],
+	  "en": "reading (books)",
+	  "de": "Bücherlesen",
+	  "speak": "どくしょ"
+	},
+	{
+	  "id": "w80",
+	  "tokens": [
+		{
+		  "t": "乗馬",
+		  "r": "じょうば"
+		}
+	  ],
+	  "en": "horse riding",
+	  "de": "Reiten",
+	  "speak": "じょうば"
+	}
   ],
   "sentences": [
     {
@@ -376,7 +1098,7 @@ window.JP_DATA = {
           "who": "user",
           "tokens": [
             "チェックイン",
-            {
+			{
               "t": "お願い",
               "r": "おねがい"
             },
@@ -422,7 +1144,2433 @@ window.JP_DATA = {
           "speak": "こちらへどうぞ"
         }
       ]
-    }
+    },
+	{
+	  "id": "d5",
+	  "title_en": "Confirming a person",
+	  "title_de": "Eine Person bestätigen",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"すみません",
+			"、",
+			"いでさん",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Excuse me, are you Mr./Ms. Ide?",
+		  "de": "Entschuldigung, sind Sie Herr/Frau Ide?",
+		  "speak": "すみませんいでさんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"はい",
+			"、",
+			"いで",
+			"です",
+			"。"
+		  ],
+		  "en": "Yes, I am Ide.",
+		  "de": "Ja, ich bin Ide.",
+		  "speak": "はい、いでです"
+		}
+	  ]
+	},
+	{
+	  "id": "d6",
+	  "title_en": "Confirming a person",
+	  "title_de": "Eine Person bestätigen",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"すみません",
+			"、",
+			"ここ",
+			"か",
+			"さん",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Excuse me, are you Mr./Ms. Koko?",
+		  "de": "Entschuldigung, sind Sie Herr/Frau Koko?",
+		  "speak": "すみませんここかさんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"いいえ",
+			"、",
+			"みよし",
+			"です",
+			"。"
+		  ],
+		  "en": "No, I am Miyoshi.",
+		  "de": "Nein, ich bin Miyoshi.",
+		  "speak": "いいえ、みよしです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"すみません",
+			"。"
+		  ],
+		  "en": "Excuse me.",
+		  "de": "Entschuldigung.",
+		  "speak": "すみません"
+		}
+	  ]
+	},
+	{
+	  "id": "d7",
+	  "title_en": "Talking about jobs",
+	  "title_de": "Über Berufe sprechen",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"こんばんは",
+			"。",
+			"すがい",
+			"です",
+			"。",
+			"すみません",
+			"。",
+			{
+			  "t": "お名前",
+			  "r": "おなまえ"
+			},
+			"は",
+			"…"
+		  ],
+		  "en": "Good evening. I'm Sugai. Excuse me, your name is…?",
+		  "de": "Guten Abend. Ich bin Sugai. Entschuldigung, wie ist Ihr Name…?",
+		  "speak": "こんばんはすがいですすみませんおなまえは"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			{
+			  "t": "名川",
+			  "r": "ながわ"
+			},
+			"です",
+			"。",
+			"はじめまして",
+			"。"
+		  ],
+		  "en": "I'm Nagawa. Nice to meet you.",
+		  "de": "Ich bin Nagawa. Freut mich, Sie kennenzulernen.",
+		  "speak": "ながわですはじめまして"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"はじめまして",
+			"。",
+			"すみません",
+			"。",
+			{
+			  "t": "名川",
+			  "r": "ながわ"
+			},
+			"さん",
+			"は",
+			{
+			  "t": "お仕事",
+			  "r": "おしごと"
+			},
+			"は",
+			"…"
+		  ],
+		  "en": "Nice to meet you. Excuse me, Mr./Ms. Nagawa, your job is…?",
+		  "de": "Freut mich. Entschuldigung, Herr/Frau Nagawa, was ist Ihr Beruf…?",
+		  "speak": "はじめましてすみませんながわさんはおしごとは"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"programmer",
+			"です",
+			"。",
+			"すがい",
+			"さん",
+			"は",
+			{
+			  "t": "お仕事",
+			  "r": "おしごと"
+			},
+			"は",
+			"…"
+		  ],
+		  "en": "I'm a programmer. Mr./Ms. Sugai, your job is…?",
+		  "de": "Ich bin Programmierer/in. Herr/Frau Sugai, was ist Ihr Beruf…?",
+		  "speak": "programmerですすがいさんはおしごとは"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"engineer",
+			"です",
+			"。"
+		  ],
+		  "en": "I'm an engineer.",
+		  "de": "Ich bin Ingenieur/in.",
+		  "speak": "engineerです"
+		}
+	  ]
+	},
+
+	{
+	  "id": "d8",
+	  "title_en": "Asking about nationality (1)",
+	  "title_de": "Nach der Nationalität fragen (1)",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"William",
+			"さん",
+			"は",
+			{
+			  "t": "ドイツ人",
+			  "r": "ドイツじん"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "William, are you German?",
+		  "de": "William, sind Sie Deutscher?",
+		  "speak": "Williamさんはドイツじんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"いいえ",
+			"、",
+			{
+			  "t": "スイス人",
+			  "r": "スイスじん"
+			},
+			"です",
+			"。"
+		  ],
+		  "en": "No, I'm Swiss.",
+		  "de": "Nein, ich bin Schweizer/in.",
+		  "speak": "いいえスイスじんです"
+		}
+	  ]
+	},
+	{
+	  "id": "d9",
+	  "title_en": "Asking about nationality (2)",
+	  "title_de": "Nach der Nationalität fragen (2)",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"Murakami",
+			"Haruki",
+			"は",
+			{
+			  "t": "日本人",
+			  "r": "にほんじん"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Is Murakami Haruki Japanese?",
+		  "de": "Ist Murakami Haruki Japaner?",
+		  "speak": "Murakami Harukiはにほんじんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"はい",
+			"、",
+			{
+			  "t": "日本人",
+			  "r": "にほんじん"
+			},
+			"です",
+			"。"
+		  ],
+		  "en": "Yes, he is Japanese.",
+		  "de": "Ja, er ist Japaner.",
+		  "speak": "はいにほんじんです"
+		}
+	  ]
+	},
+	{
+	  "id": "d10",
+	  "title_en": "Where are you from and where do you live? (1)",
+	  "title_de": "Herkunft und Wohnort (1)",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"Thomas",
+			"さん",
+			"、",
+			"Thomas",
+			"さん",
+			"は",
+			"ドイツ",
+			"の",
+			{
+			  "t": "方",
+			  "r": "かた"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Thomas, are you from Germany?",
+		  "de": "Thomas, kommen Sie aus Deutschland?",
+		  "speak": "ThomasさんThomasさんはドイツのかたですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"いいえ",
+			"、",
+			"スイス",
+			"です",
+			"。",
+			"でも",
+			"、",
+			"いま",
+			"、",
+			"Potsdam",
+			"に",
+			{
+			  "t": "住んでいます",
+			  "r": "すんでいます"
+			},
+			"。"
+		  ],
+		  "en": "No, I'm Swiss. But I live in Potsdam now.",
+		  "de": "Nein, ich bin Schweizer/in. Aber ich wohne jetzt in Potsdam.",
+		  "speak": "いいえスイスですでもいまPotsdamにすんでいます"
+		}
+	  ]
+	},
+	{
+	  "id": "d11",
+	  "title_en": "Where are you from and where do you live? (2)",
+	  "title_de": "Herkunft und Wohnort (2)",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"Keller",
+			"さん",
+			"、",
+			"Keller",
+			"さん",
+			"は",
+			"Berlin",
+			"の",
+			{
+			  "t": "方",
+			  "r": "かた"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Keller, are you from Berlin?",
+		  "de": "Keller, kommen Sie aus Berlin?",
+		  "speak": "KellerさんKellerさんはBerlinのかたですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"いいえ",
+			"、",
+			"Hamburg",
+			"です",
+			"。",
+			"でも",
+			"、",
+			"いま",
+			"、",
+			"Berlin",
+			"に",
+			{
+			  "t": "住んでいます",
+			  "r": "すんでいます"
+			},
+			"。"
+		  ],
+		  "en": "No, I'm from Hamburg. But I live in Berlin now.",
+		  "de": "Nein, ich komme aus Hamburg. Aber ich wohne jetzt in Berlin.",
+		  "speak": "いいえHamburgですでもいまBerlinにすんでいます"
+		}
+	  ]
+	},
+	{
+	  "id": "d12",
+	  "title_en": "Company and occupation",
+	  "title_de": "Firma und Beruf",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"はじめまして",
+			"。",
+			"さの",
+			"せいこ",
+			"です",
+			"。",
+			"Thomas",
+			"さん",
+			"は",
+			"ドイツ",
+			"の",
+			{
+			  "t": "方",
+			  "r": "かた"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Nice to meet you. I'm Seiko Sano. Thomas, are you from Germany?",
+		  "de": "Freut mich. Ich bin Seiko Sano. Thomas, kommen Sie aus Deutschland?",
+		  "speak": "はじめましてさのせいこですThomasさんはドイツのかたですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"いいえ",
+			"、",
+			"スイス",
+			"です",
+			"。",
+			"でも",
+			"、",
+			"いま",
+			"、",
+			"Potsdam",
+			"に",
+			{
+			  "t": "住んでいます",
+			  "r": "すんでいます"
+			},
+			"。"
+		  ],
+		  "en": "No, I'm Swiss. But I live in Potsdam now.",
+		  "de": "Nein, ich bin Schweizer/in. Aber ich wohne jetzt in Potsdam.",
+		  "speak": "いいえスイスですでもいまPotsdamにすんでいます"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"さの",
+			"さん",
+			"は",
+			"、",
+			"Tokyo",
+			"の",
+			{
+			  "t": "方",
+			  "r": "かた"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Ms. Sano, are you from Tokyo?",
+		  "de": "Frau Sano, kommen Sie aus Tokio?",
+		  "speak": "さのさんはTokyoのかたですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"いいえ",
+			"、",
+			"おおさか",
+			"です",
+			"。",
+			"あの",
+			"…",
+			"Thomas",
+			"さん",
+			"は",
+			"Behrmann",
+			"さん",
+			"の",
+			{
+			  "t": "会社",
+			  "r": "かいしゃ"
+			},
+			"の",
+			{
+			  "t": "方",
+			  "r": "かた"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "No, I'm from Osaka. Um… Thomas, are you from Mr./Ms. Behrmann's company?",
+		  "de": "Nein, ich komme aus Osaka. Ähm… Thomas, sind Sie von Herrn/Frau Behrmanns Firma?",
+		  "speak": "いいえおおさかですあのThomasさんはBehrmannさんのかいしゃのかたですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"いいえ",
+			"、",
+			{
+			  "t": "学生",
+			  "r": "がくせい"
+			},
+			"です",
+			"。",
+			"さの",
+			"さん",
+			"は",
+			"、",
+			{
+			  "t": "お仕事",
+			  "r": "おしごと"
+			},
+			"は",
+			"…"
+		  ],
+		  "en": "No, I'm a student. Ms. Sano, your job is…?",
+		  "de": "Nein, ich bin Student/in. Frau Sano, was ist Ihr Beruf…?",
+		  "speak": "いいえがくせいですさのさんはおしごとは"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			{
+			  "t": "会社員",
+			  "r": "かいしゃいん"
+			},
+			"です",
+			"。"
+		  ],
+		  "en": "I'm an office worker.",
+		  "de": "Ich bin Angestellte/r.",
+		  "speak": "かいしゃいんです"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			{
+			  "t": "日本",
+			  "r": "にほん"
+			},
+			"の",
+			{
+			  "t": "会社",
+			  "r": "かいしゃ"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Is it a Japanese company?",
+		  "de": "Ist es eine japanische Firma?",
+		  "speak": "にほんのかいしゃですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"はい",
+			"。",
+			"Sony",
+			"です",
+			"。"
+		  ],
+		  "en": "Yes. It's Sony.",
+		  "de": "Ja. Es ist Sony.",
+		  "speak": "はいSonyです"
+		}
+	  ]
+	},
+	{
+	  "id": "d13",
+	  "title_en": "Clarifying a name",
+	  "title_de": "Einen Namen klären",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"あの",
+			"…",
+			{
+			  "t": "お名前",
+			  "r": "おなまえ"
+			},
+			"は",
+			"…"
+		  ],
+		  "en": "Um… your name is…?",
+		  "de": "Ähm… wie ist Ihr Name…?",
+		  "speak": "あのおなまえは"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"うだ",
+			"です",
+			"。"
+		  ],
+		  "en": "It's Uda.",
+		  "de": "Uda.",
+		  "speak": "うだです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"おだ",
+			"さん",
+			"ですね",
+			"。"
+		  ],
+		  "en": "Oda, right?",
+		  "de": "Oda, richtig?",
+		  "speak": "おださんですね"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"いいえ",
+			"、",
+			"「",
+			"おだ",
+			"」",
+			"じゃ",
+			"ない",
+			"です",
+			"。",
+			"「",
+			"うだ",
+			"」",
+			"です",
+			"。"
+		  ],
+		  "en": "No, not 'Oda'. It's 'Uda'.",
+		  "de": "Nein, nicht „Oda“. Es ist „Uda“.",
+		  "speak": "いいえおだじゃないですうだです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"あ",
+			"、",
+			"どうも",
+			"すみません",
+			"。"
+		  ],
+		  "en": "Ah, I'm very sorry.",
+		  "de": "Ah, tut mir leid.",
+		  "speak": "あどうもすみません"
+		}
+	  ]
+	},
+	{
+	  "id": "d14",
+	  "title_en": "Talking about Mr. Kasai",
+	  "title_de": "Über Herrn Kasai sprechen",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"かさい",
+			"さん",
+			"は",
+			"かんごし",
+			"さん",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Is Mr. Kasai a nurse?",
+		  "de": "Ist Herr Kasai Krankenpfleger?",
+		  "speak": "かさいさんはかんごしさんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"いいえ",
+			"、",
+			"かんごし",
+			"さん",
+			"じゃ",
+			"ない",
+			"です",
+			"。",
+			"おいしゃ",
+			"さん",
+			"です",
+			"。"
+		  ],
+		  "en": "No, he isn't a nurse. He is a doctor.",
+		  "de": "Nein, er ist kein Krankenpfleger. Er ist Arzt.",
+		  "speak": "いいえかんごしさんじゃないですおいしゃさんです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"あ",
+			"、",
+			"おいしゃ",
+			"さん",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Oh, a doctor?",
+		  "de": "Ah, ein Arzt?",
+		  "speak": "あおいしゃさんですか"
+		}
+	  ]
+	},
+	{
+	  "id": "d15",
+	  "title_en": "Kaiser and Sano",
+	  "title_de": "Kaiser und Sano",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"こんにちは",
+			"。",
+			"さの",
+			"です",
+			"。",
+			"あの",
+			"…",
+			"、",
+			{
+			  "t": "お名前",
+			  "r": "おなまえ"
+			},
+			"は",
+			"…",
+			"。"
+		  ],
+		  "en": "Hello. I'm Sano. Um… your name is…?",
+		  "de": "Hallo. Ich bin Sano. Ähm… wie ist Ihr Name…?",
+		  "speak": "こんにちはさのですあのおなまえは"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"Kayser",
+			"です",
+			"。",
+			"さの",
+			"さん",
+			"、",
+			"ですね",
+			"。",
+			"さの",
+			"さん",
+			"は",
+			{
+			  "t": "学生",
+			  "r": "がくせい"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "I'm Kayser. Ms. Sano, right? Are you a student?",
+		  "de": "Ich bin Kayser. Frau Sano, richtig? Sind Sie Studentin?",
+		  "speak": "Kayserですさのさんですねさのさんはがくせいですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"いいえ",
+			"、",
+			{
+			  "t": "学生",
+			  "r": "がくせい"
+			},
+			"じゃ",
+			"ない",
+			"です",
+			"。",
+			{
+			  "t": "会社員",
+			  "r": "かいしゃいん"
+			},
+			"です",
+			"。",
+			"Kayser",
+			"さん",
+			"は",
+			"、",
+			{
+			  "t": "お仕事",
+			  "r": "おしごと"
+			},
+			"は",
+			"…",
+			"。"
+		  ],
+		  "en": "No, I'm not a student. I'm an office worker. Mr. Kayser, your job is…?",
+		  "de": "Nein, ich bin keine Studentin. Ich bin Angestellte. Herr Kayser, was ist Ihr Beruf…?",
+		  "speak": "いいえがくせいじゃないですかいしゃいんですKayserさんはおしごとは"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			{
+			  "t": "パン屋",
+			  "r": "パンや"
+			},
+			"です",
+			"。"
+		  ],
+		  "en": "I'm a baker.",
+		  "de": "Ich bin Bäcker.",
+		  "speak": "パンやです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			{
+			  "t": "パン屋",
+			  "r": "パンや"
+			},
+			"さん",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "A baker?",
+		  "de": "Ein Bäcker?",
+		  "speak": "パンやさんですか"
+		}
+	  ]
+	},
+	{
+	  "id": "d16",
+	  "title_en": "Meeting Keller",
+	  "title_de": "Keller kennenlernen",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"こんにちは",
+			"。",
+			"あの",
+			"…",
+			"、",
+			{
+			  "t": "日本",
+			  "r": "にほん"
+			},
+			"の",
+			{
+			  "t": "方",
+			  "r": "かた"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Hello. Um… are you Japanese?",
+		  "de": "Hallo. Ähm… sind Sie Japaner/in?",
+		  "speak": "こんにちはあのにほんのかたですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"はい",
+			"、",
+			"そう",
+			"です",
+			"。",
+			"はじめまして",
+			"。"
+		  ],
+		  "en": "Yes, I am. Nice to meet you.",
+		  "de": "Ja, bin ich. Freut mich.",
+		  "speak": "はいそうですはじめまして"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"はじめまして",
+			"。",
+			"Siemens",
+			"の",
+			"Keller",
+			"です",
+			"。",
+			"どうぞ",
+			"よろしく",
+			"おねがいします",
+			"。"
+		  ],
+		  "en": "Nice to meet you. I'm Keller from Siemens. Pleased to meet you.",
+		  "de": "Freut mich. Ich bin Keller von Siemens. Angenehm.",
+		  "speak": "はじめましてSiemensのKellerですどうぞよろしくおねがいします"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"こちらこそ",
+			"。",
+			"Sony",
+			"の",
+			"うだ",
+			"です",
+			"。"
+		  ],
+		  "en": "Likewise. I'm Uda from Sony.",
+		  "de": "Ganz meinerseits. Ich bin Uda von Sony.",
+		  "speak": "こちらこそSonyのうだです"
+		}
+	  ]
+	},
+	{
+	  "id": "d17",
+	  "title_en": "Talking about preferences",
+	  "title_de": "Über Vorlieben sprechen",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"アメリカ",
+			"の",
+			"りょうり",
+			"が",
+			"すき",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Do you like American food?",
+		  "de": "Mögen Sie amerikanisches Essen?",
+		  "speak": "アメリカのりょうりがすきですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"はい",
+			"、",
+			"すき",
+			"です",
+			"。"
+		  ],
+		  "en": "Yes, I do.",
+		  "de": "Ja, das mag ich.",
+		  "speak": "はいすきです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			{
+			  "t": "何",
+			  "r": "なに"
+			},
+			"が",
+			"すき",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "What do you like?",
+		  "de": "Was mögen Sie?",
+		  "speak": "なにがすきですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"ハンバーガー",
+			"が",
+			"すき",
+			"です",
+			"。"
+		  ],
+		  "en": "I like hamburgers.",
+		  "de": "Ich mag Hamburger.",
+		  "speak": "ハンバーガーがすきです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"そう",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "I see.",
+		  "de": "Ach so.",
+		  "speak": "そうですか"
+		}
+	  ]
+	},
+	{
+	  "id": "d18",
+	  "title_en": "Talking about hobbies",
+	  "title_de": "Über Hobbys sprechen",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"トーマス",
+			"さん",
+			"、",
+			"トーマス",
+			"さん",
+			"は",
+			"、",
+			{
+			  "t": "趣味",
+			  "r": "しゅみ"
+			},
+			"は",
+			"…",
+			"。"
+		  ],
+		  "en": "Thomas, your hobby is…?",
+		  "de": "Thomas, Ihr Hobby ist…?",
+		  "speak": "トーマスさんトーマスさんはしゅみは"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"Reiten",
+			"…",
+			"すみません",
+			"、",
+			"Reiten",
+			"は",
+			{
+			  "t": "日本語",
+			  "r": "にほんご"
+			},
+			"で",
+			{
+			  "t": "何",
+			  "r": "なん"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Reiten… sorry, what is 'Reiten' in Japanese?",
+		  "de": "Reiten… Entschuldigung, was heißt „Reiten“ auf Japanisch?",
+		  "speak": "ReitenすみませんReitenはにほんごでなんですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"あの",
+			"…",
+			"、",
+			{
+			  "t": "英語",
+			  "r": "えいご"
+			},
+			"で",
+			{
+			  "t": "何",
+			  "r": "なん"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Um… what is it in English?",
+		  "de": "Ähm… wie heißt es auf Englisch?",
+		  "speak": "あのえいごでなんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"horse riding",
+			"です",
+			"。"
+		  ],
+		  "en": "It's horse riding.",
+		  "de": "Es heißt horse riding.",
+		  "speak": "horse ridingです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"あ",
+			"、",
+			"「",
+			"じょうば",
+			"」",
+			"です",
+			"。"
+		  ],
+		  "en": "Ah, it's 'jouba'.",
+		  "de": "Ah, es heißt „jouba“.",
+		  "speak": "あじょうばです"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"「",
+			"じょうば",
+			"」",
+			"、",
+			"です",
+			"か",
+			"。",
+			"あの",
+			"…",
+			"、",
+			"さの",
+			"さん",
+			"は",
+			{
+			  "t": "趣味",
+			  "r": "しゅみ"
+			},
+			"は",
+			"…",
+			"。"
+		  ],
+		  "en": "'Jouba', I see. Ms. Sano, your hobby is…?",
+		  "de": "„Jouba“, ach so. Frau Sano, Ihr Hobby ist…?",
+		  "speak": "じょうばですかあのさのさんはしゅみは"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			{
+			  "t": "読書",
+			  "r": "どくしょ"
+			},
+			"です",
+			"。",
+			"あの",
+			"…",
+			"、",
+			"「",
+			{
+			  "t": "読書",
+			  "r": "どくしょ"
+			},
+			"」",
+			"は",
+			"ドイツ",
+			"語",
+			"で",
+			{
+			  "t": "何",
+			  "r": "なん"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "It's reading. By the way, what is 'dokusho' in German?",
+		  "de": "Es ist Lesen. Wie heißt „dokusho“ auf Deutsch?",
+		  "speak": "どくしょですあのどくしょはドイツごでなんですか"
+		}
+	  ]
+	},
+	{
+	  "id": "d19",
+	  "title_en": "Home party introduction",
+	  "title_de": "Vorstellung auf der Homeparty",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"こんにちは",
+			"。",
+			"Barbara",
+			"Keller",
+			"です",
+			"。",
+			"あの",
+			"、",
+			{
+			  "t": "お名前",
+			  "r": "おなまえ"
+			},
+			"は",
+			"…",
+			"。"
+		  ],
+		  "en": "Hello. I'm Barbara Keller. Um, your name is…?",
+		  "de": "Hallo. Ich bin Barbara Keller. Ähm, wie ist Ihr Name…?",
+		  "speak": "こんにちはBarbara Kellerですあのおなまえは"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"さの",
+			"です",
+			"。",
+			"さの",
+			"せいこ",
+			"です",
+			"。",
+			"はじめまして",
+			"。",
+			"どうぞ",
+			"よろしく",
+			"。"
+		  ],
+		  "en": "I'm Sano. Seiko Sano. Nice to meet you. Pleased to meet you.",
+		  "de": "Ich bin Sano. Seiko Sano. Freut mich. Angenehm.",
+		  "speak": "さのですさのせいこですはじめましてどうぞよろしく"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"こちらこそ",
+			"。",
+			"あの",
+			"…",
+			"さの",
+			"さん",
+			"は",
+			"、",
+			{
+			  "t": "学生",
+			  "r": "がくせい"
+			},
+			"さん",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Likewise. Um… Ms. Sano, are you a student?",
+		  "de": "Ganz meinerseits. Ähm… Frau Sano, sind Sie Studentin?",
+		  "speak": "こちらこそあのさのさんはがくせいさんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"いいえ",
+			"、",
+			{
+			  "t": "学生",
+			  "r": "がくせい"
+			},
+			"じゃ",
+			"ない",
+			"です",
+			"。",
+			{
+			  "t": "会社員",
+			  "r": "かいしゃいん"
+			},
+			"です",
+			"。",
+			"Keller",
+			"さん",
+			"は",
+			"、",
+			{
+			  "t": "お仕事",
+			  "r": "おしごと"
+			},
+			"は",
+			"…",
+			"。"
+		  ],
+		  "en": "No, I'm not a student. I'm an office worker. Ms. Keller, your job is…?",
+		  "de": "Nein, ich bin keine Studentin. Ich bin Angestellte. Frau Keller, was ist Ihr Beruf…?",
+		  "speak": "いいえがくせいじゃないですかいしゃいんですKellerさんはおしごとは"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"Siemens",
+			"の",
+			"programmer",
+			"です",
+			"。"
+		  ],
+		  "en": "I'm a programmer at Siemens.",
+		  "de": "Ich bin Programmierer/in bei Siemens.",
+		  "speak": "Siemensのprogrammerです"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"programmer",
+			"です",
+			"か",
+			"。",
+			{
+			  "t": "日本語",
+			  "r": "にほんご"
+			},
+			"が",
+			"すき",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "A programmer? Do you like Japanese?",
+		  "de": "Programmierer/in? Mögen Sie Japanisch?",
+		  "speak": "programmerですかにほんごがすきですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"ええ",
+			"、",
+			"すき",
+			"です",
+			"。"
+		  ],
+		  "en": "Yes, I do.",
+		  "de": "Ja, ich mag es.",
+		  "speak": "ええすきです"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			{
+			  "t": "趣味",
+			  "r": "しゅみ"
+			},
+			"は",
+			"、",
+			{
+			  "t": "何",
+			  "r": "なん"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "What is your hobby?",
+		  "de": "Was ist Ihr Hobby?",
+		  "speak": "しゅみはなんですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			{
+			  "t": "趣味",
+			  "r": "しゅみ"
+			},
+			"…",
+			"、",
+			"「",
+			{
+			  "t": "趣味",
+			  "r": "しゅみ"
+			},
+			"」",
+			"は",
+			"、",
+			"ドイツ",
+			"語",
+			"で",
+			{
+			  "t": "何",
+			  "r": "なん"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "shumi… what is 'shumi' in German?",
+		  "de": "shumi… was heißt „shumi“ auf Deutsch?",
+		  "speak": "しゅみしゅみはドイツごでなんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"あ",
+			"、",
+			{
+			  "t": "英語",
+			  "r": "えいご"
+			},
+			"で",
+			"は",
+			"hobby",
+			"です",
+			"。"
+		  ],
+		  "en": "Ah, in English it's 'hobby.'",
+		  "de": "Ah, auf Englisch heißt es „hobby“.",
+		  "speak": "あえいごではhobbyです"
+		}
+	  ]
+	},
+	{
+	  "id": "d20",
+	  "title_en": "At a party – Japanese sweets",
+	  "title_de": "Auf einem Fest – Japanische Süßigkeiten",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"どうぞ",
+			"。"
+		  ],
+		  "en": "Please.",
+		  "de": "Bitte.",
+		  "speak": "どうぞ"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"あ",
+			"、",
+			"どうも",
+			"。",
+			"あの",
+			"…",
+			"これ",
+			"は",
+			{
+			  "t": "何",
+			  "r": "なん"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Oh, thank you. Um… what is this?",
+		  "de": "Oh, danke. Ähm… was ist das?",
+		  "speak": "あどうもあのこれはなんですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"それ",
+			"は",
+			"「",
+			"やつはし",
+			"」",
+			"です",
+			"。",
+			{
+			  "t": "日本",
+			  "r": "にほん"
+			},
+			"の",
+			"おかし",
+			"です",
+			"よ",
+			"。",
+			"ともだち",
+			"の",
+			{
+			  "t": "お土産",
+			  "r": "おみやげ"
+			},
+			"です",
+			"。"
+		  ],
+		  "en": "That is 'yatsuhashi.' It's a Japanese sweet. It's a souvenir from a friend.",
+		  "de": "Das ist „Yatsuhashi“. Es ist eine japanische Süßigkeit. Ein Mitbringsel von einem Freund.",
+		  "speak": "それはやつはしですにほんのおかしですよともだちのおみやげです"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"おいしそう",
+			"です",
+			"ね",
+			"。"
+		  ],
+		  "en": "It looks delicious.",
+		  "de": "Sieht lecker aus.",
+		  "speak": "おいしそうですね"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"ええ",
+			"、",
+			"おいしい",
+			"です",
+			"よ",
+			"。",
+			"どうぞ",
+			"。"
+		  ],
+		  "en": "Yes, it is delicious. Please.",
+		  "de": "Ja, es ist lecker. Bitte.",
+		  "speak": "ええおいしいですよどうぞ"
+		}
+	  ]
+	},
+	{
+	  "id": "d21",
+	  "title_en": "Travel photos",
+	  "title_de": "Reisefotos",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"それ",
+			"は",
+			"、",
+			"どこ",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Where is that?",
+		  "de": "Wo ist das?",
+		  "speak": "それはどこですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"これ",
+			"は",
+			"、",
+			{
+			  "t": "京都",
+			  "r": "きょうと"
+			},
+			"です",
+			"。"
+		  ],
+		  "en": "This is Kyoto.",
+		  "de": "Das ist Kyoto.",
+		  "speak": "これはきょうとです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"きれい",
+			"です",
+			"ね",
+			"。",
+			"それ",
+			"は",
+			"？"
+		  ],
+		  "en": "Beautiful, isn't it? And that?",
+		  "de": "Schön, oder? Und das?",
+		  "speak": "きれいですねそれは"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"これ",
+			"は",
+			"、",
+			{
+			  "t": "松山",
+			  "r": "まつやま"
+			},
+			"です",
+			"。",
+			{
+			  "t": "温泉",
+			  "r": "おんせん"
+			},
+			"です",
+			"。"
+		  ],
+		  "en": "This is Matsuyama. It's a hot spring.",
+		  "de": "Das ist Matsuyama. Eine heiße Quelle.",
+		  "speak": "これはまつやまですおんせんです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			{
+			  "t": "道後温泉",
+			  "r": "どうごおんせん"
+			},
+			"です",
+			"ね",
+			"。",
+			"あ",
+			"、",
+			"それ",
+			"は",
+			{
+			  "t": "広島",
+			  "r": "ひろしま"
+			},
+			"です",
+			"ね",
+			"。"
+		  ],
+		  "en": "That's Dogo Onsen, right? Oh, and that is Hiroshima, right?",
+		  "de": "Das ist Dogo Onsen, oder? Und das ist Hiroshima, oder?",
+		  "speak": "どうごおんせんですねあそれはひろしまですね"
+		}
+	  ]
+	},
+	{
+	  "id": "d22",
+	  "title_en": "At the buffet",
+	  "title_de": "Am Buffet",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"すみません",
+			"、",
+			"あれ",
+			"は",
+			{
+			  "t": "何",
+			  "r": "なん"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Excuse me, what is that?",
+		  "de": "Entschuldigung, was ist das?",
+		  "speak": "すみませんあれはなんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"どれ",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Which one?",
+		  "de": "Welches?",
+		  "speak": "どれですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"あれ",
+			"です",
+			"。"
+		  ],
+		  "en": "That one.",
+		  "de": "Das da.",
+		  "speak": "あれです"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"ああ",
+			"、",
+			"あれ",
+			"は",
+			"「",
+			"かずのこ",
+			"」",
+			"です",
+			"。",
+			"さかな",
+			"の",
+			"たまご",
+			"です",
+			"よ",
+			"。"
+		  ],
+		  "en": "Ah, that is 'kazunoko.' It's fish eggs.",
+		  "de": "Ah, das ist „Kazunoko“. Fischrogen.",
+		  "speak": "あああれはかずのこですさかなのたまごですよ"
+		}
+	  ]
+	},
+	{
+	  "id": "d23",
+	  "title_en": "At a flea market",
+	  "title_de": "Auf dem Flohmarkt",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"あの",
+			"…",
+			"、",
+			"すみません",
+			"。",
+			"それ",
+			"は",
+			{
+			  "t": "何",
+			  "r": "なん"
+			},
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Um… excuse me. What is that?",
+		  "de": "Ähm… entschuldigen Sie. Was ist das?",
+		  "speak": "あのすみませんそれはなんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"これ",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "This one?",
+		  "de": "Dieses hier?",
+		  "speak": "これですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"はい",
+			"、",
+			"それ",
+			"です",
+			"。"
+		  ],
+		  "en": "Yes, that one.",
+		  "de": "Ja, das.",
+		  "speak": "はいそれです"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"これ",
+			"は",
+			"ゆかた",
+			"です",
+			"。"
+		  ],
+		  "en": "This is a yukata.",
+		  "de": "Das ist eine Yukata.",
+		  "speak": "これはゆかたです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"「",
+			"ゆかた",
+			"」",
+			"？"
+		  ],
+		  "en": "'Yukata'?",
+		  "de": "„Yukata“?",
+		  "speak": "ゆかた"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			{
+			  "t": "日本",
+			  "r": "にほん"
+			},
+			"の",
+			"なつ",
+			"の",
+			"きもの",
+			"です",
+			"。"
+		  ],
+		  "en": "It's a Japanese summer kimono.",
+		  "de": "Ein japanischer Sommerkimono.",
+		  "speak": "にほんのなつのきものです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"きれい",
+			"です",
+			"ね",
+			"。",
+			"いくら",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "It's beautiful. How much is it?",
+		  "de": "Schön. Wie viel kostet es?",
+		  "speak": "きれいですねいくらですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"30",
+			"euro",
+			"です",
+			"。"
+		  ],
+		  "en": "30 euros.",
+		  "de": "30 Euro.",
+		  "speak": "30 euroです"
+		}
+	  ]
+	},
+	{
+	  "id": "d24",
+	  "title_en": "Whose textbook?",
+	  "title_de": "Wessen Lehrbuch?",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"これ",
+			"は",
+			"だれ",
+			"の",
+			"（",
+			{
+			  "t": "教科書",
+			  "r": "きょうかしょ"
+			},
+			"）",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Whose (textbook) is this?",
+		  "de": "Wessen (Lehrbuch) ist das?",
+		  "speak": "これはだれのきょうかしょですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"あ",
+			"、",
+			"すみません",
+			"。",
+			"わたし",
+			"の",
+			"です",
+			"。"
+		  ],
+		  "en": "Oh, excuse me. It's mine.",
+		  "de": "Oh, entschuldigung. Das ist meins.",
+		  "speak": "あすみませんわたしのです"
+		}
+	  ]
+	},
+	{
+	  "id": "d25",
+	  "title_en": "Complimenting a letter",
+	  "title_de": "Ein Kompliment für einen Brief",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"Keller",
+			"さん",
+			"の",
+			"じ",
+			"は",
+			"、",
+			"きれい",
+			"です",
+			"ね",
+			"。"
+		  ],
+		  "en": "Ms. Keller, your handwriting is beautiful.",
+		  "de": "Frau Keller, Ihre Schrift ist schön.",
+		  "speak": "Kellerさんのじはきれいですね"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"ありがとう",
+			"ございます",
+			"。"
+		  ],
+		  "en": "Thank you very much.",
+		  "de": "Vielen Dank.",
+		  "speak": "ありがとうございます"
+		}
+	  ]
+	},
+	{
+	  "id": "d26",
+	  "title_en": "Whose umbrella?",
+	  "title_de": "Wessen Regenschirm?",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"せんせい",
+			"、",
+			"さようなら",
+			"。",
+			"また",
+			"、",
+			"らいしゅう",
+			"。"
+		  ],
+		  "en": "Goodbye, teacher. See you next week.",
+		  "de": "Auf Wiedersehen, Lehrer/in. Bis nächste Woche.",
+		  "speak": "せんせいさようならまたらいしゅう"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"あ",
+			"、",
+			"トーマス",
+			"さん",
+			"、",
+			"この",
+			"かさ",
+			"は",
+			"トーマス",
+			"さん",
+			"の",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Oh, Thomas, is this umbrella yours?",
+		  "de": "Oh, Thomas, ist das dein Regenschirm?",
+		  "speak": "あトーマスさんこのかさはトーマスさんのですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"いいえ",
+			"、",
+			"わたし",
+			"の",
+			"じゃ",
+			"ない",
+			"です",
+			"。"
+		  ],
+		  "en": "No, it's not mine.",
+		  "de": "Nein, es ist nicht meins.",
+		  "speak": "いいえわたしのじゃないです"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"そう",
+			"です",
+			"か",
+			"。",
+			"じゃ",
+			"、",
+			"どなた",
+			"の",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "I see. Then whose is it?",
+		  "de": "Ach so. Wessen ist es dann?",
+		  "speak": "そうですかじゃどなたのですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"うーん",
+			"…",
+			"。",
+			"わかりません",
+			"。"
+		  ],
+		  "en": "Hmm… I don't know.",
+		  "de": "Hm… ich weiß es nicht.",
+		  "speak": "うーんわかりません"
+		}
+	  ]
+	},
+	{
+	  "id": "d27",
+	  "title_en": "Price question",
+	  "title_de": "Preisfrage",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"この",
+			"「",
+			"ゆかた",
+			"」",
+			"は",
+			"、",
+			"いくら",
+			"です",
+			"か",
+			"。",
+			"／",
+			"その",
+			"「",
+			"ゆかた",
+			"」",
+			"は",
+			"、",
+			"いくら",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "How much is this yukata? / How much is that yukata?",
+		  "de": "Wie viel kostet diese Yukata? / Wie viel kostet jene Yukata?",
+		  "speak": "このゆかたはいくらですかそのゆかたはいくらですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"15",
+			"euro",
+			"です",
+			"。"
+		  ],
+		  "en": "15 euros.",
+		  "de": "15 Euro.",
+		  "speak": "15 euroです"
+		}
+	  ]
+	},
+	{
+	  "id": "d28",
+	  "title_en": "What is your job?",
+	  "title_de": "Was ist Ihr Beruf?",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"あの",
+			"、",
+			"すみません",
+			"。",
+			{
+			  "t": "お仕事",
+			  "r": "おしごと"
+			},
+			"は",
+			"…",
+			"。"
+		  ],
+		  "en": "Um, excuse me. Your job is…?",
+		  "de": "Ähm, entschuldigen Sie. Ihr Beruf ist…?",
+		  "speak": "あのすみませんおしごとは"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"あ",
+			"、",
+			"こうこう",
+			"の",
+			{
+			  "t": "教師",
+			  "r": "きょうし"
+			},
+			"です",
+			"。"
+		  ],
+		  "en": "Ah, I'm a high school teacher.",
+		  "de": "Ah, ich bin Oberschullehrer/in.",
+		  "speak": "あこうこうのきょうしです"
+		}
+	  ]
+	},
+	{
+	  "id": "d29",
+	  "title_en": "Are you a university student?",
+	  "title_de": "Sind Sie Student/in an der Universität?",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"Berlin",
+			{
+			  "t": "大学",
+			  "r": "だいがく"
+			},
+			"の",
+			{
+			  "t": "学生",
+			  "r": "がくせい"
+			},
+			"さん",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Are you a student at Berlin University?",
+		  "de": "Sind Sie Student/in an der Universität Berlin?",
+		  "speak": "Berlinだいがくのがくせいさんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"あ",
+			"、",
+			"いいえ",
+			"、",
+			"まだ",
+			"こうこうせい",
+			"です",
+			"。"
+		  ],
+		  "en": "Ah, no, I'm still a high school student.",
+		  "de": "Ah, nein, ich bin noch Schüler/in.",
+		  "speak": "あいいえまだこうこうせいです"
+		}
+	  ]
+	},
+	{
+	  "id": "d30",
+	  "title_en": "At the party buffet",
+	  "title_de": "Am Party-Buffet",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"さかい",
+			"さん",
+			"は",
+			{
+			  "t": "学生",
+			  "r": "がくせい"
+			},
+			"さん",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Ms. Sakai, are you a student?",
+		  "de": "Frau Sakai, sind Sie Studentin?",
+		  "speak": "さかいさんはがくせいさんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"いいえ",
+			"。",
+			"いま",
+			"は",
+			{
+			  "t": "会社員",
+			  "r": "かいしゃいん"
+			},
+			"です",
+			"。",
+			{
+			  "t": "日本",
+			  "r": "にほん"
+			},
+			"の",
+			{
+			  "t": "会社",
+			  "r": "かいしゃ"
+			},
+			"の",
+			{
+			  "t": "秘書",
+			  "r": "ひしょ"
+			},
+			"です",
+			"。",
+			"でも",
+			"、",
+			"まえ",
+			"は",
+			"ドイツ",
+			"の",
+			{
+			  "t": "大学",
+			  "r": "だいがく"
+			},
+			"の",
+			{
+			  "t": "学生",
+			  "r": "がくせい"
+			},
+			"で",
+			"した",
+			"。"
+		  ],
+		  "en": "No. I'm an office worker now. I'm a secretary at a Japanese company. But before, I was a university student in Germany.",
+		  "de": "Nein. Jetzt bin ich Angestellte. Ich bin Sekretärin in einer japanischen Firma. Aber früher war ich Studentin an einer Universität in Deutschland.",
+		  "speak": "いいえいまはかいしゃいんですにほんのかいしゃのひしょですでもまえはドイツのだいがくのがくせいでした"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"そう",
+			"です",
+			"か",
+			"。",
+			"（",
+			"あの",
+			"、",
+			"それ",
+			"は",
+			{
+			  "t": "何",
+			  "r": "なん"
+			},
+			"です",
+			"か",
+			"。",
+			"）"
+		  ],
+		  "en": "I see. (Um, what is that?)",
+		  "de": "Ach so. (Ähm, was ist das?)",
+		  "speak": "そうですかあのそれはなんですか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"これ",
+			"です",
+			"か",
+			"。",
+			"これ",
+			"は",
+			"かずのこ",
+			"です",
+			"。",
+			"さかな",
+			"の",
+			"たまご",
+			"です",
+			"よ",
+			"。",
+			"ケラー",
+			"さん",
+			"は",
+			"、",
+			"さかな",
+			"が",
+			"すき",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "This one? This is kazunoko. It's fish eggs. Ms. Keller, do you like fish?",
+		  "de": "Dieses hier? Das ist Kazunoko. Fischrogen. Frau Keller, mögen Sie Fisch?",
+		  "speak": "これですかこれはかずのこですさかなのたまごですよケラーさんはさかながすきですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"ええ",
+			"、",
+			"すき",
+			"です",
+			"。",
+			"でも",
+			"、",
+			"さかな",
+			"の",
+			"たまご",
+			"は",
+			"あまり",
+			"すき",
+			"じゃ",
+			"ない",
+			"です",
+			"。"
+		  ],
+		  "en": "Yes, I do. But I don't like fish eggs very much.",
+		  "de": "Ja, ich mag Fisch. Aber Fischrogen mag ich nicht besonders.",
+		  "speak": "ええすきですでもさかなのたまごはあまりすきじゃないです"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"あの",
+			"…",
+			"、",
+			"それ",
+			"は",
+			"ケラー",
+			"さん",
+			"の",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Um… is that yours, Ms. Keller?",
+		  "de": "Ähm… ist das Ihres, Frau Keller?",
+		  "speak": "あのそれはケラーさんのですか"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"わたし",
+			"の",
+			"じゃ",
+			"ない",
+			"です",
+			"。"
+		  ],
+		  "en": "It's not mine.",
+		  "de": "Es ist nicht meins.",
+		  "speak": "わたしのじゃないです"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"あの",
+			"、",
+			"すみません",
+			"、",
+			"これ",
+			"は",
+			"どなた",
+			"の",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "Um, excuse me, whose is this?",
+		  "de": "Ähm, entschuldigen Sie, wessen ist das?",
+		  "speak": "あのすみませんこれはどなたのですか"
+		}
+	  ]
+	},
+	{
+	  "id": "d31",
+	  "title_en": "Do you play sports?",
+	  "title_de": "Treiben Sie Sport?",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"スポーツ",
+			"を",
+			"します",
+			"か",
+			"。"
+		  ],
+		  "en": "Do you play sports?",
+		  "de": "Treiben Sie Sport?",
+		  "speak": "スポーツをしますか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"はい",
+			"、",
+			"します",
+			"。"
+		  ],
+		  "en": "Yes, I do.",
+		  "de": "Ja, das tue ich.",
+		  "speak": "はいします"
+		}
+	  ]
+	},
+	{
+	  "id": "d32",
+	  "title_en": "Talking about sports",
+	  "title_de": "Über Sport sprechen",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"ばば",
+			"さん",
+			"は",
+			{
+			  "t": "野球",
+			  "r": "やきゅう"
+			},
+			"を",
+			"します",
+			"か",
+			"。"
+		  ],
+		  "en": "Mr./Ms. Baba, do you play baseball?",
+		  "de": "Herr/Frau Baba, spielen Sie Baseball?",
+		  "speak": "ばばさんはやきゅうをしますか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"いいえ",
+			"、",
+			"しません",
+			"。",
+			"でも",
+			"、",
+			"まえ",
+			"は",
+			"しました",
+			"。"
+		  ],
+		  "en": "No, I don't. But I did before.",
+		  "de": "Nein, ich spiele nicht. Aber früher habe ich gespielt.",
+		  "speak": "いいえしませんでもまえはしました"
+		}
+	  ]
+	},
+	{
+	  "id": "d33",
+	  "title_en": "What sport do you play?",
+	  "title_de": "Welchen Sport treiben Sie?",
+	  "turns": [
+		{
+		  "who": "user",
+		  "tokens": [
+			"Meyer",
+			"さん",
+			"は",
+			"、",
+			"スポーツ",
+			"を",
+			"します",
+			"か",
+			"。"
+		  ],
+		  "en": "Mr./Ms. Meyer, do you play sports?",
+		  "de": "Herr/Frau Meyer, treiben Sie Sport?",
+		  "speak": "Meyerさんはスポーツをしますか"
+		},
+		{
+		  "who": "bot",
+		  "tokens": [
+			"はい",
+			"。",
+			"「",
+			{
+			  "t": "空手",
+			  "r": "からて"
+			},
+			"と",
+			{
+			  "t": "登山",
+			  "r": "とざん"
+			},
+			"」",
+			"を",
+			"します",
+			"。"
+		  ],
+		  "en": "Yes. I do karate and mountain climbing.",
+		  "de": "Ja. Ich mache Karate und Bergsteigen.",
+		  "speak": "はいからてととざんをします"
+		},
+		{
+		  "who": "user",
+		  "tokens": [
+			"そう",
+			"です",
+			"か",
+			"。"
+		  ],
+		  "en": "I see.",
+		  "de": "Ach so.",
+		  "speak": "そうですか"
+		}
+	  ]
+	}
   ],
   "hiragana": [
     {
