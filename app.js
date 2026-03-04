@@ -43,6 +43,7 @@
       btn_listen: "Listen",
       btn_stop: "Stop",
       btn_speak: "Play",
+	  btn_speak_slow: "Slow",
       btn_retry: "Retry",
       btn_next: "Next",
       recognized_label: "Recognized:",
@@ -86,9 +87,10 @@
       tips_2: "Deutlich sprechen; kurze Pausen helfen.",
       tips_3: "Wenn es zu streng ist: nochmal — ähnliche Treffer zählen.",
       tips_4: "Die Beispieltexte enthalten Leerzeichen zwischen japanischen „Chunks“ für bessere Hervorhebung.",
-      btn_listen: "Hören",
+      btn_listen: "Sprechen",
       btn_stop: "Stopp",
       btn_speak: "Abspielen",
+	  btn_speak_slow: "Langsam",
       btn_retry: "Nochmal",
       btn_next: "Weiter",
       recognized_label: "Erkannt:",
@@ -467,18 +469,20 @@
     const ja = state.voices.find(x => (x.lang || '').toLowerCase().startsWith('ja'));
     return ja || state.voices[0] || null;
   }
+  
+  function speak(text, rate = 0.95) {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.lang = 'ja-JP';
+  const v = pickVoice();
+  if (v) utt.voice = v;
 
-  function speak(text) {
-    if (!window.speechSynthesis) return;
-    window.speechSynthesis.cancel();
-    const utt = new SpeechSynthesisUtterance(text);
-    utt.lang = 'ja-JP';
-    const v = pickVoice();
-    if (v) utt.voice = v;
-    utt.rate = 0.95;
-    utt.pitch = 1.0;
-    window.speechSynthesis.speak(utt);
-  }
+  utt.rate = rate;
+  utt.pitch = 1.0;
+
+  window.speechSynthesis.speak(utt);
+}
 
   // ---------- Speech recognition ----------
   let recognizer = null;
@@ -748,6 +752,7 @@ function startListening() {
 
       // In dialog mode, disable Play for bot turns (we auto-play)
       $('#btnSpeak').disabled = (turn.who === 'bot');
+	  $('#btnSpeakSlow').disabled = (turn.who === 'bot');
 
       updateProgressText();
       resetHighlights();
@@ -783,6 +788,7 @@ function startListening() {
     prompt.appendChild(tr);
 
     $('#btnSpeak').disabled = false;
+	$('#btnSpeakSlow').disabled = false;
 
     updateProgressText();
     resetHighlights();
@@ -1126,6 +1132,23 @@ function startListening() {
       const text = item.speak || getTokensFromItem(item).map(tokenToText).join('');
       speak(text);
     });
+	
+	$('#btnSpeakSlow').addEventListener('click', () => {
+	  const slowRate = 0.70;
+
+	  if (state.mode === 'dialog') {
+		const dialog = getItem();
+		const turn = dialog?.turns?.[state.dialogTurn];
+		if (!turn) return;
+		speak(turn.speak || getTokensFromItem(turn).map(tokenToText).join(''), slowRate);
+		return;
+	  }
+
+	  const item = getItem();
+	  if (!item) return;
+	  const text = item.speak || getTokensFromItem(item).map(tokenToText).join('');
+	  speak(text, slowRate);
+	});
 
     // Settings bindings are elsewhere in this file (sliders/selects); keep those intact.
   }
