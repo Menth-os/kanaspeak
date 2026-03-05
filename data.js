@@ -1,6 +1,6 @@
 // Sample content (you can expand freely).
 // Tokens are arrays for highlighting; display keeps Japanese punctuation.
-// Tokens can be strings or objects: { t: "私", r: { t: "私", r: "わたし" } } for ruby/furigana.
+// Tokens can be strings or objects: { t: "私", r: "わたし" } for ruby/furigana.
 
 window.JP_DATA = {
   "words": [
@@ -50,7 +50,7 @@ window.JP_DATA = {
       "tokens": [
         {
           "t": "私",
-          "r": { t: "私", r: "わたし" }
+          "r": "わたし"
         }
       ],
       "en": "I / me",
@@ -67,7 +67,7 @@ window.JP_DATA = {
       "tokens": [
         {
           "t": "日本",
-          "r": { t: "日本", r: "にほん" }
+          "r": "にほん"
         }
       ],
       "en": "Japan",
@@ -244,7 +244,7 @@ window.JP_DATA = {
       "tokens": [
         {
           "t": "日本",
-          "r": { t: "日本", r: "にほん" }
+          "r": "にほん"
         }
       ],
       "en": "Japan",
@@ -702,7 +702,7 @@ window.JP_DATA = {
       "tokens": [
         {
           "t": "私",
-          "r": { t: "私", r: "わたし" }
+          "r": "わたし"
         },
         "は",
         "ペーター",
@@ -859,7 +859,7 @@ window.JP_DATA = {
           "tokens": [
             {
               "t": "私",
-              "r": { t: "私", r: "わたし" }
+              "r": "わたし"
             },
             "は",
             "マリア",
@@ -1383,7 +1383,7 @@ window.JP_DATA = {
             "、",
             {
               "t": "東京",
-              "r": { t: "東京", r: "とうきょう" }
+              "r": "とうきょう"
             },
             "の",
             {
@@ -1473,7 +1473,7 @@ window.JP_DATA = {
           "tokens": [
             {
               "t": "日本",
-              "r": { t: "日本", r: "にほん" }
+              "r": "にほん"
             },
             "の",
             {
@@ -1749,7 +1749,7 @@ window.JP_DATA = {
             "、",
             {
               "t": "日本",
-              "r": { t: "日本", r: "にほん" }
+              "r": "にほん"
             },
             "の",
             {
@@ -2309,7 +2309,7 @@ window.JP_DATA = {
             "。",
             {
               "t": "日本",
-              "r": { t: "日本", r: "にほん" }
+              "r": "にほん"
             },
             "の",
             "おかし",
@@ -2589,7 +2589,7 @@ window.JP_DATA = {
           "tokens": [
             {
               "t": "日本",
-              "r": { t: "日本", r: "にほん" }
+              "r": "にほん"
             },
             "の",
             "なつ",
@@ -2659,7 +2659,7 @@ window.JP_DATA = {
             "。",
             {
 			  "t": "私",
-			  "r": { t: "私", r: "わたし" }
+			  "r": "わたし"
 			},
             "の",
             "です",
@@ -2753,7 +2753,7 @@ window.JP_DATA = {
             "、",
             {
 			  "t": "私",
-			  "r": { t: "私", r: "わたし" }
+			  "r": "わたし"
 			},
             "の",
             "じゃ",
@@ -2957,7 +2957,7 @@ window.JP_DATA = {
             "。",
             {
               "t": "日本",
-              "r": { t: "日本", r: "にほん" }
+              "r": "にほん"
             },
             "の",
             {
@@ -3113,7 +3113,7 @@ window.JP_DATA = {
           "tokens": [
             {
 			  "t": "私",
-			  "r": { t: "私", r: "わたし" }
+			  "r": "わたし"
 			},
             "の",
             "じゃ",
