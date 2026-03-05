@@ -56,7 +56,7 @@
           <button id="btnHome" class="btn btn-sm btn-outline-light" type="button" title="Home">
             <i class="fa-solid fa-house"></i>
           </button>
-        </div>
+</div>
       </div>
     </header>
 
@@ -172,7 +172,11 @@
                         <button id="btnNext" class="btn btn-primary" type="button">
                           <i class="fa-solid fa-forward me-2"></i><span data-i18n="btn_next">Next</span>
                         </button>
-                      </div>
+                        <button id="btnShuffle" class="btn btn-outline-light btn-toggle" type="button" aria-pressed="false" title="Shuffle">
+                          <i class="fa-solid fa-shuffle"></i>
+                        </button>
+
+</div>
 
                       <button class="btn btn-sm btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#settingsCanvas" aria-controls="settingsCanvas">
                         <i class="fa-solid fa-gear"></i>
@@ -256,7 +260,19 @@
           <span id="successValue"></span>
           <span>95%</span>
         </div>
+      
+
+      <div class="mb-3">
+        <label class="form-label" data-i18n="settings_pause">Listening timeout</label>
+        <input id="pauseRange" type="range" class="form-range" min="1200" max="20000" step="200">
+        <div class="d-flex justify-content-between small text-white-60">
+          <span>1.2s</span>
+          <span id="pauseValue"></span>
+          <span>20s</span>
+        </div>
+        <div class="form-text text-white-60" data-i18n="settings_pause_help">How long we keep listening without new speech (allows pauses + slow starts).</div>
       </div>
+</div>
 
       <div class="mb-3">
         <label class="form-label" data-i18n="settings_recog">Recognition language</label>

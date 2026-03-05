@@ -46,6 +46,7 @@
 	  btn_speak_slow: "Slow",
       btn_retry: "Retry",
       btn_next: "Next",
+      shuffle_label: "Shuffle",
       recognized_label: "Recognized:",
       dialog_title: "Dialog",
       footer_note: "Works best in Chrome/Edge. No data leaves your device.",
@@ -56,6 +57,8 @@
       settings_leniency_strict: "Strict",
       settings_leniency_loose: "Loose",
       settings_success: "Success threshold",
+      settings_pause: "Listening timeout",
+      settings_pause_help: "How long the app keeps listening after you stop speaking. Increase this if you need more time or pause between words.",
       settings_recog: "Recognition language",
       settings_recog_help: "Use ja-JP for best Japanese results.",
       settings_reset: "Reset progress",
@@ -93,6 +96,7 @@
 	  btn_speak_slow: "Langsam",
       btn_retry: "Nochmal",
       btn_next: "Weiter",
+      shuffle_label: "Shuffle",
       recognized_label: "Erkannt:",
       dialog_title: "Dialog",
       footer_note: "Am besten in Chrome/Edge. Keine Daten verlassen dein Gerät.",
@@ -103,6 +107,8 @@
       settings_leniency_strict: "Streng",
       settings_leniency_loose: "Locker",
       settings_success: "Erfolgs-Schwelle",
+      settings_pause: "Hör-Timeout",
+      settings_pause_help: "Wie lange die App nach einer Sprechpause weiter zuhört. Erhöhe den Wert, wenn du mehr Zeit brauchst oder zwischen Wörtern pausierst.",
       settings_recog: "Erkennungs-Sprache",
       settings_recog_help: "Für Japanisch ist ja-JP meist am besten.",
       settings_reset: "Fortschritt zurücksetzen",
@@ -117,7 +123,7 @@
     }
   };
 
-  const IGNORE_PUNCT = new Set(['。','、','「','」']);
+  const IGNORE_PUNCT = new Set(['。','、','「','」','…','・','—','～','（','）','『','』']);
 
   const LS = {
     uiLang: 'jpTrainer.uiLang',
@@ -125,6 +131,8 @@
     leniency: 'jpTrainer.leniency',
     success: 'jpTrainer.success',
     recogLang: 'jpTrainer.recogLang',
+    pauseMs: 'jpTrainer.pauseMs',
+    shuffle: 'jpTrainer.shuffle',
     progress: 'jpTrainer.progress'
   };
 
@@ -368,6 +376,8 @@
     leniency: Number(localStorage.getItem(LS.leniency) || '45'), // 0..100
     success: Number(localStorage.getItem(LS.success) || '90'),   // 50..95
     recogLang: localStorage.getItem(LS.recogLang) || 'ja-JP',
+    pauseMs: Number(localStorage.getItem(LS.pauseMs) || '6000'),
+    shuffle: (localStorage.getItem(LS.shuffle) || '0') === '1',
     progress: safeJsonParse(localStorage.getItem(LS.progress) || '{}', {})
   };
 
@@ -426,62 +436,139 @@
 
   // ---------- Speech synthesis ----------
   function refreshVoices() {
-    const voices = (window.speechSynthesis?.getVoices?.() || []);
-    state.voices = voices;
+    const voicesAll = (window.speechSynthesis?.getVoices?.() || []);
+    // Only Japanese voices. (If you have just one installed, the list will still be short.)
+    const jaRaw = voicesAll.filter(v => ((v.lang || '').toLowerCase().startsWith('ja')));
+    // De-duplicate by voiceURI (some platforms return duplicates)
+    const seen = new Set();
+    const ja = jaRaw.filter(v => {
+      if (!v.voiceURI) return false;
+      if (seen.has(v.voiceURI)) return false;
+      seen.add(v.voiceURI);
+      return true;
+    });
+
+    state.voices = ja;
+
     const sel = $('#voiceSelect');
     sel.innerHTML = '';
 
-    const ja = voices.filter(v => (v.lang || '').toLowerCase().startsWith('ja'));
-    const other = voices.filter(v => !((v.lang || '').toLowerCase().startsWith('ja')));
+    ja.forEach(v => {
+      const opt = document.createElement('option');
+      opt.value = v.voiceURI;
+      opt.textContent = `${v.name} (${v.lang})`;
+      sel.appendChild(opt);
+    });
 
-    const addGroup = (label, list) => {
-      if (!list.length) return;
-      const og = document.createElement('optgroup');
-      og.label = label;
-      list.forEach(v => {
-        const opt = document.createElement('option');
-        opt.value = v.voiceURI;
-        opt.textContent = `${v.name} (${v.lang})`;
-        og.appendChild(opt);
-      });
-      sel.appendChild(og);
-    };
-
-    addGroup('Japanese', ja);
-    addGroup('Other', other);
-
-    // pick stored voice if still present; otherwise pick first JA
     const stored = state.voiceUri;
-    const hasStored = voices.some(v => v.voiceURI === stored);
+    const hasStored = ja.some(v => v.voiceURI === stored);
+
     if (hasStored) sel.value = stored;
     else if (ja.length) sel.value = ja[0].voiceURI;
-    else if (voices.length) sel.value = voices[0].voiceURI;
 
-    state.voiceUri = sel.value || '';
-    localStorage.setItem(LS.voiceUri, state.voiceUri);
+    // Only persist when we actually have a selection
+    if (sel.value) {
+      state.voiceUri = sel.value;
+      localStorage.setItem(LS.voiceUri, state.voiceUri);
+    }
   }
 
-  function pickVoice() {
+function pickVoice() {
     const uri = state.voiceUri;
     const v = state.voices.find(x => x.voiceURI === uri);
-    if (v) return v;
-    // fallback to JA
-    const ja = state.voices.find(x => (x.lang || '').toLowerCase().startsWith('ja'));
-    return ja || state.voices[0] || null;
+    return v || state.voices[0] || null;
   }
+
+  function ttsTextForNaturalProsody(text) {
+    const s = (text || '').toString().trim();
+    if (!s) return s;
+
+    // If already a question mark exists, keep it.
+    if (/[？?]\s*$/.test(s)) return s;
+
+    // Check if the sentence ends with か (question particle), allowing trailing punctuation.
+    const core = s.replace(/[。！？!…]+$/g, '').trim();
+    if (core.endsWith('か')) return s + '？';
+
+    return s;
+  }
+
+
+
+
   
   function speak(text, rate = 0.90) {
   if (!window.speechSynthesis) return;
+  // Any new speak request cancels the previous one.
+  state.ttsSeqId = (state.ttsSeqId || 0) + 1;
   window.speechSynthesis.cancel();
-  const utt = new SpeechSynthesisUtterance(text);
-  utt.lang = 'ja-JP';
+
+  // Add ? only for speech synthesis (does not affect displayed text / matching)
+  const ttsText = ttsTextForNaturalProsody(text);
+
+  const utt = new SpeechSynthesisUtterance(ttsText);
   const v = pickVoice();
-  if (v) utt.voice = v;
+  if (v) {
+    utt.voice = v;
+    if (v.lang) utt.lang = v.lang;
+  } else {
+    utt.lang = 'ja-JP';
+  }
 
   utt.rate = rate;
   utt.pitch = 1.0;
 
   window.speechSynthesis.speak(utt);
+}
+
+// Speak chunk-by-chunk with small pauses (better for learners + clearer prosody).
+function speakChunks(text, rate = 0.75, pauseMs = 220) {
+  if (!window.speechSynthesis) return;
+  const seqId = (state.ttsSeqId = (state.ttsSeqId || 0) + 1);
+  window.speechSynthesis.cancel();
+
+  const raw = (text || '').toString();
+  const ttsFull = ttsTextForNaturalProsody(raw);
+
+  // Split on spaces you already provide between “chunks”.
+  // Fallback: split by common punctuation if no spaces exist.
+  let chunks = raw.includes(' ')
+    ? raw.split(/\s+/).filter(Boolean)
+    : raw.split(/[、。！？!?]/).map(s => s.trim()).filter(Boolean);
+
+  if (!chunks.length) return;
+
+  const v = pickVoice();
+  // If we added a question mark, attach it to the LAST chunk only (more natural).
+  const addedQ = /[？?]\s*$/.test(ttsFull) && !/[？?]\s*$/.test(raw);
+
+  const speakOne = (i) => {
+    if (seqId !== state.ttsSeqId) return; // cancelled/replaced
+    if (i >= chunks.length) return;
+
+    let chunk = chunks[i];
+    if (addedQ && i === chunks.length - 1) chunk = chunk + '？';
+
+    const utt = new SpeechSynthesisUtterance(chunk);
+    if (v) {
+      utt.voice = v;
+      if (v.lang) utt.lang = v.lang;
+    } else {
+      utt.lang = 'ja-JP';
+    }
+
+    utt.rate = rate;
+    utt.pitch = 1.0;
+
+    utt.onend = () => {
+      if (seqId !== state.ttsSeqId) return;
+      setTimeout(() => speakOne(i + 1), pauseMs);
+    };
+
+    window.speechSynthesis.speak(utt);
+  };
+
+  speakOne(0);
 }
 
   // ---------- Speech recognition ----------
@@ -519,7 +606,8 @@
 
       // extend time window for slow speakers
       clearSilenceTimer();
-      silenceTimer = window.setTimeout(finalizeByTimeout, clamp(state.pauseMs || 2000, 600, 10000));
+      const initial = clamp(Math.max(state.pauseMs || 6000, 2000 + (currentSpeakText(false).length * 140)), 1200, 30000);
+    silenceTimer = window.setTimeout(finalizeByTimeout, initial);
 
       const isFinal = !!finalText;
       const resEval = evaluateTranscript(transcriptForMatch, isFinal);
@@ -620,7 +708,8 @@ function startListening() {
     try { recognizer.start(); } catch {}
 
     // schedule silence timeout
-    silenceTimer = window.setTimeout(finalizeByTimeout, clamp(state.pauseMs || 2000, 600, 10000));
+    const initial = clamp(Math.max(state.pauseMs || 6000, 2000 + (currentSpeakText(false).length * 140)), 1200, 30000);
+    silenceTimer = window.setTimeout(finalizeByTimeout, initial);
   }
 
   function stopListening() {
@@ -670,7 +759,21 @@ function startListening() {
     state.index = pickRandomIndex(n, prev);
   }
 
-  function getItem() {
+  
+  function advanceIndex() {
+    const set = currentSet();
+    const n = set.length;
+    if (!n) return;
+
+    if (state.shuffle) {
+      const prev = Number.isFinite(state.index) ? state.index : -1;
+      state.index = pickRandomIndex(n, prev);
+    } else {
+      state.index = ((Number.isFinite(state.index) ? state.index : 0) + 1) % n;
+    }
+  }
+
+function getItem() {
     const set = currentSet();
     if (!set.length) return null;
     return set[state.index % set.length];
@@ -768,7 +871,7 @@ function startListening() {
     prompt.appendChild(renderPromptTokens(tokens, rubyMap));
 
     const jp = tokens.map(tokenToText).join(' ');
-    const reading = item.reading || item.furigana || item.speak || jp.replace(/\s+/g,'');
+    const reading = item.reading || item.furigana || tokensToSpeakText(tokens, false) || jp.replace(/\s+/g,'');
 
     if (item.furigana && !rubyMap) {
       const f = document.createElement('div');
@@ -830,15 +933,25 @@ function startListening() {
     return getTokensFromItem(item);
   }
 
-  function currentSpeakText() {
+  
+  
+  function tokensToSpeakText(tokens, withSpaces = false) {
+    const parts = (tokens || []).map(tokenToText).filter(Boolean);
+    return withSpaces ? parts.join(' ') : parts.join('');
+  }
+
+  function currentSpeakText(withSpaces = false) {
     if (state.mode === 'dialog') {
       const dialog = getItem();
-      const turn = dialog.turns[state.dialogTurn];
-      return turn.speak || turn.reading || turn.jp;
+      const turn = dialog?.turns?.[state.dialogTurn];
+      if (!turn) return '';
+      return tokensToSpeakText(getTokensFromItem(turn), withSpaces);
     }
     const item = getItem();
-    return item.speak || item.reading || item.furigana || item.jp;
+    if (!item) return '';
+    return tokensToSpeakText(getTokensFromItem(item), withSpaces);
   }
+
 
   function applyTokenClasses(matches) {
     $$('.jp-token').forEach((el) => {
@@ -999,7 +1112,7 @@ function startListening() {
       showRating(1, state.success/100); // simplistic final label; we also show last score
       state.dialogTurn = 0;
       // move to next dialog
-      state.index = (state.index + 1) % currentSet().length;
+      advanceIndex();
     }
 
     renderCurrent();
@@ -1012,7 +1125,7 @@ function startListening() {
       stopListening();
       resetHighlights();
       $('#recognizedText').textContent = '';
-      speak(turn.speak || getTokensFromItem(turn).map(tokenToText).join(''));
+      speak(currentSpeakText(false));
       // advance after a conservative delay based on text length
       const delay = clamp(900 + ((getTokensFromItem(turn).map(tokenToText).join('')).length * 140), 1200, 6500);
       window.setTimeout(() => {
@@ -1047,11 +1160,18 @@ function startListening() {
     function pickForMode(mode) {
       const set = currentSet();
       const n = set.length;
-      const prev = (state.lastPick && Number.isFinite(state.lastPick[mode])) ? state.lastPick[mode] : -1;
-      const idx = pickRandomIndex(n, prev);
-      if (!state.lastPick) state.lastPick = {};
-      state.lastPick[mode] = idx;
-      state.index = idx;
+      if (!n) { state.index = 0; return; }
+
+      if (state.shuffle) {
+        const prev = (state.lastPick && Number.isFinite(state.lastPick[mode])) ? state.lastPick[mode] : -1;
+        const idx = pickRandomIndex(n, prev);
+        if (!state.lastPick) state.lastPick = {};
+        state.lastPick[mode] = idx;
+        state.index = idx;
+      } else {
+        // deterministic order
+        state.index = 0;
+      }
     }
 
     $$('.mode-btn').forEach(btn => {
@@ -1107,30 +1227,55 @@ function startListening() {
       $('#ratingPill').classList.add('d-none');
 
       if (state.mode === 'dialog') {
-        // new random dialog
         state.dialogTurn = 0;
-        pickForMode('dialog');
-      } else if (['hiragana','katakana','word','sentence'].includes(state.mode)) {
-        pickForMode(state.mode);
+        advanceIndex();
       } else {
+        advanceIndex();
       }
 
       renderCurrent();
       renderDialogTranscript();
     });
 
-    $('#btnSpeak').addEventListener('click', () => {
+
+    const btnShuffle = $('#btnShuffle');
+    if (btnShuffle) {
+      const applyShuffleUi = () => {
+        const on = !!state.shuffle;
+        btnShuffle.classList.toggle('active', on);
+        btnShuffle.setAttribute('aria-pressed', on ? 'true' : 'false');
+        btnShuffle.title = t('shuffle_label');
+      };
+      applyShuffleUi();
+      btnShuffle.addEventListener('click', () => {
+        state.shuffle = !state.shuffle;
+        localStorage.setItem(LS.shuffle, state.shuffle ? '1' : '0');
+        applyShuffleUi();
+      });
+    }
+
+
+    const sh = $('#shuffleToggle');
+    if (sh) {
+      sh.checked = !!state.shuffle;
+      sh.addEventListener('change', (e) => {
+        state.shuffle = !!e.target.checked;
+        localStorage.setItem(LS.shuffle, state.shuffle ? '1' : '0');
+      });
+    }
+
+
+$('#btnSpeak').addEventListener('click', () => {
       if (state.mode === 'dialog') {
         const dialog = getItem();
         const turn = dialog?.turns?.[state.dialogTurn];
         if (!turn) return;
-        speak(turn.speak || getTokensFromItem(turn).map(tokenToText).join(''));
+        speak(currentSpeakText(false));
         return;
       }
       const item = getItem();
       if (!item) return;
-      const text = item.speak || getTokensFromItem(item).map(tokenToText).join('');
-      speak(text);
+      speak(currentSpeakText(false));
     });
 	
 	$('#btnSpeakSlow').addEventListener('click', () => {
@@ -1140,14 +1285,13 @@ function startListening() {
 		const dialog = getItem();
 		const turn = dialog?.turns?.[state.dialogTurn];
 		if (!turn) return;
-		speak(turn.speak || getTokensFromItem(turn).map(tokenToText).join(''), slowRate);
+		speakChunks(currentSpeakText(false), slowRate, 240);
 		return;
 	  }
 
 	  const item = getItem();
 	  if (!item) return;
-	  const text = item.speak || getTokensFromItem(item).map(tokenToText).join('');
-	  speak(text, slowRate);
+	  speakChunks(currentSpeakText(false), slowRate, 240);
 	});
 
     // Settings bindings are elsewhere in this file (sliders/selects); keep those intact.

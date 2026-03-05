@@ -193,3 +193,42 @@
 	opacity:1; 
 	color: rgba(255,255,255,.85);
 }
+
+
+/* Toggle button for shuffle (fits into button row) */
+.btn-toggle {
+  padding-left: .75rem;
+  padding-right: .75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-toggle.active {
+  background-color: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.35);
+}
+.btn-toggle i {
+  opacity: .9;
+}
+
+/* Rating pill should stay readable in dark mode */
+#ratingPill, #ratingPill * {
+  color: rgba(255,255,255,.92) !important;
+}
+
+/* Shuffle active should match Next button color */
+#btnShuffle.active{
+  background: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+#btnShuffle.active{
+  background: #ffffff;
+  border: 1px solid #ffffff;
+}
+#btnShuffle.active i{
+  background: linear-gradient(135deg, rgba(59, 130, 246, .95), rgba(236, 72, 153, .85));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

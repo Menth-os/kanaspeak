@@ -10,18 +10,14 @@ window.JP_DATA = {
         "こんにちは"
       ],
       "en": "Hello",
-      "de": "Hallo",
-      "speak": "こんにちは"
-    },
+      "de": "Hallo",},
     {
       "id": "w2",
       "tokens": [
         "ありがとう"
       ],
       "en": "Thank you",
-      "de": "Danke",
-      "speak": "ありがとう"
-    },
+      "de": "Danke",},
     {
       "id": "w3",
       "tokens": [
@@ -31,9 +27,7 @@ window.JP_DATA = {
         }
       ],
       "en": "Cat",
-      "de": "Katze",
-      "speak": "ねこ"
-    },
+      "de": "Katze",},
     {
       "id": "w4",
       "tokens": [
@@ -43,18 +37,14 @@ window.JP_DATA = {
         }
       ],
       "en": "Student",
-      "de": "Student(in)",
-      "speak": "がくせい"
-    },
+      "de": "Student(in)",},
     {
       "id": "w5",
       "tokens": [
         "コーヒー"
       ],
       "en": "Coffee",
-      "de": "Kaffee",
-      "speak": "コーヒー"
-    },
+      "de": "Kaffee",},
     {
       "id": "w6",
       "tokens": [
@@ -64,18 +54,14 @@ window.JP_DATA = {
         }
       ],
       "en": "I / me",
-      "de": "ich / mich",
-      "speak": "私"
-    },
+      "de": "ich / mich",},
     {
       "id": "w7",
       "tokens": [
         "テレビ"
       ],
       "en": "TV",
-      "de": "Fernseher",
-      "speak": "テレビ"
-    },
+      "de": "Fernseher",},
     {
       "id": "w8",
       "tokens": [
@@ -85,63 +71,49 @@ window.JP_DATA = {
         }
       ],
       "en": "Japan",
-      "de": "Japan",
-      "speak": "にほん"
-    },
+      "de": "Japan",},
     {
       "id": "w9",
       "tokens": [
         "ホテル"
       ],
       "en": "Hotel",
-      "de": "Hotel",
-      "speak": "ホテル"
-    },
+      "de": "Hotel",},
     {
       "id": "w10",
       "tokens": [
         "です"
       ],
       "en": "to be; am / is / are",
-      "de": "sein; bin / bist / ist",
-      "speak": "です"
-    },
+      "de": "sein; bin / bist / ist",},
     {
       "id": "w11",
       "tokens": [
         "さん"
       ],
       "en": "Mr.; Ms.; polite suffix",
-      "de": "Herr; Frau; Höflichkeitssuffix",
-      "speak": "さん"
-    },
+      "de": "Herr; Frau; Höflichkeitssuffix",},
     {
       "id": "w12",
       "tokens": [
         "はい"
       ],
       "en": "yes",
-      "de": "ja",
-      "speak": "はい"
-    },
+      "de": "ja",},
     {
       "id": "w13",
       "tokens": [
         "いいえ"
       ],
       "en": "no",
-      "de": "nein",
-      "speak": "いいえ"
-    },
+      "de": "nein",},
     {
       "id": "w14",
       "tokens": [
         "すみません"
       ],
       "en": "excuse me; sorry",
-      "de": "entschuldigung; tut mir leid",
-      "speak": "すみません"
-    },
+      "de": "entschuldigung; tut mir leid",},
     {
       "id": "w15",
       "tokens": [
@@ -151,9 +123,7 @@ window.JP_DATA = {
         }
       ],
       "en": "name",
-      "de": "Name",
-      "speak": "なまえ"
-    },
+      "de": "Name",},
     {
       "id": "w16",
       "tokens": [
@@ -163,18 +133,14 @@ window.JP_DATA = {
         }
       ],
       "en": "job; work",
-      "de": "Arbeit; Beruf",
-      "speak": "しごと"
-    },
+      "de": "Arbeit; Beruf",},
     {
       "id": "w17",
       "tokens": [
         "こんばんは"
       ],
       "en": "good evening",
-      "de": "guten Abend",
-      "speak": "こんばんは"
-    },
+      "de": "guten Abend",},
     {
       "id": "w18",
       "tokens": [
@@ -184,9 +150,7 @@ window.JP_DATA = {
         }
       ],
       "en": "teacher",
-      "de": "Lehrer/in",
-      "speak": "せんせい"
-    },
+      "de": "Lehrer/in",},
     {
       "id": "w19",
       "tokens": [
@@ -196,27 +160,21 @@ window.JP_DATA = {
         }
       ],
       "en": "student",
-      "de": "Student/in; Schüler/in",
-      "speak": "がくせい"
-    },
+      "de": "Student/in; Schüler/in",},
     {
       "id": "w20",
       "tokens": [
         "ちち"
       ],
       "en": "my father",
-      "de": "mein Vater",
-      "speak": "ちち"
-    },
+      "de": "mein Vater",},
     {
       "id": "w21",
       "tokens": [
         "はは"
       ],
       "en": "my mother",
-      "de": "meine Mutter",
-      "speak": "はは"
-    },
+      "de": "meine Mutter",},
     {
       "id": "w22",
       "tokens": [
@@ -226,9 +184,7 @@ window.JP_DATA = {
         }
       ],
       "en": "company",
-      "de": "Firma",
-      "speak": "かいしゃ"
-    },
+      "de": "Firma",},
     {
       "id": "w23",
       "tokens": [
@@ -238,9 +194,7 @@ window.JP_DATA = {
         }
       ],
       "en": "company employee; office worker",
-      "de": "Angestellte/r",
-      "speak": "かいしゃいん"
-    },
+      "de": "Angestellte/r",},
     {
       "id": "w24",
       "tokens": [
@@ -250,9 +204,7 @@ window.JP_DATA = {
         }
       ],
       "en": "pharmacist",
-      "de": "Apotheker/in",
-      "speak": "やくざいし"
-    },
+      "de": "Apotheker/in",},
     {
       "id": "w25",
       "tokens": [
@@ -262,18 +214,14 @@ window.JP_DATA = {
         }
       ],
       "en": "nurse",
-      "de": "Krankenpfleger/in",
-      "speak": "かんごし"
-    },
+      "de": "Krankenpfleger/in",},
     {
       "id": "w26",
       "tokens": [
         "ここ"
       ],
       "en": "here; this place",
-      "de": "hier; dieser Ort",
-      "speak": "ここ"
-    },
+      "de": "hier; dieser Ort",},
     {
       "id": "w27",
       "tokens": [
@@ -283,18 +231,14 @@ window.JP_DATA = {
         }
       ],
       "en": "South Korea",
-      "de": "Südkorea",
-      "speak": "かんこく"
-    },
+      "de": "Südkorea",},
     {
       "id": "w28",
       "tokens": [
         "ドイツ"
       ],
       "en": "Germany",
-      "de": "Deutschland",
-      "speak": "ドイツ"
-    },
+      "de": "Deutschland",},
     {
       "id": "w29",
       "tokens": [
@@ -304,18 +248,14 @@ window.JP_DATA = {
         }
       ],
       "en": "Japan",
-      "de": "Japan",
-      "speak": "にほん"
-    },
+      "de": "Japan",},
     {
       "id": "w30",
       "tokens": [
         "スイス"
       ],
       "en": "Switzerland",
-      "de": "Schweiz",
-      "speak": "スイス"
-    },
+      "de": "Schweiz",},
     {
       "id": "w31",
       "tokens": [
@@ -325,9 +265,7 @@ window.JP_DATA = {
         }
       ],
       "en": "Japanese person",
-      "de": "Japaner/in",
-      "speak": "にほんじん"
-    },
+      "de": "Japaner/in",},
     {
       "id": "w32",
       "tokens": [
@@ -337,9 +275,7 @@ window.JP_DATA = {
         }
       ],
       "en": "German person",
-      "de": "Deutsche/r",
-      "speak": "ドイツじん"
-    },
+      "de": "Deutsche/r",},
     {
       "id": "w33",
       "tokens": [
@@ -349,18 +285,14 @@ window.JP_DATA = {
         }
       ],
       "en": "Swiss person",
-      "de": "Schweizer/in",
-      "speak": "スイスじん"
-    },
+      "de": "Schweizer/in",},
     {
       "id": "w34",
       "tokens": [
         "あの"
       ],
       "en": "um; well; that (over there)",
-      "de": "ähm; also; jener da",
-      "speak": "あの"
-    },
+      "de": "ähm; also; jener da",},
     {
       "id": "w35",
       "tokens": [
@@ -368,9 +300,7 @@ window.JP_DATA = {
         "の"
       ],
       "en": "~'s; of",
-      "de": "von; Genitivpartikel",
-      "speak": "の"
-    },
+      "de": "von; Genitivpartikel",},
     {
       "id": "w36",
       "tokens": [
@@ -380,18 +310,14 @@ window.JP_DATA = {
         }
       ],
       "en": "person (polite)",
-      "de": "Person (höflich)",
-      "speak": "かた"
-    },
+      "de": "Person (höflich)",},
     {
       "id": "w37",
       "tokens": [
-        "いま"
+        { t: "今", r: "いま" }
       ],
       "en": "now",
-      "de": "jetzt",
-      "speak": "いま"
-    },
+      "de": "jetzt",},
     {
       "id": "w38",
       "tokens": [
@@ -403,18 +329,14 @@ window.JP_DATA = {
         }
       ],
       "en": "to live in ~",
-      "de": "in ~ wohnen",
-      "speak": "にすんでいます"
-    },
+      "de": "in ~ wohnen",},
     {
       "id": "w39",
       "tokens": [
         "でも"
       ],
       "en": "but; however",
-      "de": "aber",
-      "speak": "でも"
-    },
+      "de": "aber",},
     {
       "id": "w40",
       "tokens": [
@@ -424,9 +346,7 @@ window.JP_DATA = {
         }
       ],
       "en": "car",
-      "de": "Auto",
-      "speak": "くるま"
-    },
+      "de": "Auto",},
     {
       "id": "w41",
       "tokens": [
@@ -436,9 +356,7 @@ window.JP_DATA = {
         }
       ],
       "en": "university",
-      "de": "Universität",
-      "speak": "だいがく"
-    },
+      "de": "Universität",},
     {
       "id": "w42",
       "tokens": [
@@ -447,27 +365,21 @@ window.JP_DATA = {
         "です"
       ],
       "en": "is not (informal negative of です)",
-      "de": "ist nicht (umgangssprachlich)",
-      "speak": "じゃないです"
-    },
+      "de": "ist nicht (umgangssprachlich)",},
     {
       "id": "w43",
       "tokens": [
         "ね"
       ],
       "en": "sentence-ending particle (right? isn't it?)",
-      "de": "Satzpartikel (nicht wahr?)",
-      "speak": "ね"
-    },
+      "de": "Satzpartikel (nicht wahr?)",},
     {
       "id": "w44",
       "tokens": [
         "どうも"
       ],
       "en": "very; thanks; indeed",
-      "de": "sehr; vielen Dank",
-      "speak": "どうも"
-    },
+      "de": "sehr; vielen Dank",},
     {
       "id": "w45",
       "tokens": [
@@ -477,18 +389,14 @@ window.JP_DATA = {
         }
       ],
       "en": "doctor",
-      "de": "Arzt/Ärztin",
-      "speak": "いしゃ"
-    },
+      "de": "Arzt/Ärztin",},
     {
       "id": "w46",
       "tokens": [
         "か"
       ],
       "en": "question particle",
-      "de": "Fragepartikel",
-      "speak": "か"
-    },
+      "de": "Fragepartikel",},
     {
       "id": "w47",
       "tokens": [
@@ -498,9 +406,7 @@ window.JP_DATA = {
         }
       ],
       "en": "tooth",
-      "de": "Zahn",
-      "speak": "は"
-    },
+      "de": "Zahn",},
     {
       "id": "w48",
       "tokens": [
@@ -510,9 +416,7 @@ window.JP_DATA = {
         }
       ],
       "en": "dentist",
-      "de": "Zahnarzt/-ärztin",
-      "speak": "はいしゃ"
-    },
+      "de": "Zahnarzt/-ärztin",},
     {
       "id": "w49",
       "tokens": [
@@ -522,9 +426,7 @@ window.JP_DATA = {
         }
       ],
       "en": "eye",
-      "de": "Auge",
-      "speak": "め"
-    },
+      "de": "Auge",},
     {
       "id": "w50",
       "tokens": [
@@ -534,9 +436,7 @@ window.JP_DATA = {
         }
       ],
       "en": "eye doctor",
-      "de": "Augenarzt/-ärztin",
-      "speak": "めいしゃ"
-    },
+      "de": "Augenarzt/-ärztin",},
     {
       "id": "w51",
       "tokens": [
@@ -546,9 +446,7 @@ window.JP_DATA = {
         }
       ],
       "en": "flower",
-      "de": "Blume",
-      "speak": "はな"
-    },
+      "de": "Blume",},
     {
       "id": "w52",
       "tokens": [
@@ -558,18 +456,14 @@ window.JP_DATA = {
         }
       ],
       "en": "flower shop; florist",
-      "de": "Blumenladen; Florist/in",
-      "speak": "はなや"
-    },
+      "de": "Blumenladen; Florist/in",},
     {
       "id": "w53",
       "tokens": [
         "パン"
       ],
       "en": "bread",
-      "de": "Brot",
-      "speak": "パン"
-    },
+      "de": "Brot",},
     {
       "id": "w54",
       "tokens": [
@@ -579,84 +473,66 @@ window.JP_DATA = {
         }
       ],
       "en": "bakery; baker",
-      "de": "Bäckerei; Bäcker/in",
-      "speak": "パンや"
-    },
+      "de": "Bäckerei; Bäcker/in",},
     {
       "id": "w55",
       "tokens": [
         "こんにちは"
       ],
       "en": "good afternoon; hello",
-      "de": "Guten Tag; Hallo",
-      "speak": "こんにちは"
-    },
+      "de": "Guten Tag; Hallo",},
     {
       "id": "w56",
       "tokens": [
         "そう"
       ],
       "en": "so; that's right",
-      "de": "so; stimmt",
-      "speak": "そう"
-    },
+      "de": "so; stimmt",},
     {
       "id": "w57",
       "tokens": [
         "どうぞ"
       ],
       "en": "please; here you are",
-      "de": "bitte; gern",
-      "speak": "どうぞ"
-    },
+      "de": "bitte; gern",},
     {
       "id": "w58",
       "tokens": [
         "よろしく"
       ],
       "en": "well; favorably; best regards (in set phrases)",
-      "de": "gut; wohlwollend; freundlich",
-      "speak": "よろしく"
-    },
+      "de": "gut; wohlwollend; freundlich",},
     {
       "id": "w59",
       "tokens": [
         "おねがいします"
       ],
       "en": "please; I ask you; I request",
-      "de": "bitte; ich bitte Sie",
-      "speak": "おねがいします"
-    },
+      "de": "bitte; ich bitte Sie",},
     {
       "id": "w60",
       "tokens": [
         "こちらこそ"
       ],
       "en": "likewise; the pleasure is mine",
-      "de": "ganz meinerseits",
-      "speak": "こちらこそ"
-    },
+      "de": "ganz meinerseits",},
     {
       "id": "w61",
       "tokens": [
         "～",
         "が",
-        "すき",
+        { t: "好き", r: "すき" },
         "です"
       ],
       "en": "to like ~",
-      "de": "~ mögen",
-      "speak": "がすきです"
-    },
+      "de": "~ mögen",},
     {
       "id": "w62",
       "tokens": [
         "あまり"
       ],
       "en": "not very (used with negative)",
-      "de": "nicht besonders",
-      "speak": "あまり"
-    },
+      "de": "nicht besonders",},
     {
       "id": "w63",
       "tokens": [
@@ -666,18 +542,14 @@ window.JP_DATA = {
         }
       ],
       "en": "sushi",
-      "de": "Sushi",
-      "speak": "すし"
-    },
+      "de": "Sushi",},
     {
       "id": "w64",
       "tokens": [
         "ええ"
       ],
       "en": "yes (informal)",
-      "de": "ja (ugs.)",
-      "speak": "ええ"
-    },
+      "de": "ja (ugs.)",},
     {
       "id": "w65",
       "tokens": [
@@ -687,9 +559,7 @@ window.JP_DATA = {
         }
       ],
       "en": "cooking; cuisine",
-      "de": "Küche; Gericht",
-      "speak": "りょうり"
-    },
+      "de": "Küche; Gericht",},
     {
       "id": "w66",
       "tokens": [
@@ -698,36 +568,28 @@ window.JP_DATA = {
         "か"
       ],
       "en": "I see; is that so?",
-      "de": "Ach so; ich verstehe",
-      "speak": "そうですか"
-    },
+      "de": "Ach so; ich verstehe",},
     {
       "id": "w67",
       "tokens": [
         "うどん"
       ],
       "en": "udon noodles",
-      "de": "Udon",
-      "speak": "うどん"
-    },
+      "de": "Udon",},
     {
       "id": "w68",
       "tokens": [
         "そば"
       ],
       "en": "soba noodles",
-      "de": "Soba",
-      "speak": "そば"
-    },
+      "de": "Soba",},
     {
       "id": "w69",
       "tokens": [
         "ハンバーガー"
       ],
       "en": "hamburger",
-      "de": "Hamburger",
-      "speak": "ハンバーガー"
-    },
+      "de": "Hamburger",},
     {
       "id": "w70",
       "tokens": [
@@ -737,9 +599,7 @@ window.JP_DATA = {
         }
       ],
       "en": "what",
-      "de": "was",
-      "speak": "なに"
-    },
+      "de": "was",},
     {
       "id": "w71",
       "tokens": [
@@ -747,9 +607,7 @@ window.JP_DATA = {
         "で"
       ],
       "en": "in; by; with (means / language)",
-      "de": "in; mit; auf (Sprache)",
-      "speak": "で"
-    },
+      "de": "in; mit; auf (Sprache)",},
     {
       "id": "w72",
       "tokens": [
@@ -759,9 +617,7 @@ window.JP_DATA = {
         }
       ],
       "en": "fish",
-      "de": "Fisch",
-      "speak": "さかな"
-    },
+      "de": "Fisch",},
     {
       "id": "w73",
       "tokens": [
@@ -771,9 +627,7 @@ window.JP_DATA = {
         }
       ],
       "en": "vegetable",
-      "de": "Gemüse",
-      "speak": "やさい"
-    },
+      "de": "Gemüse",},
     {
       "id": "w74",
       "tokens": [
@@ -783,18 +637,14 @@ window.JP_DATA = {
         }
       ],
       "en": "cooked rice; meal",
-      "de": "Reis; Mahlzeit",
-      "speak": "ごはん"
-    },
+      "de": "Reis; Mahlzeit",},
     {
       "id": "w75",
       "tokens": [
         "しょうゆ"
       ],
       "en": "soy sauce",
-      "de": "Sojasoße",
-      "speak": "しょうゆ"
-    },
+      "de": "Sojasoße",},
     {
       "id": "w76",
       "tokens": [
@@ -804,9 +654,7 @@ window.JP_DATA = {
         }
       ],
       "en": "pupil; student (school)",
-      "de": "Schüler/in",
-      "speak": "せいと"
-    },
+      "de": "Schüler/in",},
     {
       "id": "w77",
       "tokens": [
@@ -816,9 +664,7 @@ window.JP_DATA = {
         }
       ],
       "en": "chair",
-      "de": "Stuhl",
-      "speak": "いす"
-    },
+      "de": "Stuhl",},
     {
       "id": "w78",
       "tokens": [
@@ -828,9 +674,7 @@ window.JP_DATA = {
         }
       ],
       "en": "hobby",
-      "de": "Hobby",
-      "speak": "しゅみ"
-    },
+      "de": "Hobby",},
     {
       "id": "w79",
       "tokens": [
@@ -840,9 +684,7 @@ window.JP_DATA = {
         }
       ],
       "en": "reading (books)",
-      "de": "Bücherlesen",
-      "speak": "どくしょ"
-    },
+      "de": "Bücherlesen",},
     {
       "id": "w80",
       "tokens": [
@@ -852,9 +694,7 @@ window.JP_DATA = {
         }
       ],
       "en": "horse riding",
-      "de": "Reiten",
-      "speak": "じょうば"
-    }
+      "de": "Reiten",}
   ],
   "sentences": [
     {
@@ -870,9 +710,7 @@ window.JP_DATA = {
         "。"
       ],
       "en": "I am Peter.",
-      "de": "Ich bin Peter.",
-      "speak": "私はぺえたあです。"
-    },
+      "de": "Ich bin Peter.",},
     {
       "id": "s2",
       "tokens": [
@@ -887,9 +725,7 @@ window.JP_DATA = {
         "何": "なに"
       },
       "en": "What is this。",
-      "de": "Was ist das。",
-      "speak": "これは何ですか。"
-    },
+      "de": "Was ist das。",},
     {
       "id": "s3",
       "tokens": [
@@ -906,9 +742,7 @@ window.JP_DATA = {
         "。"
       ],
       "en": "Excuse me, where is the station.",
-      "de": "Entschuldigung, wo ist der Bahnhof.",
-      "speak": "すみません、駅はどこですか。"
-    },
+      "de": "Entschuldigung, wo ist der Bahnhof.",},
     {
       "id": "s4",
       "tokens": [
@@ -922,9 +756,7 @@ window.JP_DATA = {
         "。"
       ],
       "en": "I am free tomorrow.",
-      "de": "Ich habe morgen Zeit.",
-      "speak": "明日はひまです。"
-    },
+      "de": "Ich habe morgen Zeit.",},
     {
       "id": "s5",
       "tokens": [
@@ -934,9 +766,7 @@ window.JP_DATA = {
         "。"
       ],
       "en": "Coffee, please.",
-      "de": "Einen Kaffee bitte.",
-      "speak": "コーヒーをください。"
-    },
+      "de": "Einen Kaffee bitte.",},
     {
       "id": "s6",
       "tokens": [
@@ -950,9 +780,7 @@ window.JP_DATA = {
         "。"
       ],
       "en": "I study Japanese.",
-      "de": "Ich lerne Japanisch.",
-      "speak": "日本語をべんきょうします。"
-    }
+      "de": "Ich lerne Japanisch.",}
   ],
   "dialogs": [
     {
@@ -971,9 +799,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Excuse me, coffee please.",
-          "de": "Entschuldigung, einen Kaffee bitte.",
-          "speak": "すみません、コーヒーをください。"
-        },
+          "de": "Entschuldigung, einen Kaffee bitte.",},
         {
           "who": "bot",
           "tokens": [
@@ -983,9 +809,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Sure.",
-          "de": "Gern.",
-          "speak": "はい。わかりました。"
-        },
+          "de": "Gern.",},
         {
           "who": "user",
           "tokens": [
@@ -998,9 +822,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No sugar.",
-          "de": "Kein Zucker.",
-          "speak": "砂糖はいりません。"
-        },
+          "de": "Kein Zucker.",},
         {
           "who": "bot",
           "tokens": [
@@ -1008,9 +830,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Understood.",
-          "de": "Verstanden.",
-          "speak": "かしこまりました。"
-        }
+          "de": "Verstanden.",}
       ]
     },
     {
@@ -1025,9 +845,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Nice to meet you.",
-          "de": "Freut mich.",
-          "speak": "はじめまして。"
-        },
+          "de": "Freut mich.",},
         {
           "who": "bot",
           "tokens": [
@@ -1035,9 +853,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Nice to meet you too.",
-          "de": "Freut mich auch.",
-          "speak": "はじめまして。"
-        },
+          "de": "Freut mich auch.",},
         {
           "who": "user",
           "tokens": [
@@ -1051,9 +867,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I am Maria.",
-          "de": "Ich bin Maria.",
-          "speak": "私はマリアです。"
-        },
+          "de": "Ich bin Maria.",},
         {
           "who": "bot",
           "tokens": [
@@ -1062,9 +876,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Please treat me well.",
-          "de": "Freut mich / auf gute Zusammenarbeit.",
-          "speak": "よろしくおねがいします。"
-        }
+          "de": "Freut mich / auf gute Zusammenarbeit.",}
       ]
     },
     {
@@ -1088,9 +900,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Excuse me, where is the station。",
-          "de": "Entschuldigung, wo ist der Bahnhof。",
-          "speak": "すみません、駅はどこですか。"
-        },
+          "de": "Entschuldigung, wo ist der Bahnhof。",},
         {
           "who": "bot",
           "tokens": [
@@ -1099,9 +909,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Go straight.",
-          "de": "Geradeaus.",
-          "speak": "まっすぐです。"
-        },
+          "de": "Geradeaus.",},
         {
           "who": "user",
           "tokens": [
@@ -1110,9 +918,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Thank you very much.",
-          "de": "Vielen Dank.",
-          "speak": "ありがとうございます。"
-        },
+          "de": "Vielen Dank.",},
         {
           "who": "bot",
           "tokens": [
@@ -1120,9 +926,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "You're welcome.",
-          "de": "Gern geschehen.",
-          "speak": "どういたしまして。"
-        }
+          "de": "Gern geschehen.",}
       ]
     },
     {
@@ -1142,9 +946,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I'd like to check in.",
-          "de": "Ich möchte einchecken.",
-          "speak": "チェックインお願いします。"
-        },
+          "de": "Ich möchte einchecken.",},
         {
           "who": "bot",
           "tokens": [
@@ -1157,9 +959,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Your name?",
-          "de": "Ihr Name?",
-          "speak": "お名前は…。"
-        },
+          "de": "Ihr Name?",},
         {
           "who": "user",
           "tokens": [
@@ -1168,9 +968,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "It's Peter.",
-          "de": "Peter.",
-          "speak": "ピえたあです。"
-        },
+          "de": "Peter.",},
         {
           "who": "bot",
           "tokens": [
@@ -1180,9 +978,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "This way, please.",
-          "de": "Bitte hier entlang.",
-          "speak": "こちらへどうぞ。"
-        }
+          "de": "Bitte hier entlang.",}
       ]
     },
     {
@@ -1201,9 +997,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Excuse me, are you Mr./Ms. Ide?",
-          "de": "Entschuldigung, sind Sie Herr/Frau Ide?",
-          "speak": "すみません、いでさんですか。"
-        },
+          "de": "Entschuldigung, sind Sie Herr/Frau Ide?",},
         {
           "who": "bot",
           "tokens": [
@@ -1214,9 +1008,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Yes, I am Ide.",
-          "de": "Ja, ich bin Ide.",
-          "speak": "はい、いでです。"
-        }
+          "de": "Ja, ich bin Ide.",}
       ]
     },
     {
@@ -1237,9 +1029,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Excuse me, are you Mr./Ms. Koko?",
-          "de": "Entschuldigung, sind Sie Herr/Frau Koko?",
-          "speak": "すみません、ここかさんですか。"
-        },
+          "de": "Entschuldigung, sind Sie Herr/Frau Koko?",},
         {
           "who": "bot",
           "tokens": [
@@ -1250,9 +1040,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, I am Miyoshi.",
-          "de": "Nein, ich bin Miyoshi.",
-          "speak": "いいえ、みよしです。"
-        },
+          "de": "Nein, ich bin Miyoshi.",},
         {
           "who": "user",
           "tokens": [
@@ -1260,9 +1048,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Excuse me.",
-          "de": "Entschuldigung.",
-          "speak": "すみません。"
-        }
+          "de": "Entschuldigung.",}
       ]
     },
     {
@@ -1289,9 +1075,7 @@ window.JP_DATA = {
 			"。"
           ],
           "en": "Good evening. I'm Sugai. Excuse me, your name is…?",
-          "de": "Guten Abend. Ich bin Sugai. Entschuldigung, wie ist Ihr Name…?",
-          "speak": "こんばんは。すがいです。すみません。おなまえは…。"
-        },
+          "de": "Guten Abend. Ich bin Sugai. Entschuldigung, wie ist Ihr Name…?",},
         {
           "who": "bot",
           "tokens": [
@@ -1305,9 +1089,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I'm Nagawa. Nice to meet you.",
-          "de": "Ich bin Nagawa. Freut mich, Sie kennenzulernen.",
-          "speak": "名川です。はじめまして。"
-        },
+          "de": "Ich bin Nagawa. Freut mich, Sie kennenzulernen.",},
         {
           "who": "user",
           "tokens": [
@@ -1330,9 +1112,7 @@ window.JP_DATA = {
 			"。"
           ],
           "en": "Nice to meet you. Excuse me, Mr./Ms. Nagawa, your job is…?",
-          "de": "Freut mich. Entschuldigung, Herr/Frau Nagawa, was ist Ihr Beruf…?",
-          "speak": "はじめまして。すみません。名川さんはお仕事は…。"
-        },
+          "de": "Freut mich. Entschuldigung, Herr/Frau Nagawa, was ist Ihr Beruf…?",},
         {
           "who": "bot",
           "tokens": [
@@ -1351,9 +1131,7 @@ window.JP_DATA = {
 			"。"
           ],
           "en": "I'm a programmer. Mr./Ms. Sugai, your job is…?",
-          "de": "Ich bin Programmierer/in. Herr/Frau Sugai, was ist Ihr Beruf…?",
-          "speak": "プログラマーです。すがいさんはお仕事は…。"
-        },
+          "de": "Ich bin Programmierer/in. Herr/Frau Sugai, was ist Ihr Beruf…?",},
         {
           "who": "user",
           "tokens": [
@@ -1362,9 +1140,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I'm an engineer.",
-          "de": "Ich bin Ingenieur/in.",
-          "speak": "エンジニアです。"
-        }
+          "de": "Ich bin Ingenieur/in.",}
       ]
     },
     {
@@ -1387,9 +1163,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "William, are you German?",
-          "de": "William, sind Sie Deutscher?",
-          "speak": "ウィリアムさんはドイツじんですか。"
-        },
+          "de": "William, sind Sie Deutscher?",},
         {
           "who": "bot",
           "tokens": [
@@ -1403,9 +1177,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, I'm Swiss.",
-          "de": "Nein, ich bin Schweizer/in.",
-          "speak": "いいえ、スイスじんです。"
-        }
+          "de": "Nein, ich bin Schweizer/in.",}
       ]
     },
     {
@@ -1434,9 +1206,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Is Murakami Haruki Japanese?",
-          "de": "Ist Murakami Haruki Japaner?",
-          "speak": "村上 春樹は日本人ですか。"
-        },
+          "de": "Ist Murakami Haruki Japaner?",},
         {
           "who": "bot",
           "tokens": [
@@ -1450,9 +1220,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Yes, he is Japanese.",
-          "de": "Ja, er ist Japaner.",
-          "speak": "はい、日本人です。"
-        }
+          "de": "Ja, er ist Japaner.",}
       ]
     },
     {
@@ -1480,9 +1248,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Thomas, are you from Germany?",
-          "de": "Thomas, kommen Sie aus Deutschland?",
-          "speak": "トーマスさん、トーマスさんはドイツの方ですか。"
-        },
+          "de": "Thomas, kommen Sie aus Deutschland?",},
         {
           "who": "bot",
           "tokens": [
@@ -1493,7 +1259,7 @@ window.JP_DATA = {
             "。",
             "でも",
             "、",
-            "いま",
+            { t: "今", r: "いま" },
             "、",
             "ポツダム",
             "に",
@@ -1504,9 +1270,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, I'm Swiss. But I live in Potsdam now.",
-          "de": "Nein, ich bin Schweizer/in. Aber ich wohne jetzt in Potsdam.",
-          "speak": "いいえ、スイスです。でも、いま、ポツダムに住んでいます。"
-        }
+          "de": "Nein, ich bin Schweizer/in. Aber ich wohne jetzt in Potsdam.",}
       ]
     },
     {
@@ -1534,9 +1298,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Keller, are you from Berlin?",
-          "de": "Keller, kommen Sie aus Berlin?",
-          "speak": "ケラーさん、ケラーさんはベルリンの方ですか。"
-        },
+          "de": "Keller, kommen Sie aus Berlin?",},
         {
           "who": "bot",
           "tokens": [
@@ -1547,7 +1309,7 @@ window.JP_DATA = {
             "。",
             "でも",
             "、",
-            "いま",
+            { t: "今", r: "いま" },
             "、",
             "ベルリン",
             "に",
@@ -1558,9 +1320,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, I'm from Hamburg. But I live in Berlin now.",
-          "de": "Nein, ich komme aus Hamburg. Aber ich wohne jetzt in Berlin.",
-          "speak": "いいえ、ハンブルクです。でも、いま、ベルリンに住んでいます。"
-        }
+          "de": "Nein, ich komme aus Hamburg. Aber ich wohne jetzt in Berlin.",}
       ]
     },
     {
@@ -1591,9 +1351,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Nice to meet you. I'm Seiko Sano. Thomas, are you from Germany?",
-          "de": "Freut mich. Ich bin Seiko Sano. Thomas, kommen Sie aus Deutschland?",
-          "speak": "はじめまして。さのせいこです。トーマスさんはドイツの方ですか。"
-        },
+          "de": "Freut mich. Ich bin Seiko Sano. Thomas, kommen Sie aus Deutschland?",},
         {
           "who": "bot",
           "tokens": [
@@ -1604,7 +1362,7 @@ window.JP_DATA = {
             "。",
             "でも",
             "、",
-            "いま",
+            { t: "今", r: "いま" },
             "、",
             "ポツダム",
             "に",
@@ -1615,9 +1373,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, I'm Swiss. But I live in Potsdam now.",
-          "de": "Nein, ich bin Schweizer/in. Aber ich wohne jetzt in Potsdam.",
-          "speak": "いいえ、スイスです。でも、いま、ポツダムに住んでいます。"
-        },
+          "de": "Nein, ich bin Schweizer/in. Aber ich wohne jetzt in Potsdam.",},
         {
           "who": "user",
           "tokens": [
@@ -1639,9 +1395,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Ms. Sano, are you from Tokyo?",
-          "de": "Frau Sano, kommen Sie aus Tokio?",
-          "speak": "さのさんは、東京の方ですか。"
-        },
+          "de": "Frau Sano, kommen Sie aus Tokio?",},
         {
           "who": "user",
           "tokens": [
@@ -1676,9 +1430,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, I'm from Osaka. Um… Thomas, are you from Mr./Ms. Behrmann's company?",
-          "de": "Nein, ich komme aus Osaka. Ähm… Thomas, sind Sie von Herrn/Frau Behrmanns Firma?",
-          "speak": "いいえ、大阪です。あの…、トーマスさんはベールマンさんの会社の方ですか。"
-        },
+          "de": "Nein, ich komme aus Osaka. Ähm… Thomas, sind Sie von Herrn/Frau Behrmanns Firma?",},
         {
           "who": "bot",
           "tokens": [
@@ -1703,9 +1455,7 @@ window.JP_DATA = {
 			"。"
           ],
           "en": "No, I'm a student. Ms. Sano, your job is…?",
-          "de": "Nein, ich bin Student/in. Frau Sano, was ist Ihr Beruf…?",
-          "speak": "いいえ、学生です。さのさんは、お仕事は…。"
-        },
+          "de": "Nein, ich bin Student/in. Frau Sano, was ist Ihr Beruf…?",},
         {
           "who": "user",
           "tokens": [
@@ -1717,9 +1467,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I'm an office worker.",
-          "de": "Ich bin Angestellte/r.",
-          "speak": "会社員です。"
-        },
+          "de": "Ich bin Angestellte/r.",},
         {
           "who": "bot",
           "tokens": [
@@ -1737,9 +1485,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Is it a Japanese company?",
-          "de": "Ist es eine japanische Firma?",
-          "speak": "日本の会社ですか。"
-        },
+          "de": "Ist es eine japanische Firma?",},
         {
           "who": "user",
           "tokens": [
@@ -1750,9 +1496,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Yes. It's Sony.",
-          "de": "Ja. Es ist Sony.",
-          "speak": "はい。ソニーです。"
-        }
+          "de": "Ja. Es ist Sony.",}
       ]
     },
     {
@@ -1774,9 +1518,7 @@ window.JP_DATA = {
 			"。"
           ],
           "en": "Um… your name is…?",
-          "de": "Ähm… wie ist Ihr Name…?",
-          "speak": "あの…お名前は…。"
-        },
+          "de": "Ähm… wie ist Ihr Name…?",},
         {
           "who": "bot",
           "tokens": [
@@ -1785,9 +1527,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "It's Uda.",
-          "de": "Uda.",
-          "speak": "うだです。"
-        },
+          "de": "Uda.",},
         {
           "who": "user",
           "tokens": [
@@ -1797,9 +1537,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Oda, right?",
-          "de": "Oda, richtig?",
-          "speak": "おださんですね。"
-        },
+          "de": "Oda, richtig?",},
         {
           "who": "bot",
           "tokens": [
@@ -1819,9 +1557,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, not 'Oda'. It's 'Uda'.",
-          "de": "Nein, nicht „Oda“. Es ist „Uda“.",
-          "speak": "いいえ、「おだ」じゃないです。「うだ」です。"
-        },
+          "de": "Nein, nicht „Oda“. Es ist „Uda“.",},
         {
           "who": "user",
           "tokens": [
@@ -1832,9 +1568,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Ah, I'm very sorry.",
-          "de": "Ah, tut mir leid.",
-          "speak": "あ、どうもすみません。"
-        }
+          "de": "Ah, tut mir leid.",}
       ]
     },
     {
@@ -1855,9 +1589,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Is Mr. Kasai a nurse?",
-          "de": "Ist Herr Kasai Krankenpfleger?",
-          "speak": "かさいさんはかんごしさんですか。"
-        },
+          "de": "Ist Herr Kasai Krankenpfleger?",},
         {
           "who": "bot",
           "tokens": [
@@ -1875,9 +1607,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, he isn't a nurse. He is a doctor.",
-          "de": "Nein, er ist kein Krankenpfleger. Er ist Arzt.",
-          "speak": "いいえ、かんごしさんじゃないです。おいしゃさんです。"
-        },
+          "de": "Nein, er ist kein Krankenpfleger. Er ist Arzt.",},
         {
           "who": "user",
           "tokens": [
@@ -1890,9 +1620,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Oh, a doctor?",
-          "de": "Ah, ein Arzt?",
-          "speak": "あ、おいしゃさんですか。"
-        }
+          "de": "Ah, ein Arzt?",}
       ]
     },
     {
@@ -1920,9 +1648,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Hello. I'm Sano. Um… your name is…?",
-          "de": "Hallo. Ich bin Sano. Ähm… wie ist Ihr Name…?",
-          "speak": "こんにちは。さのです。あのお名前は…。"
-        },
+          "de": "Hallo. Ich bin Sano. Ähm… wie ist Ihr Name…?",},
         {
           "who": "bot",
           "tokens": [
@@ -1946,9 +1672,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I'm Kayser. Ms. Sano, right? Are you a student?",
-          "de": "Ich bin Kayser. Frau Sano, richtig? Sind Sie Studentin?",
-          "speak": "カイザーです。さのさん、ですね。さのさんは学生ですか。"
-        },
+          "de": "Ich bin Kayser. Frau Sano, richtig? Sind Sie Studentin?",},
         {
           "who": "user",
           "tokens": [
@@ -1981,9 +1705,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, I'm not a student. I'm an office worker. Mr. Kayser, your job is…?",
-          "de": "Nein, ich bin keine Studentin. Ich bin Angestellte. Herr Kayser, was ist Ihr Beruf…?",
-          "speak": "いいえ、学生じゃないです。会社員です。カイザーさんは、お仕事は…。"
-        },
+          "de": "Nein, ich bin keine Studentin. Ich bin Angestellte. Herr Kayser, was ist Ihr Beruf…?",},
         {
           "who": "bot",
           "tokens": [
@@ -1995,9 +1717,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I'm a baker.",
-          "de": "Ich bin Bäcker.",
-          "speak": "パン屋です。"
-        },
+          "de": "Ich bin Bäcker.",},
         {
           "who": "user",
           "tokens": [
@@ -2011,9 +1731,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "A baker?",
-          "de": "Ein Bäcker?",
-          "speak": "パン屋さんですか。"
-        }
+          "de": "Ein Bäcker?",}
       ]
     },
     {
@@ -2043,9 +1761,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Hello. Um… are you Japanese?",
-          "de": "Hallo. Ähm… sind Sie Japaner/in?",
-          "speak": "こんにちは。あの…、日本の方ですか。"
-        },
+          "de": "Hallo. Ähm… sind Sie Japaner/in?",},
         {
           "who": "bot",
           "tokens": [
@@ -2058,9 +1774,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Yes, I am. Nice to meet you.",
-          "de": "Ja, bin ich. Freut mich.",
-          "speak": "はい、そうです。はじめまして。"
-        },
+          "de": "Ja, bin ich. Freut mich.",},
         {
           "who": "user",
           "tokens": [
@@ -2077,9 +1791,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Nice to meet you. I'm Keller from Siemens. Pleased to meet you.",
-          "de": "Freut mich. Ich bin Keller von Siemens. Angenehm.",
-          "speak": "はじめまして。ジーメンスのケラーです。どうぞよろしくおねがいします。"
-        },
+          "de": "Freut mich. Ich bin Keller von Siemens. Angenehm.",},
         {
           "who": "bot",
           "tokens": [
@@ -2092,9 +1804,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Likewise. I'm Uda from Sony.",
-          "de": "Ganz meinerseits. Ich bin Uda von Sony.",
-          "speak": "こちらこそ。ソニーのうだです。"
-        }
+          "de": "Ganz meinerseits. Ich bin Uda von Sony.",}
       ]
     },
     {
@@ -2121,9 +1831,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Do you like American food?",
-          "de": "Mögen Sie amerikanisches Essen?",
-          "speak": "アメリカの料理が好きですか。"
-        },
+          "de": "Mögen Sie amerikanisches Essen?",},
         {
           "who": "bot",
           "tokens": [
@@ -2137,9 +1845,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Yes, I do.",
-          "de": "Ja, das mag ich.",
-          "speak": "はい、好きです。"
-        },
+          "de": "Ja, das mag ich.",},
         {
           "who": "user",
           "tokens": [
@@ -2157,9 +1863,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "What do you like?",
-          "de": "Was mögen Sie?",
-          "speak": "何が好きですか。"
-        },
+          "de": "Was mögen Sie?",},
         {
           "who": "bot",
           "tokens": [
@@ -2173,9 +1877,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I like hamburgers.",
-          "de": "Ich mag Hamburger.",
-          "speak": "ハンバーガーが好きです。"
-        },
+          "de": "Ich mag Hamburger.",},
         {
           "who": "user",
           "tokens": [
@@ -2185,9 +1887,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I see.",
-          "de": "Ach so.",
-          "speak": "そうですか。"
-        }
+          "de": "Ach so.",}
       ]
     },
     {
@@ -2214,9 +1914,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Thomas, your hobby is…?",
-          "de": "Thomas, Ihr Hobby ist…?",
-          "speak": "トーマスさん、トーマスさんは、趣味は…。"
-        },
+          "de": "Thomas, Ihr Hobby ist…?",},
         {
           "who": "bot",
           "tokens": [
@@ -2240,9 +1938,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Reiten… sorry, what is 'Reiten' in Japanese?",
-          "de": "Reiten… Entschuldigung, was heißt „Reiten“ auf Japanisch?",
-          "speak": "ライテン…すみません、ライテンは日本語で何ですか。"
-        },
+          "de": "Reiten… Entschuldigung, was heißt „Reiten“ auf Japanisch?",},
         {
           "who": "user",
           "tokens": [
@@ -2263,9 +1959,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Um… what is it in English?",
-          "de": "Ähm… wie heißt es auf Englisch?",
-          "speak": "あの…、英語で何ですか。"
-        },
+          "de": "Ähm… wie heißt es auf Englisch?",},
         {
           "who": "bot",
           "tokens": [
@@ -2274,9 +1968,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "It's horse riding.",
-          "de": "Es heißt horse riding.",
-          "speak": "horse ridingです。"
-        },
+          "de": "Es heißt horse riding.",},
         {
           "who": "user",
           "tokens": [
@@ -2289,9 +1981,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Ah, it's 'jouba'.",
-          "de": "Ah, es heißt „jouba“.",
-          "speak": "あ、「じょうば」です。"
-        },
+          "de": "Ah, es heißt „jouba“.",},
         {
           "who": "bot",
           "tokens": [
@@ -2317,9 +2007,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "'Jouba', I see. Ms. Sano, your hobby is…?",
-          "de": "„Jouba“, ach so. Frau Sano, Ihr Hobby ist…?",
-          "speak": "「じょうば」、ですか。あの…、さのさんは趣味は…。"
-        },
+          "de": "„Jouba“, ach so. Frau Sano, Ihr Hobby ist…?",},
         {
           "who": "user",
           "tokens": [
@@ -2354,9 +2042,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "It's reading. By the way, what is 'dokusho' in German?",
-          "de": "Es ist Lesen. Wie heißt „dokusho“ auf Deutsch?",
-          "speak": "読書です。あの…、「読書」はドイツ語で何ですか。"
-        }
+          "de": "Es ist Lesen. Wie heißt „dokusho“ auf Deutsch?",}
       ]
     },
     {
@@ -2384,9 +2070,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Hello. I'm Barbara Keller. Um, your name is…?",
-          "de": "Hallo. Ich bin Barbara Keller. Ähm, wie ist Ihr Name…?",
-          "speak": "こんにちは。バルバラ ケラーです。あのお名前は…。"
-        },
+          "de": "Hallo. Ich bin Barbara Keller. Ähm, wie ist Ihr Name…?",},
         {
           "who": "bot",
           "tokens": [
@@ -2404,9 +2088,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I'm Sano. Seiko Sano. Nice to meet you. Pleased to meet you.",
-          "de": "Ich bin Sano. Seiko Sano. Freut mich. Angenehm.",
-          "speak": "さのです。さのせいこです。はじめまして。どうぞよろしく。"
-        },
+          "de": "Ich bin Sano. Seiko Sano. Freut mich. Angenehm.",},
         {
           "who": "user",
           "tokens": [
@@ -2429,9 +2111,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Likewise. Um… Ms. Sano, are you a student?",
-          "de": "Ganz meinerseits. Ähm… Frau Sano, sind Sie Studentin?",
-          "speak": "こちらこそ。あの…、さのさんは、学生さんですか。"
-        },
+          "de": "Ganz meinerseits. Ähm… Frau Sano, sind Sie Studentin?",},
         {
           "who": "bot",
           "tokens": [
@@ -2464,9 +2144,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, I'm not a student. I'm an office worker. Ms. Keller, your job is…?",
-          "de": "Nein, ich bin keine Studentin. Ich bin Angestellte. Frau Keller, was ist Ihr Beruf…?",
-          "speak": "いいえ、学生じゃないです。会社員です。ケラーさんは、お仕事は…。"
-        },
+          "de": "Nein, ich bin keine Studentin. Ich bin Angestellte. Frau Keller, was ist Ihr Beruf…?",},
         {
           "who": "user",
           "tokens": [
@@ -2477,9 +2155,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I'm a programmer at Siemens.",
-          "de": "Ich bin Programmierer/in bei Siemens.",
-          "speak": "ジーメンスのプログラマーです。"
-        },
+          "de": "Ich bin Programmierer/in bei Siemens.",},
         {
           "who": "bot",
           "tokens": [
@@ -2501,9 +2177,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "A programmer? Do you like Japanese?",
-          "de": "Programmierer/in? Mögen Sie Japanisch?",
-          "speak": "プログラマーですか。日本語が好きですか。"
-        },
+          "de": "Programmierer/in? Mögen Sie Japanisch?",},
         {
           "who": "user",
           "tokens": [
@@ -2517,9 +2191,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Yes, I do.",
-          "de": "Ja, ich mag es.",
-          "speak": "ええ、好きです。"
-        },
+          "de": "Ja, ich mag es.",},
         {
           "who": "bot",
           "tokens": [
@@ -2538,9 +2210,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "What is your hobby?",
-          "de": "Was ist Ihr Hobby?",
-          "speak": "趣味は、何ですか。"
-        },
+          "de": "Was ist Ihr Hobby?",},
         {
           "who": "user",
           "tokens": [
@@ -2573,9 +2243,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "shumi… what is 'shumi' in German?",
-          "de": "shumi… was heißt „shumi“ auf Deutsch?",
-          "speak": "趣味…、「趣味」は、ドイツ語で何ですか。"
-        },
+          "de": "shumi… was heißt „shumi“ auf Deutsch?",},
         {
           "who": "bot",
           "tokens": [
@@ -2592,9 +2260,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Ah, in English it's 'hobby.'",
-          "de": "Ah, auf Englisch heißt es „hobby“.",
-          "speak": "あ、英語ではホビーです。"
-        }
+          "de": "Ah, auf Englisch heißt es „hobby“.",}
       ]
     },
     {
@@ -2609,9 +2275,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Please.",
-          "de": "Bitte.",
-          "speak": "どうぞ。"
-        },
+          "de": "Bitte.",},
         {
           "who": "bot",
           "tokens": [
@@ -2632,9 +2296,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Oh, thank you. Um… what is this?",
-          "de": "Oh, danke. Ähm… was ist das?",
-          "speak": "あ、どうも。あの…これは何ですか。"
-        },
+          "de": "Oh, danke. Ähm… was ist das?",},
         {
           "who": "user",
           "tokens": [
@@ -2654,7 +2316,7 @@ window.JP_DATA = {
             "です",
             "よ",
             "。",
-            "ともだち",
+            { t: "友達", r: "ともだち" },
             "の",
             {
               "t": "お土産",
@@ -2664,9 +2326,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "That is 'yatsuhashi.' It's a Japanese sweet. It's a souvenir from a friend.",
-          "de": "Das ist „Yatsuhashi“. Es ist eine japanische Süßigkeit. Ein Mitbringsel von einem Freund.",
-          "speak": "それは「やつはし」です。日本のおかしですよ。ともだちのお土産です。"
-        },
+          "de": "Das ist „Yatsuhashi“. Es ist eine japanische Süßigkeit. Ein Mitbringsel von einem Freund.",},
         {
           "who": "bot",
           "tokens": [
@@ -2676,9 +2336,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "It looks delicious.",
-          "de": "Sieht lecker aus.",
-          "speak": "おいしそうですね。"
-        },
+          "de": "Sieht lecker aus.",},
         {
           "who": "user",
           "tokens": [
@@ -2692,9 +2350,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Yes, it is delicious. Please.",
-          "de": "Ja, es ist lecker. Bitte.",
-          "speak": "ええ、おいしいですよ。どうぞ。"
-        }
+          "de": "Ja, es ist lecker. Bitte.",}
       ]
     },
     {
@@ -2714,9 +2370,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Where is that?",
-          "de": "Wo ist das?",
-          "speak": "それは、どこですか。"
-        },
+          "de": "Wo ist das?",},
         {
           "who": "bot",
           "tokens": [
@@ -2731,9 +2385,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "This is Kyoto.",
-          "de": "Das ist Kyoto.",
-          "speak": "これは、京都です。"
-        },
+          "de": "Das ist Kyoto.",},
         {
           "who": "user",
           "tokens": [
@@ -2747,9 +2399,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Beautiful, isn't it? And that?",
-          "de": "Schön, oder? Und das?",
-          "speak": "きれいですね。それは…。"
-        },
+          "de": "Schön, oder? Und das?",},
         {
           "who": "bot",
           "tokens": [
@@ -2770,9 +2420,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "This is Matsuyama. It's a hot spring.",
-          "de": "Das ist Matsuyama. Eine heiße Quelle.",
-          "speak": "これは、松山です。温泉です。"
-        },
+          "de": "Das ist Matsuyama. Eine heiße Quelle.",},
         {
           "who": "user",
           "tokens": [
@@ -2796,9 +2444,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "That's Dogo Onsen, right? Oh, and that is Hiroshima, right?",
-          "de": "Das ist Dogo Onsen, oder? Und das ist Hiroshima, oder?",
-          "speak": "道後温泉ですね。あ、それは広島ですね。"
-        }
+          "de": "Das ist Dogo Onsen, oder? Und das ist Hiroshima, oder?",}
       ]
     },
     {
@@ -2822,9 +2468,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Excuse me, what is that?",
-          "de": "Entschuldigung, was ist das?",
-          "speak": "すみません、あれは何ですか。"
-        },
+          "de": "Entschuldigung, was ist das?",},
         {
           "who": "bot",
           "tokens": [
@@ -2834,9 +2478,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Which one?",
-          "de": "Welches?",
-          "speak": "どれですか。"
-        },
+          "de": "Welches?",},
         {
           "who": "user",
           "tokens": [
@@ -2845,9 +2487,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "That one.",
-          "de": "Das da.",
-          "speak": "あれです。"
-        },
+          "de": "Das da.",},
         {
           "who": "bot",
           "tokens": [
@@ -2874,9 +2514,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Ah, that is 'kazunoko.' It's fish eggs.",
-          "de": "Ah, das ist „Kazunoko“. Fischrogen.",
-          "speak": "ああ、あれは「かずのこ」です。魚の卵ですよ。"
-        }
+          "de": "Ah, das ist „Kazunoko“. Fischrogen.",}
       ]
     },
     {
@@ -2903,9 +2541,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Um… excuse me. What is that?",
-          "de": "Ähm… entschuldigen Sie. Was ist das?",
-          "speak": "あの…、すみません。それは何ですか。"
-        },
+          "de": "Ähm… entschuldigen Sie. Was ist das?",},
         {
           "who": "bot",
           "tokens": [
@@ -2915,9 +2551,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "This one?",
-          "de": "Dieses hier?",
-          "speak": "これですか。"
-        },
+          "de": "Dieses hier?",},
         {
           "who": "user",
           "tokens": [
@@ -2928,9 +2562,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Yes, that one.",
-          "de": "Ja, das.",
-          "speak": "はい、それです。"
-        },
+          "de": "Ja, das.",},
         {
           "who": "bot",
           "tokens": [
@@ -2941,9 +2573,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "This is a yukata.",
-          "de": "Das ist eine Yukata.",
-          "speak": "これはゆかたです。"
-        },
+          "de": "Das ist eine Yukata.",},
         {
           "who": "user",
           "tokens": [
@@ -2953,9 +2583,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "'Yukata'?",
-          "de": "„Yukata“?",
-          "speak": "「ゆかた」。"
-        },
+          "de": "„Yukata“?",},
         {
           "who": "bot",
           "tokens": [
@@ -2971,9 +2599,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "It's a Japanese summer kimono.",
-          "de": "Ein japanischer Sommerkimono.",
-          "speak": "日本のなつのきものです。"
-        },
+          "de": "Ein japanischer Sommerkimono.",},
         {
           "who": "user",
           "tokens": [
@@ -2987,9 +2613,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "It's beautiful. How much is it?",
-          "de": "Schön. Wie viel kostet es?",
-          "speak": "きれいですね。いくらですか。"
-        },
+          "de": "Schön. Wie viel kostet es?",},
         {
           "who": "bot",
           "tokens": [
@@ -2999,9 +2623,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "30 euros.",
-          "de": "30 Euro.",
-          "speak": "30 ユーロです。"
-        }
+          "de": "30 Euro.",}
       ]
     },
     {
@@ -3027,9 +2649,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Whose (textbook) is this?",
-          "de": "Wessen (Lehrbuch) ist das?",
-          "speak": "これはだれの（教科書）ですか。"
-        },
+          "de": "Wessen (Lehrbuch) ist das?",},
         {
           "who": "bot",
           "tokens": [
@@ -3046,9 +2666,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Oh, excuse me. It's mine.",
-          "de": "Oh, entschuldigung. Das ist meins.",
-          "speak": "あ、すみません。私のです。"
-        }
+          "de": "Oh, entschuldigung. Das ist meins.",}
       ]
     },
     {
@@ -3071,9 +2689,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Ms. Keller, your handwriting is beautiful.",
-          "de": "Frau Keller, Ihre Schrift ist schön.",
-          "speak": "ケラーさんのじは、きれいですね。"
-        },
+          "de": "Frau Keller, Ihre Schrift ist schön.",},
         {
           "who": "bot",
           "tokens": [
@@ -3082,9 +2698,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Thank you very much.",
-          "de": "Vielen Dank.",
-          "speak": "ありがとうございます。"
-        }
+          "de": "Vielen Dank.",}
       ]
     },
     {
@@ -3108,9 +2722,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Goodbye, teacher. See you next week.",
-          "de": "Auf Wiedersehen, Lehrer/in. Bis nächste Woche.",
-          "speak": "先生、さようなら。また、らいしゅう。"
-        },
+          "de": "Auf Wiedersehen, Lehrer/in. Bis nächste Woche.",},
         {
           "who": "bot",
           "tokens": [
@@ -3133,9 +2745,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Oh, Thomas, is this umbrella yours?",
-          "de": "Oh, Thomas, ist das dein Regenschirm?",
-          "speak": "あ、トーマスさん、この傘はトーマスさんのですか。"
-        },
+          "de": "Oh, Thomas, ist das dein Regenschirm?",},
         {
           "who": "user",
           "tokens": [
@@ -3152,9 +2762,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, it's not mine.",
-          "de": "Nein, es ist nicht meins.",
-          "speak": "いいえ、私のじゃないです。"
-        },
+          "de": "Nein, es ist nicht meins.",},
         {
           "who": "bot",
           "tokens": [
@@ -3171,9 +2779,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I see. Then whose is it?",
-          "de": "Ach so. Wessen ist es dann?",
-          "speak": "そうですか。じゃ、どなたのですか。"
-        },
+          "de": "Ach so. Wessen ist es dann?",},
         {
           "who": "user",
           "tokens": [
@@ -3184,9 +2790,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Hmm… I don't know.",
-          "de": "Hm… ich weiß es nicht.",
-          "speak": "うーん…。わかりません。"
-        }
+          "de": "Hm… ich weiß es nicht.",}
       ]
     },
     {
@@ -3219,9 +2823,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "How much is this yukata? / How much is that yukata?",
-          "de": "Wie viel kostet diese Yukata? / Wie viel kostet jene Yukata?",
-          "speak": "この「ゆかた」は、いくらですか。その「ゆかた」は、いくらですか。"
-        },
+          "de": "Wie viel kostet diese Yukata? / Wie viel kostet jene Yukata?",},
         {
           "who": "bot",
           "tokens": [
@@ -3231,9 +2833,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "15 euros.",
-          "de": "15 Euro.",
-          "speak": "15 ユーロです。"
-        }
+          "de": "15 Euro.",}
       ]
     },
     {
@@ -3257,9 +2857,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Um, excuse me. Your job is…?",
-          "de": "Ähm, entschuldigen Sie. Ihr Beruf ist…?",
-          "speak": "あの、すみません。お仕事は…。"
-        },
+          "de": "Ähm, entschuldigen Sie. Ihr Beruf ist…?",},
         {
           "who": "bot",
           "tokens": [
@@ -3275,9 +2873,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Ah, I'm a high school teacher.",
-          "de": "Ah, ich bin Oberschullehrer/in.",
-          "speak": "あ、こうこうの教師です。"
-        }
+          "de": "Ah, ich bin Oberschullehrer/in.",}
       ]
     },
     {
@@ -3304,9 +2900,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Are you a student at Berlin University?",
-          "de": "Sind Sie Student/in an der Universität Berlin?",
-          "speak": "ベルリン大学の学生さんですか。"
-        },
+          "de": "Sind Sie Student/in an der Universität Berlin?",},
         {
           "who": "bot",
           "tokens": [
@@ -3323,9 +2917,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Ah, no, I'm still a high school student.",
-          "de": "Ah, nein, ich bin noch Schüler/in.",
-          "speak": "あ、いいえ、まだ高校生です。"
-        }
+          "de": "Ah, nein, ich bin noch Schüler/in.",}
       ]
     },
     {
@@ -3349,15 +2941,13 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Ms. Sakai, are you a student?",
-          "de": "Frau Sakai, sind Sie Studentin?",
-          "speak": "さかいさんは学生さんですか。"
-        },
+          "de": "Frau Sakai, sind Sie Studentin?",},
         {
           "who": "bot",
           "tokens": [
             "いいえ",
             "。",
-            "いま",
+            { t: "今", r: "いま" },
             "は",
             {
               "t": "会社員",
@@ -3401,9 +2991,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No. I'm an office worker now. I'm a secretary at a Japanese company. But before, I was a university student in Germany.",
-          "de": "Nein. Jetzt bin ich Angestellte. Ich bin Sekretärin in einer japanischen Firma. Aber früher war ich Studentin an einer Universität in Deutschland.",
-          "speak": "いいえ。いまは会社員です。日本の会社の秘書です。でも、まえはドイツの大学の学生でした。"
-        },
+          "de": "Nein. Jetzt bin ich Angestellte. Ich bin Sekretärin in einer japanischen Firma. Aber früher war ich Studentin an einer Universität in Deutschland.",},
         {
           "who": "user",
           "tokens": [
@@ -3421,12 +3009,10 @@ window.JP_DATA = {
             },
             "です",
             "か",
-            "。",
-          ],
+            "。"
+  ],
           "en": "I see. Um, what is that?",
-          "de": "Ach so. Ähm, was ist das?",
-          "speak": "そうですか。あの、それは何ですか。"
-        },
+          "de": "Ach so. Ähm, was ist das?",},
         {
           "who": "bot",
           "tokens": [
@@ -3469,9 +3055,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "This one? This is kazunoko. It's fish eggs. Ms. Keller, do you like fish?",
-          "de": "Dieses hier? Das ist Kazunoko. Fischrogen. Frau Keller, mögen Sie Fisch?",
-          "speak": "これですか。これはかずのこです。魚の卵ですよ。ケラーさんは、魚が好きですか。"
-        },
+          "de": "Dieses hier? Das ist Kazunoko. Fischrogen. Frau Keller, mögen Sie Fisch?",},
         {
           "who": "user",
           "tokens": [
@@ -3506,9 +3090,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Yes, I do. But I don't like fish eggs very much.",
-          "de": "Ja, ich mag Fisch. Aber Fischrogen mag ich nicht besonders.",
-          "speak": "ええ、好きです。でも、魚の卵はあまり好きじゃないです。"
-        },
+          "de": "Ja, ich mag Fisch. Aber Fischrogen mag ich nicht besonders.",},
         {
           "who": "bot",
           "tokens": [
@@ -3525,9 +3107,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Um… is that yours, Ms. Keller?",
-          "de": "Ähm… ist das Ihres, Frau Keller?",
-          "speak": "あの…、それはケラーさんのですか。"
-        },
+          "de": "Ähm… ist das Ihres, Frau Keller?",},
         {
           "who": "user",
           "tokens": [
@@ -3542,9 +3122,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "It's not mine.",
-          "de": "Es ist nicht meins.",
-          "speak": "私のじゃないです。"
-        },
+          "de": "Es ist nicht meins.",},
         {
           "who": "user",
           "tokens": [
@@ -3561,9 +3139,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Um, excuse me, whose is this?",
-          "de": "Ähm, entschuldigen Sie, wessen ist das?",
-          "speak": "あの、すみません、これはどなたのですか。"
-        }
+          "de": "Ähm, entschuldigen Sie, wessen ist das?",}
       ]
     },
     {
@@ -3581,9 +3157,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Do you play sports?",
-          "de": "Treiben Sie Sport?",
-          "speak": "スポーツをしますか。"
-        },
+          "de": "Treiben Sie Sport?",},
         {
           "who": "bot",
           "tokens": [
@@ -3593,9 +3167,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Yes, I do.",
-          "de": "Ja, das tue ich.",
-          "speak": "はい、します。"
-        }
+          "de": "Ja, das tue ich.",}
       ]
     },
     {
@@ -3619,9 +3191,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Mr./Ms. Baba, do you play baseball?",
-          "de": "Herr/Frau Baba, spielen Sie Baseball?",
-          "speak": "ばばさんは野球をしますか。"
-        },
+          "de": "Herr/Frau Baba, spielen Sie Baseball?",},
         {
           "who": "bot",
           "tokens": [
@@ -3637,9 +3207,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "No, I don't. But I did before.",
-          "de": "Nein, ich spiele nicht. Aber früher habe ich gespielt.",
-          "speak": "いいえ、しません。でも、まえはしました。"
-        }
+          "de": "Nein, ich spiele nicht. Aber früher habe ich gespielt.",}
       ]
     },
     {
@@ -3650,7 +3218,7 @@ window.JP_DATA = {
         {
           "who": "user",
           "tokens": [
-            "マイヤー",
+            "太郎",
             "さん",
             "は",
             "、",
@@ -3661,9 +3229,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Mr./Ms. Meyer, do you play sports?",
-          "de": "Herr/Frau Meyer, treiben Sie Sport?",
-          "speak": "マイヤーさんは、スポーツをしますか。"
-        },
+          "de": "Herr/Frau Meyer, treiben Sie Sport?",},
         {
           "who": "bot",
           "tokens": [
@@ -3685,9 +3251,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "Yes. I do karate and mountain climbing.",
-          "de": "Ja. Ich mache Karate und Bergsteigen.",
-          "speak": "はい。空手と登山をします。"
-        },
+          "de": "Ja. Ich mache Karate und Bergsteigen.",},
         {
           "who": "user",
           "tokens": [
@@ -3697,9 +3261,7 @@ window.JP_DATA = {
             "。"
           ],
           "en": "I see.",
-          "de": "Ach so.",
-          "speak": "そうですか。"
-        }
+          "de": "Ach so.",}
       ]
     }
   ],
@@ -3710,963 +3272,749 @@ window.JP_DATA = {
         "あ"
       ],
       "en": "a",
-      "de": "a",
-      "speak": "あ"
-    },
+      "de": "a",},
     {
       "id": "h2",
       "tokens": [
         "い"
       ],
       "en": "i",
-      "de": "i",
-      "speak": "い"
-    },
+      "de": "i",},
     {
       "id": "h3",
       "tokens": [
         "う"
       ],
       "en": "u",
-      "de": "u",
-      "speak": "う"
-    },
+      "de": "u",},
     {
       "id": "h4",
       "tokens": [
         "え"
       ],
       "en": "e",
-      "de": "e",
-      "speak": "え"
-    },
+      "de": "e",},
     {
       "id": "h5",
       "tokens": [
         "お"
       ],
       "en": "o",
-      "de": "o",
-      "speak": "お"
-    },
+      "de": "o",},
     {
       "id": "h6",
       "tokens": [
         "か"
       ],
       "en": "ka",
-      "de": "ka",
-      "speak": "か"
-    },
+      "de": "ka",},
     {
       "id": "h7",
       "tokens": [
         "き"
       ],
       "en": "ki",
-      "de": "ki",
-      "speak": "き"
-    },
+      "de": "ki",},
     {
       "id": "h8",
       "tokens": [
         "く"
       ],
       "en": "ku",
-      "de": "ku",
-      "speak": "く"
-    },
+      "de": "ku",},
     {
       "id": "h9",
       "tokens": [
         "け"
       ],
       "en": "ke",
-      "de": "ke",
-      "speak": "け"
-    },
+      "de": "ke",},
     {
       "id": "h10",
       "tokens": [
         "こ"
       ],
       "en": "ko",
-      "de": "ko",
-      "speak": "こ"
-    },
+      "de": "ko",},
     {
       "id": "h11",
       "tokens": [
         "さ"
       ],
       "en": "sa",
-      "de": "sa",
-      "speak": "さ"
-    },
+      "de": "sa",},
     {
       "id": "h12",
       "tokens": [
         "し"
       ],
       "en": "shi",
-      "de": "shi",
-      "speak": "し"
-    },
+      "de": "shi",},
     {
       "id": "h13",
       "tokens": [
         "す"
       ],
       "en": "su",
-      "de": "su",
-      "speak": "す"
-    },
+      "de": "su",},
     {
       "id": "h14",
       "tokens": [
         "せ"
       ],
       "en": "se",
-      "de": "se",
-      "speak": "せ"
-    },
+      "de": "se",},
     {
       "id": "h15",
       "tokens": [
         "そ"
       ],
       "en": "so",
-      "de": "so",
-      "speak": "そ"
-    },
+      "de": "so",},
     {
       "id": "h16",
       "tokens": [
         "た"
       ],
       "en": "ta",
-      "de": "ta",
-      "speak": "た"
-    },
+      "de": "ta",},
     {
       "id": "h17",
       "tokens": [
         "ち"
       ],
       "en": "chi",
-      "de": "chi",
-      "speak": "ち"
-    },
+      "de": "chi",},
     {
       "id": "h18",
       "tokens": [
         "つ"
       ],
       "en": "tsu",
-      "de": "tsu",
-      "speak": "つ"
-    },
+      "de": "tsu",},
     {
       "id": "h19",
       "tokens": [
         "て"
       ],
       "en": "te",
-      "de": "te",
-      "speak": "て"
-    },
+      "de": "te",},
     {
       "id": "h20",
       "tokens": [
         "と"
       ],
       "en": "to",
-      "de": "to",
-      "speak": "と"
-    },
+      "de": "to",},
     {
       "id": "h21",
       "tokens": [
         "な"
       ],
       "en": "na",
-      "de": "na",
-      "speak": "な"
-    },
+      "de": "na",},
     {
       "id": "h22",
       "tokens": [
         "に"
       ],
       "en": "ni",
-      "de": "ni",
-      "speak": "に"
-    },
+      "de": "ni",},
     {
       "id": "h23",
       "tokens": [
         "ぬ"
       ],
       "en": "nu",
-      "de": "nu",
-      "speak": "ぬ"
-    },
+      "de": "nu",},
     {
       "id": "h24",
       "tokens": [
         "ね"
       ],
       "en": "ne",
-      "de": "ne",
-      "speak": "ね"
-    },
+      "de": "ne",},
     {
       "id": "h25",
       "tokens": [
         "の"
       ],
       "en": "no",
-      "de": "no",
-      "speak": "の"
-    },
+      "de": "no",},
     {
       "id": "h26",
       "tokens": [
         "は"
       ],
       "en": "ha",
-      "de": "ha",
-      "speak": "は"
-    },
+      "de": "ha",},
     {
       "id": "h27",
       "tokens": [
         "ひ"
       ],
       "en": "hi",
-      "de": "hi",
-      "speak": "ひ"
-    },
+      "de": "hi",},
     {
       "id": "h28",
       "tokens": [
         "ふ"
       ],
       "en": "fu",
-      "de": "fu",
-      "speak": "ふ"
-    },
+      "de": "fu",},
     {
       "id": "h29",
       "tokens": [
         "へ"
       ],
       "en": "he",
-      "de": "he",
-      "speak": "へ"
-    },
+      "de": "he",},
     {
       "id": "h30",
       "tokens": [
         "ほ"
       ],
       "en": "ho",
-      "de": "ho",
-      "speak": "ほ"
-    },
+      "de": "ho",},
     {
       "id": "h31",
       "tokens": [
         "ま"
       ],
       "en": "ma",
-      "de": "ma",
-      "speak": "ま"
-    },
+      "de": "ma",},
     {
       "id": "h32",
       "tokens": [
         "み"
       ],
       "en": "mi",
-      "de": "mi",
-      "speak": "み"
-    },
+      "de": "mi",},
     {
       "id": "h33",
       "tokens": [
         "む"
       ],
       "en": "mu",
-      "de": "mu",
-      "speak": "む"
-    },
+      "de": "mu",},
     {
       "id": "h34",
       "tokens": [
         "め"
       ],
       "en": "me",
-      "de": "me",
-      "speak": "め"
-    },
+      "de": "me",},
     {
       "id": "h35",
       "tokens": [
         "も"
       ],
       "en": "mo",
-      "de": "mo",
-      "speak": "も"
-    },
+      "de": "mo",},
     {
       "id": "h36",
       "tokens": [
         "や"
       ],
       "en": "ya",
-      "de": "ya",
-      "speak": "や"
-    },
+      "de": "ya",},
     {
       "id": "h37",
       "tokens": [
         "ゆ"
       ],
       "en": "yu",
-      "de": "yu",
-      "speak": "ゆ"
-    },
+      "de": "yu",},
     {
       "id": "h38",
       "tokens": [
         "よ"
       ],
       "en": "yo",
-      "de": "yo",
-      "speak": "よ"
-    },
+      "de": "yo",},
     {
       "id": "h39",
       "tokens": [
         "ら"
       ],
       "en": "ra",
-      "de": "ra",
-      "speak": "ら"
-    },
+      "de": "ra",},
     {
       "id": "h40",
       "tokens": [
         "り"
       ],
       "en": "ri",
-      "de": "ri",
-      "speak": "り"
-    },
+      "de": "ri",},
     {
       "id": "h41",
       "tokens": [
         "る"
       ],
       "en": "ru",
-      "de": "ru",
-      "speak": "る"
-    },
+      "de": "ru",},
     {
       "id": "h42",
       "tokens": [
         "れ"
       ],
       "en": "re",
-      "de": "re",
-      "speak": "れ"
-    },
+      "de": "re",},
     {
       "id": "h43",
       "tokens": [
         "ろ"
       ],
       "en": "ro",
-      "de": "ro",
-      "speak": "ろ"
-    },
+      "de": "ro",},
     {
       "id": "h44",
       "tokens": [
         "わ"
       ],
       "en": "wa",
-      "de": "wa",
-      "speak": "わ"
-    },
+      "de": "wa",},
     {
       "id": "h45",
       "tokens": [
         "を"
       ],
       "en": "o",
-      "de": "o",
-      "speak": "を"
-    },
+      "de": "o",},
     {
       "id": "h46",
       "tokens": [
         "ん"
       ],
       "en": "n",
-      "de": "n",
-      "speak": "ん"
-    },
+      "de": "n",},
     {
       "id": "h47",
       "tokens": [
         "が"
       ],
       "en": "ga",
-      "de": "ga",
-      "speak": "が"
-    },
+      "de": "ga",},
     {
       "id": "h48",
       "tokens": [
         "ぎ"
       ],
       "en": "gi",
-      "de": "gi",
-      "speak": "ぎ"
-    },
+      "de": "gi",},
     {
       "id": "h49",
       "tokens": [
         "ぐ"
       ],
       "en": "gu",
-      "de": "gu",
-      "speak": "ぐ"
-    },
+      "de": "gu",},
     {
       "id": "h50",
       "tokens": [
         "げ"
       ],
       "en": "ge",
-      "de": "ge",
-      "speak": "げ"
-    },
+      "de": "ge",},
     {
       "id": "h51",
       "tokens": [
         "ご"
       ],
       "en": "go",
-      "de": "go",
-      "speak": "ご"
-    },
+      "de": "go",},
     {
       "id": "h52",
       "tokens": [
         "ざ"
       ],
       "en": "za",
-      "de": "za",
-      "speak": "ざ"
-    },
+      "de": "za",},
     {
       "id": "h53",
       "tokens": [
         "じ"
       ],
       "en": "ji",
-      "de": "ji",
-      "speak": "じ"
-    },
+      "de": "ji",},
     {
       "id": "h54",
       "tokens": [
         "ず"
       ],
       "en": "zu",
-      "de": "zu",
-      "speak": "ず"
-    },
+      "de": "zu",},
     {
       "id": "h55",
       "tokens": [
         "ぜ"
       ],
       "en": "ze",
-      "de": "ze",
-      "speak": "ぜ"
-    },
+      "de": "ze",},
     {
       "id": "h56",
       "tokens": [
         "ぞ"
       ],
       "en": "zo",
-      "de": "zo",
-      "speak": "ぞ"
-    },
+      "de": "zo",},
     {
       "id": "h57",
       "tokens": [
         "だ"
       ],
       "en": "da",
-      "de": "da",
-      "speak": "だ"
-    },
+      "de": "da",},
     {
       "id": "h58",
       "tokens": [
         "ぢ"
       ],
       "en": "ji",
-      "de": "ji",
-      "speak": "ぢ"
-    },
+      "de": "ji",},
     {
       "id": "h59",
       "tokens": [
         "づ"
       ],
       "en": "zu",
-      "de": "zu",
-      "speak": "づ"
-    },
+      "de": "zu",},
     {
       "id": "h60",
       "tokens": [
         "で"
       ],
       "en": "de",
-      "de": "de",
-      "speak": "で"
-    },
+      "de": "de",},
     {
       "id": "h61",
       "tokens": [
         "ど"
       ],
       "en": "do",
-      "de": "do",
-      "speak": "ど"
-    },
+      "de": "do",},
     {
       "id": "h62",
       "tokens": [
         "ば"
       ],
       "en": "ba",
-      "de": "ba",
-      "speak": "ば"
-    },
+      "de": "ba",},
     {
       "id": "h63",
       "tokens": [
         "び"
       ],
       "en": "bi",
-      "de": "bi",
-      "speak": "び"
-    },
+      "de": "bi",},
     {
       "id": "h64",
       "tokens": [
         "ぶ"
       ],
       "en": "bu",
-      "de": "bu",
-      "speak": "ぶ"
-    },
+      "de": "bu",},
     {
       "id": "h65",
       "tokens": [
         "べ"
       ],
       "en": "be",
-      "de": "be",
-      "speak": "べ"
-    },
+      "de": "be",},
     {
       "id": "h66",
       "tokens": [
         "ぼ"
       ],
       "en": "bo",
-      "de": "bo",
-      "speak": "ぼ"
-    },
+      "de": "bo",},
     {
       "id": "h67",
       "tokens": [
         "ぱ"
       ],
       "en": "pa",
-      "de": "pa",
-      "speak": "ぱ"
-    },
+      "de": "pa",},
     {
       "id": "h68",
       "tokens": [
         "ぴ"
       ],
       "en": "pi",
-      "de": "pi",
-      "speak": "ぴ"
-    },
+      "de": "pi",},
     {
       "id": "h69",
       "tokens": [
         "ぷ"
       ],
       "en": "pu",
-      "de": "pu",
-      "speak": "ぷ"
-    },
+      "de": "pu",},
     {
       "id": "h70",
       "tokens": [
         "ぺ"
       ],
       "en": "pe",
-      "de": "pe",
-      "speak": "ぺ"
-    },
+      "de": "pe",},
     {
       "id": "h71",
       "tokens": [
         "ぽ"
       ],
       "en": "po",
-      "de": "po",
-      "speak": "ぽ"
-    },
+      "de": "po",},
     {
       "id": "h72",
       "tokens": [
         "きゃ"
       ],
       "en": "kya",
-      "de": "kya",
-      "speak": "きゃ"
-    },
+      "de": "kya",},
     {
       "id": "h73",
       "tokens": [
         "きゅ"
       ],
       "en": "kyu",
-      "de": "kyu",
-      "speak": "きゅ"
-    },
+      "de": "kyu",},
     {
       "id": "h74",
       "tokens": [
         "きょ"
       ],
       "en": "kyo",
-      "de": "kyo",
-      "speak": "きょ"
-    },
+      "de": "kyo",},
     {
       "id": "h75",
       "tokens": [
         "ぎゃ"
       ],
       "en": "gya",
-      "de": "gya",
-      "speak": "ぎゃ"
-    },
+      "de": "gya",},
     {
       "id": "h76",
       "tokens": [
         "ぎゅ"
       ],
       "en": "gyu",
-      "de": "gyu",
-      "speak": "ぎゅ"
-    },
+      "de": "gyu",},
     {
       "id": "h77",
       "tokens": [
         "ぎょ"
       ],
       "en": "gyo",
-      "de": "gyo",
-      "speak": "ぎょ"
-    },
+      "de": "gyo",},
     {
       "id": "h78",
       "tokens": [
         "しゃ"
       ],
       "en": "sha",
-      "de": "sha",
-      "speak": "しゃ"
-    },
+      "de": "sha",},
     {
       "id": "h79",
       "tokens": [
         "しゅ"
       ],
       "en": "shu",
-      "de": "shu",
-      "speak": "しゅ"
-    },
+      "de": "shu",},
     {
       "id": "h80",
       "tokens": [
         "しょ"
       ],
       "en": "sho",
-      "de": "sho",
-      "speak": "しょ"
-    },
+      "de": "sho",},
     {
       "id": "h81",
       "tokens": [
         "じゃ"
       ],
       "en": "ja",
-      "de": "ja",
-      "speak": "じゃ"
-    },
+      "de": "ja",},
     {
       "id": "h82",
       "tokens": [
         "じゅ"
       ],
       "en": "ju",
-      "de": "ju",
-      "speak": "じゅ"
-    },
+      "de": "ju",},
     {
       "id": "h83",
       "tokens": [
         "じょ"
       ],
       "en": "jo",
-      "de": "jo",
-      "speak": "じょ"
-    },
+      "de": "jo",},
     {
       "id": "h84",
       "tokens": [
         "ちゃ"
       ],
       "en": "cha",
-      "de": "cha",
-      "speak": "ちゃ"
-    },
+      "de": "cha",},
     {
       "id": "h85",
       "tokens": [
         "ちゅ"
       ],
       "en": "chu",
-      "de": "chu",
-      "speak": "ちゅ"
-    },
+      "de": "chu",},
     {
       "id": "h86",
       "tokens": [
         "ちょ"
       ],
       "en": "cho",
-      "de": "cho",
-      "speak": "ちょ"
-    },
+      "de": "cho",},
     {
       "id": "h87",
       "tokens": [
         "ぢゃ"
       ],
       "en": "ja",
-      "de": "ja",
-      "speak": "ぢゃ"
-    },
+      "de": "ja",},
     {
       "id": "h88",
       "tokens": [
         "ぢゅ"
       ],
       "en": "ju",
-      "de": "ju",
-      "speak": "ぢゅ"
-    },
+      "de": "ju",},
     {
       "id": "h89",
       "tokens": [
         "ぢょ"
       ],
       "en": "jo",
-      "de": "jo",
-      "speak": "ぢょ"
-    },
+      "de": "jo",},
     {
       "id": "h90",
       "tokens": [
         "にゃ"
       ],
       "en": "nya",
-      "de": "nya",
-      "speak": "にゃ"
-    },
+      "de": "nya",},
     {
       "id": "h91",
       "tokens": [
         "にゅ"
       ],
       "en": "nyu",
-      "de": "nyu",
-      "speak": "にゅ"
-    },
+      "de": "nyu",},
     {
       "id": "h92",
       "tokens": [
         "にょ"
       ],
       "en": "nyo",
-      "de": "nyo",
-      "speak": "にょ"
-    },
+      "de": "nyo",},
     {
       "id": "h93",
       "tokens": [
         "ひゃ"
       ],
       "en": "hya",
-      "de": "hya",
-      "speak": "ひゃ"
-    },
+      "de": "hya",},
     {
       "id": "h94",
       "tokens": [
         "ひゅ"
       ],
       "en": "hyu",
-      "de": "hyu",
-      "speak": "ひゅ"
-    },
+      "de": "hyu",},
     {
       "id": "h95",
       "tokens": [
         "ひょ"
       ],
       "en": "hyo",
-      "de": "hyo",
-      "speak": "ひょ"
-    },
+      "de": "hyo",},
     {
       "id": "h96",
       "tokens": [
         "びゃ"
       ],
       "en": "bya",
-      "de": "bya",
-      "speak": "びゃ"
-    },
+      "de": "bya",},
     {
       "id": "h97",
       "tokens": [
         "びゅ"
       ],
       "en": "byu",
-      "de": "byu",
-      "speak": "びゅ"
-    },
+      "de": "byu",},
     {
       "id": "h98",
       "tokens": [
         "びょ"
       ],
       "en": "byo",
-      "de": "byo",
-      "speak": "びょ"
-    },
+      "de": "byo",},
     {
       "id": "h99",
       "tokens": [
         "ぴゃ"
       ],
       "en": "pya",
-      "de": "pya",
-      "speak": "ぴゃ"
-    },
+      "de": "pya",},
     {
       "id": "h100",
       "tokens": [
         "ぴゅ"
       ],
       "en": "pyu",
-      "de": "pyu",
-      "speak": "ぴゅ"
-    },
+      "de": "pyu",},
     {
       "id": "h101",
       "tokens": [
         "ぴょ"
       ],
       "en": "pyo",
-      "de": "pyo",
-      "speak": "ぴょ"
-    },
+      "de": "pyo",},
     {
       "id": "h102",
       "tokens": [
         "みゃ"
       ],
       "en": "mya",
-      "de": "mya",
-      "speak": "みゃ"
-    },
+      "de": "mya",},
     {
       "id": "h103",
       "tokens": [
         "みゅ"
       ],
       "en": "myu",
-      "de": "myu",
-      "speak": "みゅ"
-    },
+      "de": "myu",},
     {
       "id": "h104",
       "tokens": [
         "みょ"
       ],
       "en": "myo",
-      "de": "myo",
-      "speak": "みょ"
-    },
+      "de": "myo",},
     {
       "id": "h105",
       "tokens": [
         "りゃ"
       ],
       "en": "rya",
-      "de": "rya",
-      "speak": "りゃ"
-    },
+      "de": "rya",},
     {
       "id": "h106",
       "tokens": [
         "りゅ"
       ],
       "en": "ryu",
-      "de": "ryu",
-      "speak": "りゅ"
-    },
+      "de": "ryu",},
     {
       "id": "h107",
       "tokens": [
         "りょ"
       ],
       "en": "ryo",
-      "de": "ryo",
-      "speak": "りょ"
-    }
+      "de": "ryo",}
   ],
   "katakana": [
     {
@@ -4675,962 +4023,748 @@ window.JP_DATA = {
         "ア"
       ],
       "en": "a",
-      "de": "a",
-      "speak": "ア"
-    },
+      "de": "a",},
     {
       "id": "k2",
       "tokens": [
         "イ"
       ],
       "en": "i",
-      "de": "i",
-      "speak": "イ"
-    },
+      "de": "i",},
     {
       "id": "k3",
       "tokens": [
         "ウ"
       ],
       "en": "u",
-      "de": "u",
-      "speak": "ウ"
-    },
+      "de": "u",},
     {
       "id": "k4",
       "tokens": [
         "エ"
       ],
       "en": "e",
-      "de": "e",
-      "speak": "エ"
-    },
+      "de": "e",},
     {
       "id": "k5",
       "tokens": [
         "オ"
       ],
       "en": "o",
-      "de": "o",
-      "speak": "オ"
-    },
+      "de": "o",},
     {
       "id": "k6",
       "tokens": [
         "カ"
       ],
       "en": "ka",
-      "de": "ka",
-      "speak": "カ"
-    },
+      "de": "ka",},
     {
       "id": "k7",
       "tokens": [
         "キ"
       ],
       "en": "ki",
-      "de": "ki",
-      "speak": "キ"
-    },
+      "de": "ki",},
     {
       "id": "k8",
       "tokens": [
         "ク"
       ],
       "en": "ku",
-      "de": "ku",
-      "speak": "ク"
-    },
+      "de": "ku",},
     {
       "id": "k9",
       "tokens": [
         "ケ"
       ],
       "en": "ke",
-      "de": "ke",
-      "speak": "ケ"
-    },
+      "de": "ke",},
     {
       "id": "k10",
       "tokens": [
         "コ"
       ],
       "en": "ko",
-      "de": "ko",
-      "speak": "コ"
-    },
+      "de": "ko",},
     {
       "id": "k11",
       "tokens": [
         "サ"
       ],
       "en": "sa",
-      "de": "sa",
-      "speak": "サ"
-    },
+      "de": "sa",},
     {
       "id": "k12",
       "tokens": [
         "シ"
       ],
       "en": "shi",
-      "de": "shi",
-      "speak": "シ"
-    },
+      "de": "shi",},
     {
       "id": "k13",
       "tokens": [
         "ス"
       ],
       "en": "su",
-      "de": "su",
-      "speak": "ス"
-    },
+      "de": "su",},
     {
       "id": "k14",
       "tokens": [
         "セ"
       ],
       "en": "se",
-      "de": "se",
-      "speak": "セ"
-    },
+      "de": "se",},
     {
       "id": "k15",
       "tokens": [
         "ソ"
       ],
       "en": "so",
-      "de": "so",
-      "speak": "ソ"
-    },
+      "de": "so",},
     {
       "id": "k16",
       "tokens": [
         "タ"
       ],
       "en": "ta",
-      "de": "ta",
-      "speak": "タ"
-    },
+      "de": "ta",},
     {
       "id": "k17",
       "tokens": [
         "チ"
       ],
       "en": "chi",
-      "de": "chi",
-      "speak": "チ"
-    },
+      "de": "chi",},
     {
       "id": "k18",
       "tokens": [
         "ツ"
       ],
       "en": "tsu",
-      "de": "tsu",
-      "speak": "ツ"
-    },
+      "de": "tsu",},
     {
       "id": "k19",
       "tokens": [
         "テ"
       ],
       "en": "te",
-      "de": "te",
-      "speak": "テ"
-    },
+      "de": "te",},
     {
       "id": "k20",
       "tokens": [
         "ト"
       ],
       "en": "to",
-      "de": "to",
-      "speak": "ト"
-    },
+      "de": "to",},
     {
       "id": "k21",
       "tokens": [
         "ナ"
       ],
       "en": "na",
-      "de": "na",
-      "speak": "ナ"
-    },
+      "de": "na",},
     {
       "id": "k22",
       "tokens": [
         "ニ"
       ],
       "en": "ni",
-      "de": "ni",
-      "speak": "ニ"
-    },
+      "de": "ni",},
     {
       "id": "k23",
       "tokens": [
         "ヌ"
       ],
       "en": "nu",
-      "de": "nu",
-      "speak": "ヌ"
-    },
+      "de": "nu",},
     {
       "id": "k24",
       "tokens": [
         "ネ"
       ],
       "en": "ne",
-      "de": "ne",
-      "speak": "ネ"
-    },
+      "de": "ne",},
     {
       "id": "k25",
       "tokens": [
         "ノ"
       ],
       "en": "no",
-      "de": "no",
-      "speak": "ノ"
-    },
+      "de": "no",},
     {
       "id": "k26",
       "tokens": [
         "ハ"
       ],
       "en": "ha",
-      "de": "ha",
-      "speak": "ハ"
-    },
+      "de": "ha",},
     {
       "id": "k27",
       "tokens": [
         "ヒ"
       ],
       "en": "hi",
-      "de": "hi",
-      "speak": "ヒ"
-    },
+      "de": "hi",},
     {
       "id": "k28",
       "tokens": [
         "フ"
       ],
       "en": "fu",
-      "de": "fu",
-      "speak": "フ"
-    },
+      "de": "fu",},
     {
       "id": "k29",
       "tokens": [
         "ヘ"
       ],
       "en": "he",
-      "de": "he",
-      "speak": "ヘ"
-    },
+      "de": "he",},
     {
       "id": "k30",
       "tokens": [
         "ホ"
       ],
       "en": "ho",
-      "de": "ho",
-      "speak": "ホ"
-    },
+      "de": "ho",},
     {
       "id": "k31",
       "tokens": [
         "マ"
       ],
       "en": "ma",
-      "de": "ma",
-      "speak": "マ"
-    },
+      "de": "ma",},
     {
       "id": "k32",
       "tokens": [
         "ミ"
       ],
       "en": "mi",
-      "de": "mi",
-      "speak": "ミ"
-    },
+      "de": "mi",},
     {
       "id": "k33",
       "tokens": [
         "ム"
       ],
       "en": "mu",
-      "de": "mu",
-      "speak": "ム"
-    },
+      "de": "mu",},
     {
       "id": "k34",
       "tokens": [
         "メ"
       ],
       "en": "me",
-      "de": "me",
-      "speak": "メ"
-    },
+      "de": "me",},
     {
       "id": "k35",
       "tokens": [
         "モ"
       ],
       "en": "mo",
-      "de": "mo",
-      "speak": "モ"
-    },
+      "de": "mo",},
     {
       "id": "k36",
       "tokens": [
         "ヤ"
       ],
       "en": "ya",
-      "de": "ya",
-      "speak": "ヤ"
-    },
+      "de": "ya",},
     {
       "id": "k37",
       "tokens": [
         "ユ"
       ],
       "en": "yu",
-      "de": "yu",
-      "speak": "ユ"
-    },
+      "de": "yu",},
     {
       "id": "k38",
       "tokens": [
         "ヨ"
       ],
       "en": "yo",
-      "de": "yo",
-      "speak": "ヨ"
-    },
+      "de": "yo",},
     {
       "id": "k39",
       "tokens": [
         "ラ"
       ],
       "en": "ra",
-      "de": "ra",
-      "speak": "ラ"
-    },
+      "de": "ra",},
     {
       "id": "k40",
       "tokens": [
         "リ"
       ],
       "en": "ri",
-      "de": "ri",
-      "speak": "リ"
-    },
+      "de": "ri",},
     {
       "id": "k41",
       "tokens": [
         "ル"
       ],
       "en": "ru",
-      "de": "ru",
-      "speak": "ル"
-    },
+      "de": "ru",},
     {
       "id": "k42",
       "tokens": [
         "レ"
       ],
       "en": "re",
-      "de": "re",
-      "speak": "レ"
-    },
+      "de": "re",},
     {
       "id": "k43",
       "tokens": [
         "ロ"
       ],
       "en": "ro",
-      "de": "ro",
-      "speak": "ロ"
-    },
+      "de": "ro",},
     {
       "id": "k44",
       "tokens": [
         "ワ"
       ],
       "en": "wa",
-      "de": "wa",
-      "speak": "ワ"
-    },
+      "de": "wa",},
     {
       "id": "k45",
       "tokens": [
         "ヲ"
       ],
       "en": "o",
-      "de": "o",
-      "speak": "ヲ"
-    },
+      "de": "o",},
     {
       "id": "k46",
       "tokens": [
         "ン"
       ],
       "en": "n",
-      "de": "n",
-      "speak": "ン"
-    },
+      "de": "n",},
     {
       "id": "k47",
       "tokens": [
         "ガ"
       ],
       "en": "ga",
-      "de": "ga",
-      "speak": "ガ"
-    },
+      "de": "ga",},
     {
       "id": "k48",
       "tokens": [
         "ギ"
       ],
       "en": "gi",
-      "de": "gi",
-      "speak": "ギ"
-    },
+      "de": "gi",},
     {
       "id": "k49",
       "tokens": [
         "グ"
       ],
       "en": "gu",
-      "de": "gu",
-      "speak": "グ"
-    },
+      "de": "gu",},
     {
       "id": "k50",
       "tokens": [
         "ゲ"
       ],
       "en": "ge",
-      "de": "ge",
-      "speak": "ゲ"
-    },
+      "de": "ge",},
     {
       "id": "k51",
       "tokens": [
         "ゴ"
       ],
       "en": "go",
-      "de": "go",
-      "speak": "ゴ"
-    },
+      "de": "go",},
     {
       "id": "k52",
       "tokens": [
         "ザ"
       ],
       "en": "za",
-      "de": "za",
-      "speak": "ザ"
-    },
+      "de": "za",},
     {
       "id": "k53",
       "tokens": [
         "ジ"
       ],
       "en": "ji",
-      "de": "ji",
-      "speak": "ジ"
-    },
+      "de": "ji",},
     {
       "id": "k54",
       "tokens": [
         "ズ"
       ],
       "en": "zu",
-      "de": "zu",
-      "speak": "ズ"
-    },
+      "de": "zu",},
     {
       "id": "k55",
       "tokens": [
         "ゼ"
       ],
       "en": "ze",
-      "de": "ze",
-      "speak": "ゼ"
-    },
+      "de": "ze",},
     {
       "id": "k56",
       "tokens": [
         "ゾ"
       ],
       "en": "zo",
-      "de": "zo",
-      "speak": "ゾ"
-    },
+      "de": "zo",},
     {
       "id": "k57",
       "tokens": [
         "ダ"
       ],
       "en": "da",
-      "de": "da",
-      "speak": "ダ"
-    },
+      "de": "da",},
     {
       "id": "k58",
       "tokens": [
         "ヂ"
       ],
       "en": "ji",
-      "de": "ji",
-      "speak": "ヂ"
-    },
+      "de": "ji",},
     {
       "id": "k59",
       "tokens": [
         "ヅ"
       ],
       "en": "zu",
-      "de": "zu",
-      "speak": "ヅ"
-    },
+      "de": "zu",},
     {
       "id": "k60",
       "tokens": [
         "デ"
       ],
       "en": "de",
-      "de": "de",
-      "speak": "デ"
-    },
+      "de": "de",},
     {
       "id": "k61",
       "tokens": [
         "ド"
       ],
       "en": "do",
-      "de": "do",
-      "speak": "ド"
-    },
+      "de": "do",},
     {
       "id": "k62",
       "tokens": [
         "バ"
       ],
       "en": "ba",
-      "de": "ba",
-      "speak": "バ"
-    },
+      "de": "ba",},
     {
       "id": "k63",
       "tokens": [
         "ビ"
       ],
       "en": "bi",
-      "de": "bi",
-      "speak": "ビ"
-    },
+      "de": "bi",},
     {
       "id": "k64",
       "tokens": [
         "ブ"
       ],
       "en": "bu",
-      "de": "bu",
-      "speak": "ブ"
-    },
+      "de": "bu",},
     {
       "id": "k65",
       "tokens": [
         "ベ"
       ],
       "en": "be",
-      "de": "be",
-      "speak": "ベ"
-    },
+      "de": "be",},
     {
       "id": "k66",
       "tokens": [
         "ボ"
       ],
       "en": "bo",
-      "de": "bo",
-      "speak": "ボ"
-    },
+      "de": "bo",},
     {
       "id": "k67",
       "tokens": [
         "パ"
       ],
       "en": "pa",
-      "de": "pa",
-      "speak": "パ"
-    },
+      "de": "pa",},
     {
       "id": "k68",
       "tokens": [
         "ピ"
       ],
       "en": "pi",
-      "de": "pi",
-      "speak": "ピ"
-    },
+      "de": "pi",},
     {
       "id": "k69",
       "tokens": [
         "プ"
       ],
       "en": "pu",
-      "de": "pu",
-      "speak": "プ"
-    },
+      "de": "pu",},
     {
       "id": "k70",
       "tokens": [
         "ペ"
       ],
       "en": "pe",
-      "de": "pe",
-      "speak": "ペ"
-    },
+      "de": "pe",},
     {
       "id": "k71",
       "tokens": [
         "ポ"
       ],
       "en": "po",
-      "de": "po",
-      "speak": "ポ"
-    },
+      "de": "po",},
     {
       "id": "k72",
       "tokens": [
         "キャ"
       ],
       "en": "kya",
-      "de": "kya",
-      "speak": "キャ"
-    },
+      "de": "kya",},
     {
       "id": "k73",
       "tokens": [
         "キュ"
       ],
       "en": "kyu",
-      "de": "kyu",
-      "speak": "キュ"
-    },
+      "de": "kyu",},
     {
       "id": "k74",
       "tokens": [
         "キョ"
       ],
       "en": "kyo",
-      "de": "kyo",
-      "speak": "キョ"
-    },
+      "de": "kyo",},
     {
       "id": "k75",
       "tokens": [
         "ギャ"
       ],
       "en": "gya",
-      "de": "gya",
-      "speak": "ギャ"
-    },
+      "de": "gya",},
     {
       "id": "k76",
       "tokens": [
         "ギュ"
       ],
       "en": "gyu",
-      "de": "gyu",
-      "speak": "ギュ"
-    },
+      "de": "gyu",},
     {
       "id": "k77",
       "tokens": [
         "ギョ"
       ],
       "en": "gyo",
-      "de": "gyo",
-      "speak": "ギョ"
-    },
+      "de": "gyo",},
     {
       "id": "k78",
       "tokens": [
         "シャ"
       ],
       "en": "sha",
-      "de": "sha",
-      "speak": "シャ"
-    },
+      "de": "sha",},
     {
       "id": "k79",
       "tokens": [
         "シュ"
       ],
       "en": "shu",
-      "de": "shu",
-      "speak": "シュ"
-    },
+      "de": "shu",},
     {
       "id": "k80",
       "tokens": [
         "ショ"
       ],
       "en": "sho",
-      "de": "sho",
-      "speak": "ショ"
-    },
+      "de": "sho",},
     {
       "id": "k81",
       "tokens": [
         "ジャ"
       ],
       "en": "ja",
-      "de": "ja",
-      "speak": "ジャ"
-    },
+      "de": "ja",},
     {
       "id": "k82",
       "tokens": [
         "ジュ"
       ],
       "en": "ju",
-      "de": "ju",
-      "speak": "ジュ"
-    },
+      "de": "ju",},
     {
       "id": "k83",
       "tokens": [
-        "ジョ"
+        "花子"
       ],
       "en": "jo",
-      "de": "jo",
-      "speak": "ジョ"
-    },
+      "de": "jo",},
     {
       "id": "k84",
       "tokens": [
         "チャ"
       ],
       "en": "cha",
-      "de": "cha",
-      "speak": "チャ"
-    },
+      "de": "cha",},
     {
       "id": "k85",
       "tokens": [
         "チュ"
       ],
       "en": "chu",
-      "de": "chu",
-      "speak": "チュ"
-    },
+      "de": "chu",},
     {
       "id": "k86",
       "tokens": [
         "チョ"
       ],
       "en": "cho",
-      "de": "cho",
-      "speak": "チョ"
-    },
+      "de": "cho",},
     {
       "id": "k87",
       "tokens": [
         "ヂャ"
       ],
       "en": "ja",
-      "de": "ja",
-      "speak": "ヂャ"
-    },
+      "de": "ja",},
     {
       "id": "k88",
       "tokens": [
         "ヂュ"
       ],
       "en": "ju",
-      "de": "ju",
-      "speak": "ヂュ"
-    },
+      "de": "ju",},
     {
       "id": "k89",
       "tokens": [
         "ヂョ"
       ],
       "en": "jo",
-      "de": "jo",
-      "speak": "ヂョ"
-    },
+      "de": "jo",},
     {
       "id": "k90",
       "tokens": [
         "ニャ"
       ],
       "en": "nya",
-      "de": "nya",
-      "speak": "ニャ"
-    },
+      "de": "nya",},
     {
       "id": "k91",
       "tokens": [
         "ニュ"
       ],
       "en": "nyu",
-      "de": "nyu",
-      "speak": "ニュ"
-    },
+      "de": "nyu",},
     {
       "id": "k92",
       "tokens": [
         "ニョ"
       ],
       "en": "nyo",
-      "de": "nyo",
-      "speak": "ニョ"
-    },
+      "de": "nyo",},
     {
       "id": "k93",
       "tokens": [
         "ヒャ"
       ],
       "en": "hya",
-      "de": "hya",
-      "speak": "ヒャ"
-    },
+      "de": "hya",},
     {
       "id": "k94",
       "tokens": [
         "ヒュ"
       ],
       "en": "hyu",
-      "de": "hyu",
-      "speak": "ヒュ"
-    },
+      "de": "hyu",},
     {
       "id": "k95",
       "tokens": [
         "ヒョ"
       ],
       "en": "hyo",
-      "de": "hyo",
-      "speak": "ヒョ"
-    },
+      "de": "hyo",},
     {
       "id": "k96",
       "tokens": [
         "ビャ"
       ],
       "en": "bya",
-      "de": "bya",
-      "speak": "ビャ"
-    },
+      "de": "bya",},
     {
       "id": "k97",
       "tokens": [
         "ビュ"
       ],
       "en": "byu",
-      "de": "byu",
-      "speak": "ビュ"
-    },
+      "de": "byu",},
     {
       "id": "k98",
       "tokens": [
         "ビョ"
       ],
       "en": "byo",
-      "de": "byo",
-      "speak": "ビョ"
-    },
+      "de": "byo",},
     {
       "id": "k99",
       "tokens": [
         "ピャ"
       ],
       "en": "pya",
-      "de": "pya",
-      "speak": "ピャ"
-    },
+      "de": "pya",},
     {
       "id": "k100",
       "tokens": [
         "ピュ"
       ],
       "en": "pyu",
-      "de": "pyu",
-      "speak": "ピュ"
-    },
+      "de": "pyu",},
     {
       "id": "k101",
       "tokens": [
         "ピョ"
       ],
       "en": "pyo",
-      "de": "pyo",
-      "speak": "ピョ"
-    },
+      "de": "pyo",},
     {
       "id": "k102",
       "tokens": [
         "ミャ"
       ],
       "en": "mya",
-      "de": "mya",
-      "speak": "ミャ"
-    },
+      "de": "mya",},
     {
       "id": "k103",
       "tokens": [
         "ミュ"
       ],
       "en": "myu",
-      "de": "myu",
-      "speak": "ミュ"
-    },
+      "de": "myu",},
     {
       "id": "k104",
       "tokens": [
         "ミョ"
       ],
       "en": "myo",
-      "de": "myo",
-      "speak": "ミョ"
-    },
+      "de": "myo",},
     {
       "id": "k105",
       "tokens": [
         "リャ"
       ],
       "en": "rya",
-      "de": "rya",
-      "speak": "リャ"
-    },
+      "de": "rya",},
     {
       "id": "k106",
       "tokens": [
         "リュ"
       ],
       "en": "ryu",
-      "de": "ryu",
-      "speak": "リュ"
-    },
+      "de": "ryu",},
     {
       "id": "k107",
       "tokens": [
         "リョ"
       ],
       "en": "ryo",
-      "de": "ryo",
-      "speak": "リョ"
-    }
+      "de": "ryo",}
   ]
 };
