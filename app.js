@@ -1127,7 +1127,7 @@ function getItem() {
       $('#recognizedText').textContent = '';
       speak(currentSpeakText(false));
       // advance after a conservative delay based on text length
-      const delay = clamp(900 + ((getTokensFromItem(turn).map(tokenToText).join('')).length * 280), 1200, 6500);
+      const delay = clamp(900 + ((getTokensFromItem(turn).map(tokenToText).join('')).length * 400), 1200, 6500);
       window.setTimeout(() => {
         nextDialogTurn();
       }, delay);
