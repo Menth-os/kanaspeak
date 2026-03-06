@@ -135,6 +135,9 @@
     shuffle: 'jpTrainer.shuffle',
     progress: 'jpTrainer.progress'
   };
+  const JOYO_KANJI_JSON_URL = 'joyo_kanji_readings.json';
+  let JOYO_KANJI_DICT = Object.create(null);
+  let PROJECT_READING_LEXICON = null;
 
   // ---------- Helpers ----------
   const $ = (sel) => document.querySelector(sel);
@@ -188,6 +191,257 @@
     s = s.replace(/づ/g, 'ず').replace(/ぢ/g, 'じ');
     // sometimes long vowels appear as う or ー; later we remove both for comparison (depending on leniency)
     return s;
+  }
+
+
+  function stripOkuriganaMarkers(s) {
+    return (s || '').replace(/[.\-!]/g, '');
+  }
+
+  function normalizeReadingText(str) {
+    return normalizeKanaLoose(stripPunct(stripOkuriganaMarkers(str))).replace(/\s+/g, '');
+  }
+
+  function isKanaChar(ch) {
+    return /[ぁ-ゟァ-ヿー]/u.test(ch || '');
+  }
+
+  function isKanjiChar(ch) {
+    return /[㐀-䶿一-鿿々〆ヵヶ]/u.test(ch || '');
+  }
+
+  function cleanLatin(str) {
+    return ((str || '').toLowerCase().match(/[a-z0-9]+/g) || []).join('');
+  }
+
+  const HIRA_ROMAJI_DIGRAPHS = {
+    'きゃ':'kya','きゅ':'kyu','きょ':'kyo','ぎゃ':'gya','ぎゅ':'gyu','ぎょ':'gyo',
+    'しゃ':'sha','しゅ':'shu','しょ':'sho','じゃ':'ja','じゅ':'ju','じょ':'jo',
+    'ちゃ':'cha','ちゅ':'chu','ちょ':'cho','にゃ':'nya','にゅ':'nyu','にょ':'nyo',
+    'ひゃ':'hya','ひゅ':'hyu','ひょ':'hyo','びゃ':'bya','びゅ':'byu','びょ':'byo',
+    'ぴゃ':'pya','ぴゅ':'pyu','ぴょ':'pyo','みゃ':'mya','みゅ':'myu','みょ':'myo',
+    'りゃ':'rya','りゅ':'ryu','りょ':'ryo'
+  };
+
+  const HIRA_ROMAJI_BASE = {
+    'あ':'a','い':'i','う':'u','え':'e','お':'o','か':'ka','き':'ki','く':'ku','け':'ke','こ':'ko',
+    'さ':'sa','し':'shi','す':'su','せ':'se','そ':'so','た':'ta','ち':'chi','つ':'tsu','て':'te','と':'to',
+    'な':'na','に':'ni','ぬ':'nu','ね':'ne','の':'no','は':'ha','ひ':'hi','ふ':'fu','へ':'he','ほ':'ho',
+    'ま':'ma','み':'mi','む':'mu','め':'me','も':'mo','や':'ya','ゆ':'yu','よ':'yo','ら':'ra','り':'ri','る':'ru','れ':'re','ろ':'ro',
+    'わ':'wa','を':'o','ん':'n','が':'ga','ぎ':'gi','ぐ':'gu','げ':'ge','ご':'go','ざ':'za','じ':'ji','ず':'zu','ぜ':'ze','ぞ':'zo',
+    'だ':'da','ぢ':'ji','づ':'zu','で':'de','ど':'do','ば':'ba','び':'bi','ぶ':'bu','べ':'be','ぼ':'bo','ぱ':'pa','ぴ':'pi','ぷ':'pu','ぺ':'pe','ぽ':'po',
+    'ぁ':'a','ぃ':'i','ぅ':'u','ぇ':'e','ぉ':'o','ゔ':'vu','ゐ':'i','ゑ':'e','ゎ':'wa'
+  };
+
+  function hiraToRomaji(str) {
+    const s = normalizeReadingText(str);
+    let out = '';
+    let geminate = false;
+
+    for (let i = 0; i < s.length; i++) {
+      const ch = s[i];
+      if (ch === 'っ') {
+        geminate = true;
+        continue;
+      }
+      if (ch === 'ー') {
+        const m = out.match(/([aeiou])[^aeiou]*$/);
+        if (m) out += m[1];
+        continue;
+      }
+
+      const pair = s.slice(i, i + 2);
+      let roma = '';
+      if (HIRA_ROMAJI_DIGRAPHS[pair]) {
+        roma = HIRA_ROMAJI_DIGRAPHS[pair];
+        i++;
+      } else {
+        roma = HIRA_ROMAJI_BASE[ch] || ch;
+      }
+
+      if (geminate && roma) {
+        roma = roma[0] + roma;
+        geminate = false;
+      }
+
+      out += roma;
+    }
+
+    return cleanLatin(out);
+  }
+
+  function addLexiconEntry(map, surface, reading) {
+    const key = cleanForMatch(surface).replace(/\s+/g, '');
+    const value = normalizeReadingText(reading);
+    if (!key || !value) return;
+    if (!map[key]) map[key] = new Set();
+    map[key].add(value);
+  }
+
+  function buildProjectReadingLexicon() {
+    const map = Object.create(null);
+    const data = window.JP_DATA || {};
+    const groups = ['words', 'sentences', 'dialogs', 'hiragana', 'katakana'];
+
+    const ingestItem = (item) => {
+      if (!item) return;
+      const ruby = getRubyMap(item) || {};
+      if (item.jp && item.reading) addLexiconEntry(map, item.jp, item.reading);
+      if (item.jp && item.furigana) addLexiconEntry(map, item.jp, item.furigana);
+      if (item.reading && item.tokens && item.tokens.length === 1) addLexiconEntry(map, tokenToText(item.tokens[0]), item.reading);
+      if (item.furigana && item.tokens && item.tokens.length === 1) addLexiconEntry(map, tokenToText(item.tokens[0]), item.furigana);
+      Object.entries(ruby).forEach(([surface, reading]) => addLexiconEntry(map, surface, reading));
+
+      const tokens = getTokensFromItem(item);
+      tokens.forEach((tok) => {
+        const surface = tokenToText(tok);
+        const reading = tokenToReading(tok) || ruby[surface] || '';
+        if (surface && reading) addLexiconEntry(map, surface, reading);
+      });
+    };
+
+    groups.forEach((group) => {
+      const items = Array.isArray(data[group]) ? data[group] : [];
+      items.forEach((item) => {
+        ingestItem(item);
+        if (Array.isArray(item.turns)) item.turns.forEach(ingestItem);
+      });
+    });
+
+    return map;
+  }
+
+  function projectReadingsForSurface(surface) {
+    if (!PROJECT_READING_LEXICON) PROJECT_READING_LEXICON = buildProjectReadingLexicon();
+    const key = cleanForMatch(surface).replace(/\s+/g, '');
+    return key && PROJECT_READING_LEXICON[key] ? Array.from(PROJECT_READING_LEXICON[key]) : [];
+  }
+
+  function joyoReadingsForKanji(ch) {
+    const entry = JOYO_KANJI_DICT && JOYO_KANJI_DICT[ch];
+    return entry && Array.isArray(entry.hiragana) ? entry.hiragana.map(normalizeReadingText).filter(Boolean) : [];
+  }
+
+  function getReadingsForSurface(surface) {
+    const key = cleanForMatch(surface).replace(/\s+/g, '');
+    if (!key) return [];
+
+    const out = [];
+    const seen = new Set();
+    const push = (value) => {
+      const v = normalizeReadingText(value);
+      if (!v || seen.has(v)) return;
+      seen.add(v);
+      out.push(v);
+    };
+
+    projectReadingsForSurface(key).forEach(push);
+    if (Array.from(key).every(ch => !isKanjiChar(ch) && (isKanaChar(ch) || /[a-z0-9]/i.test(ch)))) push(key);
+    if (key.length === 1 && isKanjiChar(key)) joyoReadingsForKanji(key).forEach(push);
+
+    return out;
+  }
+
+  function readingCoverageScore(expectedReading, spokenSurface) {
+    const expected = normalizeReadingText(expectedReading);
+    const spoken = cleanForMatch(spokenSurface).replace(/\s+/g, '');
+    if (!expected || !spoken) return 0;
+
+    const exactSurfaceReadings = getReadingsForSurface(spoken);
+    let best = 0;
+    exactSurfaceReadings.forEach((rd) => { best = Math.max(best, similarity(expected, rd)); });
+
+    let states = new Set([0]);
+    for (const ch of Array.from(spoken)) {
+      const candidates = [];
+      if (isKanaChar(ch)) {
+        candidates.push(normalizeReadingText(ch));
+      } else if (isKanjiChar(ch)) {
+        joyoReadingsForKanji(ch).forEach((rd) => candidates.push(rd));
+      } else if (/[a-z0-9]/i.test(ch)) {
+        candidates.push(cleanLatin(ch));
+      } else if (ch === 'ー') {
+        candidates.push('');
+      }
+
+      const next = new Set(states);
+      for (const pos of states) {
+        for (const cand of candidates) {
+          if (!cand) {
+            next.add(pos);
+            continue;
+          }
+          if (expected.startsWith(cand, pos)) next.add(pos + cand.length);
+        }
+      }
+      states = next;
+    }
+
+    for (const pos of states) best = Math.max(best, pos / Math.max(expected.length, 1));
+    return clamp(best, 0, 1);
+  }
+
+  function scoreExpectedVsSpokenAdvanced(surface, reading, spoken, leniency01) {
+    const spokenClean = cleanForMatch(spoken);
+    if (!spokenClean) return 0;
+
+    const expectedSurface = cleanForMatch(surface || '');
+    const expectedReading = normalizeReadingText(reading || '');
+    const expectedFallbackReading = normalizeReadingText(surface || '');
+    const expectedReadings = [];
+    const pushExpected = (value) => {
+      const v = normalizeReadingText(value);
+      if (v && !expectedReadings.includes(v)) expectedReadings.push(v);
+    };
+
+    if (expectedReading) pushExpected(expectedReading);
+    if (expectedSurface) {
+      getReadingsForSurface(expectedSurface).forEach(pushExpected);
+      if (!expectedReadings.length) pushExpected(expectedSurface);
+    }
+    if (expectedFallbackReading) pushExpected(expectedFallbackReading);
+
+    const spokenReadings = getReadingsForSurface(spokenClean);
+    const spokenRomaji = [];
+    const spokenLatin = cleanLatin(spokenClean);
+    if (spokenLatin) spokenRomaji.push(spokenLatin);
+    const spokenKanaRomaji = hiraToRomaji(spokenClean);
+    if (spokenKanaRomaji) spokenRomaji.push(spokenKanaRomaji);
+    spokenReadings.forEach((rd) => {
+      const roma = hiraToRomaji(rd);
+      if (roma) spokenRomaji.push(roma);
+    });
+
+    let best = expectedSurface ? tokenScore(expectedSurface, spokenClean, leniency01) : 0;
+
+    expectedReadings.forEach((expRd) => {
+      best = Math.max(best, tokenScore(expRd, spokenClean, leniency01));
+      spokenReadings.forEach((spRd) => {
+        best = Math.max(best, tokenScore(expRd, spRd, leniency01));
+      });
+      best = Math.max(best, readingCoverageScore(expRd, spokenClean));
+
+      const expRoma = hiraToRomaji(expRd);
+      if (expRoma) {
+        spokenRomaji.forEach((spRoma) => {
+          best = Math.max(best, similarity(expRoma, spRoma));
+        });
+      }
+    });
+
+    return clamp(best, 0, 1);
+  }
+
+  async function loadJoyoKanjiDictionary() {
+    try {
+      const res = await fetch(JOYO_KANJI_JSON_URL, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      JOYO_KANJI_DICT = data && typeof data === 'object' ? data : Object.create(null);
+    } catch (err) {
+      JOYO_KANJI_DICT = Object.create(null);
+      console.warn('Failed to load Joyo kanji dictionary:', err);
+    }
   }
 
   function levenshtein(a, b) {
@@ -264,9 +518,7 @@
 
     const scoreExpectedVsSpoken = (expTok, spTok) => {
       const { surface, reading } = normalizeExpectedForMatch(expTok, rubyMap);
-      const s1 = surface ? tokenScore(surface, spTok, leniency01) : 0;
-      const s2 = reading ? tokenScore(reading, spTok, leniency01) : 0;
-      return Math.max(s1, s2);
+      return scoreExpectedVsSpokenAdvanced(surface, reading || surface, spTok, leniency01);
     };
 
     while (i < exp.length && j < spk.length) {
@@ -294,9 +546,10 @@
     return { matches, score, matchedCount: matched };
   }
 
-  // For transcripts without spaces, approximate "matched chars" against expected joined string
+  // For transcripts without spaces, score the whole sequence against the joined expected reading/surface.
   function roughCharProgress(expectedTokens, transcript, leniency01, rubyMap) {
-    const spokenJoined = normalizeKanaLoose(stripPunct(transcript)).replace(/\s+/g,'');
+    const spokenJoined = cleanForMatch(transcript).replace(/\s+/g,'');
+    if (!spokenJoined) return 0;
 
     const surfaceJoined = expectedTokens.map(tok => normalizeExpectedForMatch(tok, rubyMap).surface).join('');
     const readingJoined = expectedTokens.map(tok => {
@@ -304,21 +557,7 @@
       return ex.reading || ex.surface;
     }).join('');
 
-    const candidates = [surfaceJoined, readingJoined].filter(x => (x || '').length);
-    if (!candidates.length) return 0;
-
-    const progressFor = (expectedJoined) => {
-      const exp = normalizeKanaLoose(stripPunct(expectedJoined)).replace(/\s+/g,'');
-      if (!exp.length) return 0;
-      let i = 0, j = 0, matched = 0;
-      while (i < exp.length && j < spokenJoined.length) {
-        if (exp[i] === spokenJoined[j]) { matched++; i++; j++; }
-        else j++;
-      }
-      return clamp(matched / exp.length, 0, 1);
-    };
-
-    return Math.max(...candidates.map(progressFor));
+    return scoreExpectedVsSpokenAdvanced(surfaceJoined, readingJoined, spokenJoined, leniency01);
   }
 
   // Token helpers: token can be string or {t, r}
@@ -1017,9 +1256,7 @@ function getItem() {
     } else {
       // single token: use similarity
       const ex = normalizeExpectedForMatch(expectedMatch[0] || '', rubyMap);
-      const sA = ex.surface ? tokenScore(ex.surface, spokenTokens[0] || cleaned, leniency01) : 0;
-      const sB = ex.reading ? tokenScore(ex.reading, spokenTokens[0] || cleaned, leniency01) : 0;
-      score = Math.max(sA, sB);
+      score = scoreExpectedVsSpokenAdvanced(ex.surface, ex.reading || ex.surface, spokenTokens[0] || cleaned, leniency01);
       matches[0] = score >= (0.86 - leniency01 * 0.20);
       // map single match back to raw indices (if raw had ignorable tokens)
       const rawMatches = rawMatchesPreset.slice();
@@ -1032,11 +1269,15 @@ function getItem() {
     if (!/\s/.test(cleaned) && expected.length > 1) {
       const prog = roughCharProgress(expectedMatch, cleaned, leniency01, rubyMap);
       // mark tokens whose cumulative length <= progress
-      const expJoined = expectedRaw.map(tok => tokenToText(tok)).join('');
-      const targetChars = Math.round(expJoined.length * prog);
+      const tokenLengths = expectedRaw.map((tok) => {
+        const exTok = normalizeExpectedForMatch(tok, rubyMap);
+        return (exTok.reading || exTok.surface || '').length;
+      });
+      const totalChars = tokenLengths.reduce((sum, n) => sum + n, 0);
+      const targetChars = Math.round(totalChars * prog);
       let acc = 0;
       for (let i = 0; i < expected.length; i++) {
-        acc += expected[i].length;
+        acc += tokenLengths[i] || 0;
         if (acc <= targetChars) matches[i] = true;
       }
       score = Math.max(score, prog);
@@ -1297,9 +1538,12 @@ $('#btnSpeak').addEventListener('click', () => {
     // Settings bindings are elsewhere in this file (sliders/selects); keep those intact.
   }
 
-function boot() {
+async function boot() {
     // Apply i18n to static nodes
     setUiLang(state.uiLang);
+
+    await loadJoyoKanjiDictionary();
+    PROJECT_READING_LEXICON = buildProjectReadingLexicon();
 
     // Feature check
     const { hasRecognition, hasSynthesis } = detectSpeechSupport();
@@ -1358,9 +1602,9 @@ function boot() {
   }
 
   // Bind UI after DOM ready
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', async () => {
     bindUi();
-    boot();
+    await boot();
   });
 
 })();
